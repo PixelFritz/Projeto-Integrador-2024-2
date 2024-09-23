@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    particlesJS('particles-js', {
+particlesJS('particles-js', {
         particles: {
             number: { value: 300 },
             color: { 
@@ -40,4 +39,3 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-});
