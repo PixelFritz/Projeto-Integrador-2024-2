@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Zen Kurenaido", sans-serif;
+}
+
+a {
+    color: black;
+
+    &:hover {
+        text-decoration: underline;
+        color: #1100ff;
+    }
+
+    &:focus {
+        color: #1100ff;
+        text-decoration: underline black;
+    }
+}
+
+.principal {
+    background-color: #93CBDB;
+    display: flex;
+    height: 100vh;
+}
+
+.imagem-fundo {
+    background-size: cover;
+    background-image: url(imagens/background-image.svg);
+    display: inline-block;
+    background-position: center;
+    z-index: 2;
+}
+
+.login-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+
+    & .logo img {
+        width: 120px;
+        z-index: -1;
+    }
+
+    & .login-box {
+        background-color: #fffdfd;
+        border-radius: 15px;
+        text-align: center;
+        padding: 15px;
+        box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.705);
+        z-index: 1;
+
+        & .titulo-login {
+            margin: 15px;
+        }
+
+        & label {
+            display: block;
+            text-align: left;
+            margin: 5px;
+        }
+
+        & input {
+            display: block;
+            background-color: #93CBDBCC;
+            border-radius: 15px;
+            width: 100%;
+            padding: 5px 15px;
+            margin-bottom: 10px;
+            font-size: 16px;
+
+            &:hover {
+                transform: scale(1.03);
+                transition: 300ms;
+            }
+
+            &:focus {
+                outline: 1px solid #1100ff;
+            }
+        }
+
+        & button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 5px;
+            border-radius: 15px;
+            font-size: 16px;
+            background-color: #d4d4d4;
+
+            &:hover {
+                background-color: #9e9e9e;
+                transform: scale(1.03);
+                transition: 300ms;
+            }
+
+            &:focus {
+                outline: 1px solid #9e9e9e;
+            }
+        }
+
+        & .a-login {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        & .p-login {
+            margin: 10px;
+        }
+    }
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+@media (min-width: 976px) {
+    .imagem-fundo {
+        width: 60%;
+        height: 100vh;
+        position: sticky;
+        bottom: 0;
+        top: 0;
+    }
+
+    .login-section {
+        width: 40%;
+
+        & .login-box {
+            width: 75%;
+        }
+    }
+}
+
+@media (max-width: 975px) {
+    .imagem-fundo {
+        width: 50%;
+    }
+
+    .login-section {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .principal {
+        flex-direction: column;
+    }
+
+    .imagem-fundo {
+        display: block;
+        width: 100%;
+        height: 250px;
+        position: relative;
+    }
+
+    .login-section {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 80px;
+
+        & .logo img {
+            width: 80px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .imagem-fundo {
+        display: block;
+        width: 100%;
+        height: 150px;
+        position: relative;
+    }
+
+    .login-section {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 50px;
+
+        & .login-box {
+            width: 75%;
+        }
+    }
+}
