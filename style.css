@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rammetto+One&family=Zen+Kurenaido&display=swap');
 
 * {
     margin: 0;
@@ -11,21 +11,22 @@
 }
 
 a {
-    color: black;
+    color: #1100ff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
 
     &:hover {
         text-decoration: underline;
-        color: #1100ff;
     }
 
     &:focus {
-        color: #1100ff;
-        text-decoration: underline black;
+        color: #6d6d6d;
+        text-decoration: underline;
     }
 }
 
 .principal {
-    background-color: #93CBDB;
+    background-color: #DCF4FC;
     display: flex;
     height: 100vh;
 }
@@ -35,7 +36,7 @@ a {
     background-image: url(imagens/background-image.svg);
     display: inline-block;
     background-position: center;
-    z-index: 2;
+    z-index: 1;
 }
 
 .login-section {
@@ -45,9 +46,20 @@ a {
     align-items: center;
     margin-bottom: 100px;
 
-    & .logo img {
-        width: 120px;
-        z-index: -1;
+    & .nome-sistema {
+        font-size: 150%;
+        margin: 20px;
+        z-index: 1;
+        
+        & h1 {
+            color: #93CBDB;
+            font-family: 'Rammetto One', sans-serif;
+        }
+
+        & span {
+            color: #f494d4;
+            font-family: 'Rammetto One', sans-serif;
+        }
     }
 
     & .login-box {
@@ -57,6 +69,7 @@ a {
         padding: 15px;
         box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.705);
         z-index: 1;
+        font-weight: 600;
 
         & .titulo-login {
             margin: 15px;
@@ -70,12 +83,13 @@ a {
 
         & input {
             display: block;
-            background-color: #93CBDBCC;
+            background-color: #f1f1f1;
             border-radius: 15px;
             width: 100%;
             padding: 5px 15px;
             margin-bottom: 10px;
             font-size: 16px;
+            box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.705);
 
             &:hover {
                 transform: scale(1.03);
@@ -89,14 +103,17 @@ a {
 
         & button {
             margin-top: 25px;
+            margin-bottom: 3px;
             width: 100%;
             padding: 5px;
             border-radius: 15px;
             font-size: 16px;
-            background-color: #d4d4d4;
+            background-color: #93CBDB;
+            box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.705);
+            font-weight: 600;
 
             &:hover {
-                background-color: #9e9e9e;
+                background-color: #6ec2da;
                 transform: scale(1.03);
                 transition: 300ms;
             }
@@ -113,6 +130,8 @@ a {
 
         & .p-login {
             margin: 10px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
         }
     }
 }
@@ -123,7 +142,7 @@ a {
     height: 100vh;
     top: 0;
     right: 0;
-    z-index: 1;
+    z-index: 0;
 }
 
 @media (min-width: 976px) {
@@ -170,10 +189,6 @@ a {
         width: 100%;
         margin: auto;
         margin-bottom: 80px;
-
-        & .logo img {
-            width: 80px;
-        }
     }
 }
 
@@ -189,9 +204,5 @@ a {
         width: 100%;
         margin: auto;
         margin-bottom: 50px;
-
-        & .login-box {
-            width: 75%;
-        }
     }
 }
