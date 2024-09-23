@@ -18,13 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             },
             opacity: {
-                value: 1,
-                random: true,
-                anim: {
-                    enable: true,
-                    speed: 1,
-                    opacity_min: 0.5
-                }
+                value: 1
             },
             move: {
                 enable: true,
