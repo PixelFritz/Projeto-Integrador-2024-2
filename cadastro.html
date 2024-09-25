@@ -4,48 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de cadastro</title> 
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/particulas.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <a href="#"><img src="#" alt=""></a>
-    </header>
-    <main>
-        <section>
-            <label for="nome">Nome:</label>
+    <main class="principal">
+       <div id="particles-cad"></div>
+        <section class="cadsection">
+            <div class="nome-sistema">
+                <h1>Hos<span>pet</span>agem</h1>
+            </div>
+            <div class="cadbox">
+                <h2 class="titulo-cad">Cadastre-se</h2>
+
+                <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome">
 
-            <label for="CPF">CPF:</label>
+                <label for="CPF">CPF:</label>
                 <input type="number" name="CPF" id="CPF">
 
-            <label for="Email">Email:</label>
+                <label for="Email">Email:</label>
                 <input type="email" name="Email" id="Email">
 
-            <label for="senha">Senha:</label>
+                <label for="senha">Senha:</label>
                 <input type="password" name="senha" id="senha">
 
-            <label for="Endereço">Endereço:</label>
-            <input type="text" name="Endereço" id="Endereço">
+                <label for="Endereço">Endereço:</label>
+                <input type="text" name="Endereço" id="Endereço">
             
-            <label for="Telefone">Telefone:</label>
-            <input type="tel" name="Telefone" id="Telefone">
+                <label for="Telefone">Telefone:</label>
+                <input type="tel" name="Telefone" id="Telefone">
 
-            <label for="data">Data de Nascimento:</label>
-            <input type="date" name="data" id="data">
+                <label for="data">Data de Nascimento:</label>
+                <input type="date" name="data" id="data">
 
-            <label for="Gênero">Gênero:</label>
-                <select id="Gênero" name="Gênero">
+                <label for="genero">Gênero:</label>
+                <select id="genero" name="genero">
                     <option value="Masculino">Masculino</option>
                     <option value="Feminino">Feminino</option>
                     <option value="Outros">Outros</option>
                     <option value="Prefiro não dizer">Prefiro não dizer</option>
                 </select>
-
-            <input type="checkbox" id="termos">
-            <label for="termos">"Eu li e concordo com os [<a href="#">Termos de Uso</a>] e a [<a href="#">Política de Privacidade</a>].</label>
-                
-            <button>Finaliza meu cadastro</button>
+    
+                <div class="termos3">
+    
+                    <input type="checkbox" id="termos">
+                    <label for="termos">"Eu li e concordo com os [<a href="#">Termos de Uso</a>] e a [<a href="#">Política de Privacidade</a>].</label>
+                </div>
+            
+                <button>Finaliza meu cadastro</button>
+            </div>
         </section>
-    </main>
+    </main>    
 </body>
 </html>

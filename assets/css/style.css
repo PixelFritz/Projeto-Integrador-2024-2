@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rammetto+One&family=Zen+Kurenaido&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Zen Kurenaido", sans-serif;
+}
+
+a {
+    color: #1100ff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus {
+        color: #6d6d6d;
+        text-decoration: underline;
+    }
+}
+
+body {
+    background-color: #DCF4FC;
+}
+
+.principal {
+    display: flex;
+    height: 100vh;
+    position: sticky;
+}
+
+
+.cadsection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    margin: auto;  
+
+    & .nome-sistema {
+        font-size: 150%;
+        margin: 20px;
+        z-index: 1;
+    
+    & h1 {
+        color: #93CBDB;
+        font-family: 'Rammetto One', sans-serif;
+    
+    }
+    
+    & span {
+        color: #f494d4;
+        font-family: 'Rammetto One', sans-serif;
+       }
+    }
+
+
+    & .cadbox {
+        background-color: #fffdfd;
+        border-radius: 15px;
+        text-align: center;
+        padding: 15px;
+        box-shadow: -2px 2px 5px rgba(187, 187, 187, 0.705);
+        z-index: 1;
+        font-weight: 600;
+        margin-bottom: 100px;
+
+        & .titulo-login {
+            margin: 15px;
+        }
+
+        & label {
+            display: block;
+            text-align: left;
+            margin: 5px;
+        }
+
+        & input {
+            display: block;
+            background-color: #f1f1f1;
+            border-radius: 15px;
+            width: 100%;
+            padding: 5px 15px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.705);
+
+            &:hover {
+                transform: scale(1.03);
+                transition: 300ms;
+            }
+
+            &:focus {
+                outline: 1px solid #1100ff;
+            }
+        } 
+
+        & button {
+            margin-top: 25px;
+            margin-bottom: 3px;
+            width: 100%;
+            padding: 5px;
+            border-radius: 15px;
+            font-size: 16px;
+            background-color: #93CBDB;
+            box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.705);
+            font-weight: 600;
+
+            &:hover {
+                background-color: #6ec2da;
+                transform: scale(1.03);
+                transition: 300ms;
+            }
+
+            &:focus {
+                outline: 1px solid #9e9e9e;
+            }
+        }
+        
+    }
+}
+
+.termos3{
+    display: flex;
+    align-items: center;
+ 
+    & #termos{
+        width: 15px;
+        height: 15px;
+        margin-top: 13px;
+    }   
+}
+
+#genero{
+   display: block;
+   background-color:#fffdfd;
+   border-radius: 8px;
+   box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.705);
+   text-align: left;
+   padding: 2px 2px;
+   font-size: 12px;
+   margin-bottom: 15px;
+}
+
+#particles-cad {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+
+    
+    
+
+
