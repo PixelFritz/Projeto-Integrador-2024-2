@@ -1,0 +1,199 @@
+body {
+    background-color: #f8f4ec;
+}
+
+.info-principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+
+    .nome-sistema {
+        font-size: 1.7rem;
+    
+        & h1 {
+            color: #93CBDB;
+            font-family: "Rammetto One", sans-serif;
+        }
+    
+        & span {
+            color: #f494d4;
+            font-family: "Rammetto One", sans-serif;
+        }
+    }
+
+    & .perfil {
+        background-color: #FFE03980;
+        width: 6em;
+        height: 2em;
+        border-radius: 20px;
+        font-size: 1.4rem;
+
+        &:hover {
+            background-color: #ffd900a1;
+            transform: scale(1.03);
+            transition: 300ms;
+        }
+    }
+}
+
+.menu-nav {
+    text-align: center;
+
+    & .lista-nav {
+        display: inline-block;
+        margin: 10px;
+
+        & .link-nav {
+            color: black;
+            text-decoration: 1px underline #FF67C5B2;
+            font-size: 1.4rem;
+
+            &:hover {
+                text-decoration: 1px underline #93CBDB;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            transition: 300ms;
+        }
+    }
+}
+
+.principal {
+    width: 80%;
+    margin: auto;
+    
+    & .pesquisa {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 2em;
+
+        & .pesquisa-barra {
+            & input {
+                width: 20em;
+                border-right: 1px solid #93CBDB;
+                padding: 0.3em 0.7em;
+                border-radius: 10px 0 0 10px;
+    
+                &:focus {
+                    background-color: #93cbdb3f;
+                }
+            }
+    
+            & .btn-pesquisa {
+                padding: 0.3em;
+                padding-right: 20px;
+                margin-right: 25px;
+                width: 1.5em;
+                position: relative;
+                right: 2.5px;
+                border-radius: 0 10px 10px 0;
+                background-color: #FFF;
+    
+                &:hover {
+                    background-color: #0000000a;
+                }
+            }
+
+            &:hover {
+                transform: scale(1.03);
+                transition: 300ms;
+            }
+        }
+
+        & .btn-filtro {
+            padding: 0.3em;
+            width: 5.5em;
+            position: relative;
+            right: 2.5px;
+            border-radius: 10px;
+            background-color: #FFF;
+
+            &:hover {
+                background-color: #0000000a;
+                transform: scale(1.03);
+                transition: 300ms;
+            }
+        }
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+
+    & .img-footer {
+        text-align: center;
+        position: relative;
+        top: 6.6em;
+        
+        & .cachorro-footer {
+            width: 12em;
+            z-index: 1;
+        }    
+    }
+
+    & .infos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 90px;
+        width: 100%;
+        margin: auto;
+        background-color: #93CBDB;
+
+        & .info-footer {
+            margin: 10px;
+            padding: 10px;
+            color: white;
+            display: block;
+            width: 25%;
+
+            & h2 {
+                font-family: "Potta One", sans-serif;
+                font-weight: 400;
+                margin-bottom: 10px;
+                font-size: 2rem;
+            }
+
+            & p {
+                font-family: "Quicksand", sans-serif;
+                font-size: 1.5rem;
+                margin-top: 5px;
+            }
+
+            & li {
+                padding: 2px;
+            }
+
+            & .info-links {
+                color: white;
+                font-family: "Quicksand", sans-serif;
+                font-size: 1.5rem;
+                margin: 3px;
+
+                &:hover {
+                    color: #1100ff;
+                    text-decoration: 1px underline #1100ff;
+                }
+            }
+
+            & .icon-footer {
+                display: flex;
+                gap: 20px;
+
+                & i:hover {
+                    transform: scale(1.1);
+                    transition: 300ms;
+                }
+            }
+        }
+    }
+}

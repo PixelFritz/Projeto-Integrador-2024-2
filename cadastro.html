@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de cadastro</title> 
+    <title>Cadastro</title> 
     
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/imagens/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/login-cad.css">
+    
     <script src="assets/js/particulas.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 
 <body>
     <main class="principal">
-       <div id="particles-cad"></div>
-        <section class="cadsection">
+        <div id="particles-cad"></div>
+        <section class="login-cad-section">
             <div class="nome-sistema">
                 <h1>Hos<span>pet</span>agem</h1>
             </div>
-            <div class="cadbox">
-                <h2 class="titulo-cad">Cadastre-se</h2>
-
+            <div class="login-cad-box">
+                <h2 class="titulo-login-cad">Cadastre-se</h2>
+                
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome">
-
+                
                 <label for="CPF">CPF:</label>
                 <input type="number" name="CPF" id="CPF">
 
@@ -34,7 +37,7 @@
 
                 <label for="Endereço">Endereço:</label>
                 <input type="text" name="Endereço" id="Endereço">
-            
+
                 <label for="Telefone">Telefone:</label>
                 <input type="tel" name="Telefone" id="Telefone">
 
@@ -48,14 +51,15 @@
                     <option value="Outros">Outros</option>
                     <option value="Prefiro não dizer">Prefiro não dizer</option>
                 </select>
-    
+
                 <div class="termos3">
-    
                     <input type="checkbox" id="termos">
                     <label for="termos">"Eu li e concordo com os [<a href="#">Termos de Uso</a>] e a [<a href="#">Política de Privacidade</a>].</label>
                 </div>
-            
-                <button>Finaliza meu cadastro</button>
+
+                <p class="p-login-cad">Já possui uma conta? <a href="login.html" tabindex="0">Faça seu login.</a></p>
+
+                <button>Finalizar meu cadastro</button>
             </div>
         </section>
     </main>    

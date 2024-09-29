@@ -1,56 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rammetto+One&family=Zen+Kurenaido&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    font-family: "Zen Kurenaido", sans-serif;
-}
-
-a {
-    color: #1100ff;
-    font-family: "Open Sans", sans-serif;
-    font-size: 12px;
-
-    &:hover {
-        text-decoration: underline;
-    }
-
-    &:focus {
-        color: #6d6d6d;
-        text-decoration: underline;
-    }
+body {
+    background-color: #DCF4FC;
 }
 
 .principal {
-    background-color: #DCF4FC;
     display: flex;
     height: 100vh;
 }
 
 .imagem-fundo {
     background-size: cover;
-    background-image: url(imagens/background-image.svg);
+    background-image: url(/assets/imagens/background-image.svg);
     display: inline-block;
     background-position: center;
     z-index: 1;
 }
 
-.login-section {
+.login-cad-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
+    margin: auto;
 
     & .nome-sistema {
-        font-size: 150%;
+        font-size: 2rem;
         margin: 20px;
         z-index: 1;
-        
+
         & h1 {
             color: #93CBDB;
             font-family: 'Rammetto One', sans-serif;
@@ -62,7 +39,7 @@ a {
         }
     }
 
-    & .login-box {
+    & .login-cad-box {
         background-color: #fffdfd;
         border-radius: 15px;
         text-align: center;
@@ -70,15 +47,18 @@ a {
         box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.705);
         z-index: 1;
         font-weight: 600;
+        margin-bottom: 50px;
 
-        & .titulo-login {
+        & .titulo-login-cad {
             margin: 15px;
+            font-size: 2rem;
         }
 
         & label {
             display: block;
             text-align: left;
             margin: 5px;
+            font-size: 1.5rem;
         }
 
         & input {
@@ -103,7 +83,7 @@ a {
 
         & button {
             margin-top: 25px;
-            margin-bottom: 3px;
+            margin-bottom: 15px;
             width: 100%;
             padding: 5px;
             border-radius: 15px;
@@ -113,7 +93,7 @@ a {
             font-weight: 600;
 
             &:hover {
-                background-color: #6ec2da;
+                background-color: #93CBDB;
                 transform: scale(1.03);
                 transition: 300ms;
             }
@@ -123,20 +103,53 @@ a {
             }
         }
 
-        & .a-login {
+        & .a-login-cad {
             display: flex;
             justify-content: flex-end;
+            margin-bottom: 15px;
         }
 
-        & .p-login {
-            margin: 10px;
+        & .p-login-cad {
+            margin: 5px;
             font-family: 'Open Sans', sans-serif;
             font-size: 12px;
         }
     }
 }
 
+.termos3{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3em;
+
+    & #termos{
+        width: 15px;
+        height: 15px;
+        margin-top: 13px;
+    }   
+}
+
+#genero{
+    display: block;
+    background-color:#fffdfd;
+    border-radius: 8px;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.705);
+    text-align: left;
+    padding: 2px 2px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
 #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+#particles-cad {
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -154,11 +167,11 @@ a {
         top: 0;
     }
 
-    .login-section {
-        width: 40%;
+    .login-cad-section {
+        width: 60%;
 
-        & .login-box {
-            width: 75%;
+        & .login-cad-box {
+            width: 70%;
         }
     }
 }
@@ -168,8 +181,8 @@ a {
         width: 50%;
     }
 
-    .login-section {
-        width: 50%;
+    .login-cad-section {
+        width: 60%;
     }
 }
 
@@ -185,8 +198,8 @@ a {
         position: relative;
     }
 
-    .login-section {
-        width: 100%;
+    .login-cad-section {
+        width: 70%;
         margin: auto;
         margin-bottom: 80px;
     }
@@ -200,8 +213,8 @@ a {
         position: relative;
     }
 
-    .login-section {
-        width: 100%;
+    .login-cad-section {
+        width: 80%;
         margin: auto;
         margin-bottom: 50px;
     }
