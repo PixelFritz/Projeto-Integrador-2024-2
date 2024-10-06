@@ -127,8 +127,7 @@ body {
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -202,3 +201,36 @@ body {
         }
     }
 }
+/* css: main como funciona */
+.main_comofunciona {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+}
+
+.como_funciona {
+    max-width: 800px;
+    width: 100%; 
+    text-align: left; 
+    font-size: 17px;
+    font-family: 'Quicksand',sans-serif;
+    & span{
+        font-weight: bold;
+    }
+}
+
+
+.pata_azul{
+    list-style-image: url(../img/pata-azul.png);
+
+}
+.pata_rosa{
+    list-style-image: url(../img/pata-rosa.png);
+
+}
+.pata_amarela{
+    list-style-image: url(../img/pata-amarela.png);
+
+}
+ 
