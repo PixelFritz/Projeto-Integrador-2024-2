@@ -384,6 +384,28 @@ i:hover {
     transition: 300ms;
 }
 
+
+/* css: main como funciona */
+.como_funciona {
+    width: 100%; 
+    text-align: left; 
+    font-size: 17px;
+    font-family: 'Quicksand',sans-serif;
+    margin-top: 3em;
+
+    & span{
+        font-weight: bold;
+    }
+
+    & .li_comofunciona {
+        margin: 1em 0;
+
+        & i {
+            margin-right: .5em;
+        }
+    }
+}
+
 @media (max-width: 975px) {
     .principal {
         & .section-icon-text {
@@ -423,6 +445,99 @@ i:hover {
                     vertical-align: top;
                     margin: 1.5em;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .info-principal {
+        & .nome-sistema {
+            text-align: center;
+        }
+
+        & .menu-btn {
+            display: block;
+            position: fixed;
+            right: 1em;
+            z-index: 2;
+        }
+
+        & .perfil {
+            display: none;
+        }
+    }
+
+    nav {
+        display: none;
+    }
+
+    .principal {
+        & .pesquisa {
+            flex-direction: column;
+            margin: auto;
+            align-items: center;
+
+            & .pesquisa-barra {
+                margin: 1em 0;
+                text-align: center;
+
+                & input {
+                    width: 80%;
+                }
+
+                & .btn-pesquisa {
+                    margin: 0;
+                }
+            }
+        }
+
+        & .section-icon-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2em;
+
+            & .icon-text-info {
+                width: 60%;
+
+                & img {
+                    width: 50%;
+                }
+            }
+        }
+
+        & .section-hoteis {
+            & .section-infos-hoteis {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                & .infos-hoteis {
+                    width: 90%;
+                    margin: 1.5em;
+                }
+            }
+        }
+    }
+
+    .footer {
+        width: 100vw;
+
+        & .img-footer {
+            top: 5.6em;
+            
+            & .cachorro-footer {
+                width:10em;
+            }
+        }
+
+        & .infos {
+            flex-direction: column;
+            padding: 3em;
+
+            & .info-footer {
+                width: auto;
             }
         }
     }

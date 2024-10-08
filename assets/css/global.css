@@ -15,6 +15,10 @@ html {
     font-size: 62.5%;
 }
 
+body{
+    background-color: #f8f4ec;
+}
+
 a {
     color: #1100ff;
     font-family: "Open Sans", sans-serif;

@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuLinks = document.getElementById('menu-nav');
     const menuEntrar = Array.from(document.getElementsByClassName('entrar'));
     const links = Array.from(document.getElementsByClassName('link-nav'));
-    const iconContainer = document.querySelectorAll('.lista-nav');
 
     menuBtn.addEventListener('click', function() {
         if(menuLinks.classList.contains('menu-active')) {
@@ -31,15 +30,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 links[i].classList.remove('link-nav');
             }
 
-            iconContainer.forEach(function(iconContainer) {
-                let menuIcon = iconContainer.querySelector('i');
-                if(!menuIcon) {
-                    menuIcon = document.createElement('i');
-                    menuIcon.classList.add('fa-solid', 'fa-arrow-up-right-from-square', 'menu-icon');
+            // iconContainer.forEach(function(iconContainer) {
+            //     let menuIcon = iconContainer.querySelector('i');
+            //     if(!menuIcon) {
+            //         menuIcon = document.createElement('i');
+            //         menuIcon.classList.add('fa-solid', 'fa-arrow-up-right-from-square', 'menu-icon');
 
-                    iconContainer.appendChild(menuIcon)
-                }
-            })
+            //         iconContainer.appendChild(menuIcon)
+            //     }
+            // })
         }
     });
 });
