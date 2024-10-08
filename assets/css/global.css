@@ -18,7 +18,6 @@ html {
 a {
     color: #1100ff;
     font-family: "Open Sans", sans-serif;
-    font-size: 12px;
 
     &:hover {
         text-decoration: underline;

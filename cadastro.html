@@ -18,48 +18,56 @@
         <div id="particles-cad"></div>
         <section class="login-cad-section">
             <div class="nome-sistema">
-                <h1>Hos<span>pet</span>agem</h1>
+                <a href="index.html">
+                    <h1>Hos<span>pet</span>agem</h1>
+                </a>
             </div>
             <div class="login-cad-box">
-                <h2 class="titulo-login-cad">Cadastre-se</h2>
+                <form action="" method="post">
+                    <h2 class="titulo-login-cad">Cadastre-se</h2>
                 
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome">
+                    <label for="nome">Nome: *</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
                 
-                <label for="CPF">CPF:</label>
-                <input type="number" name="CPF" id="CPF">
+                    <label for="CPF">CPF: *</label>
+                    <input type="text" name="CPF" id="CPF" placeholder="000.000.00-00" maxlength="14" required>
 
-                <label for="Email">Email:</label>
-                <input type="email" name="Email" id="Email">
+                    <label for="Email">Email: *</label>
+                    <input type="email" name="Email" id="Email" placeholder="Digite seu e-mail" required>
 
-                <label for="senha">Senha:</label>
-                <input type="password" name="senha" id="senha">
+                    <label for="senha">Criar senha: *</label>
+                    <input type="password" name="senha" id="senha" placeholder="Crie sua senha" required>
 
-                <label for="Endereço">Endereço:</label>
-                <input type="text" name="Endereço" id="Endereço">
+                    <label for="senha">Confirmar senha: *</label>
+                    <input type="password" name="senha" id="senha" placeholder="Confirme sua senha" required>
 
-                <label for="Telefone">Telefone:</label>
-                <input type="tel" name="Telefone" id="Telefone">
+                    <label for="Endereço">Endereço: *</label>
+                    <input type="text" name="Endereço" id="Endereço" placeholder="Digite seu endereço" required>
 
-                <label for="data">Data de Nascimento:</label>
-                <input type="date" name="data" id="data">
+                    <label for="Telefone">Telefone: *</label>
+                    <input type="tel" name="Telefone" id="Telefone" placeholder="Digite seu telefone" required>
 
-                <label for="genero">Gênero:</label>
-                <select id="genero" name="genero">
-                    <option value="Masculino">Masculino</option>
-                    <option value="Feminino">Feminino</option>
-                    <option value="Outros">Outros</option>
-                    <option value="Prefiro não dizer">Prefiro não dizer</option>
-                </select>
+                    <label for="data">Data de Nascimento: *</label>
+                    <input type="date" name="data" id="data" placeholder="seu Nascimento" required>
 
-                <div class="termos3">
-                    <input type="checkbox" id="termos">
-                    <label for="termos">"Eu li e concordo com os [<a href="#">Termos de Uso</a>] e a [<a href="#">Política de Privacidade</a>].</label>
-                </div>
+                    <label for="genero">Gênero:</label>
+                    <select id="genero" name="genero">
+                        <option value="..." selected disabled></option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Outros">Outros</option>
+                        <option value="Prefiro não dizer">Prefiro não dizer</option>
+                    </select>
 
-                <p class="p-login-cad">Já possui uma conta? <a href="login.html" tabindex="0">Faça seu login.</a></p>
+                    <div class="termos3">
+                        <input type="checkbox" id="termos" required>
+                        <label for="termos">"Eu li e concordo com os [<a href="#">Termos de Uso</a>] e a [<a href="#">Política de Privacidade</a>].</label>
+                    </div>
 
-                <button>Finalizar meu cadastro</button>
+                    <p class="p-login-cad">Já possui uma conta? <a href="login.html" tabindex="0">Faça seu login.</a></p>
+
+                    <button>Finalizar meu cadastro</button>
+                </form>
             </div>
         </section>
     </main>    

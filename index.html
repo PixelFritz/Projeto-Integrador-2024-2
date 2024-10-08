@@ -10,28 +10,41 @@
     <link rel="stylesheet" href="assets/css/index.css">
     
     <script src="https://kit.fontawesome.com/e8db2f40d0.js" crossorigin="anonymous" defer></script>
+    <script src="assets/js/menu_index.js" defer></script>
+    <script src="assets/js/avaliacao_paw.js" defer></script>
 </head>
 <body>
     <header>
         <section class="info-principal">
             <div class="nome-sistema">
-                <h1>Hos<span>pet</span>agem</h1>
+                <a href="index.html"><h1>Hos<span>pet</span>agem</h1></a>
             </div>
             <button class="perfil">
                 <a href="login.html">Entrar</a>
             </button>
+            <button id="menu-btn" class="menu-btn"><i class="fa-solid fa-bars fa-2x"></i></button>
         </section>
 
         <section>
-            <nav class="menu-nav">
+            <nav class="menu-nav menu-hidden" id="menu-nav">
                 <li class="lista-nav">
-                    <a href="" class="link-nav">Início</a></li>
+                    <a href="login.html" class="menu-hide link-nav entrar">Entrar</a>
+                </li>
                 <li class="lista-nav">
-                    <a href="" class="link-nav">Como Funciona</a></li>
+                    <a href="index.html" class="link-nav">Início</a>
+                </li>
                 <li class="lista-nav">
-                    <a href="" class="link-nav">Planos e Preços</a></li>
+                    <a href="#" class="link-nav">Como Funciona</a>
+                </li>
                 <li class="lista-nav">
-                    <a href="" class="link-nav">FAQ</a></li>
+                    <a href="#" class="link-nav">Planos e Preços</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="#" class="link-nav">FAQ</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="#" class="menu-hide link-nav entrar">Faça o teste</a>
+                </li>
             </nav>
         </section>
     </header>
@@ -49,6 +62,62 @@
                 Filtrar
             </button>
         </section>
+        <section class="section-icon-text">
+            <div class="icon-text-info">
+                <img src="assets/imagens/icon-info1.svg" alt="ícone cachorro tendo ideia">
+                <p>Busque entre diversas opções de hospedagem e garanta a melhor experiência.</p>
+            </div class="section-icon-text">
+            <div class="icon-text-info">
+                <img src="assets/imagens/icon-info2.svg" alt="ícone cachorro com corações">
+                <p>Seu pet merece um lugar onde o amor está sempre presente. Acolhimento é nossa prioridade!</p>
+            </div class="section-icon-text">
+            <div class="icon-text-info">
+                <img src="assets/imagens/icon-info3.svg" alt="ícone cachorro para feedback">
+                <p>Nossos hóspedes sempre saem com um sorriso. Confira o que os outros dizem!</p>
+            </div>
+        </section>
+        <section class="section-hoteis">
+            <h2 class="h2-titulo">Destaques Exclusivos para o seu Pet</h2>
+            <section class="section-infos-hoteis">
+                <div class="infos-hoteis">
+                    <img src="assets/imagens/hotel1.svg" alt="Hotel PetVille Hospedagem">
+                    <h3 class="nome-hotel">PetVille Hospedagem</h3>
+                    <div class="avaliacao" data-rating="5">
+                        <p class="p-texto">Avaliação</p>
+                        <div class="patinhas"></div>
+                    </div>
+                    <p class="valor">R$ XX,XX dia</p>
+                </div>
+                <div class="infos-hoteis">
+                    <img src="assets/imagens/hotel2.svg" alt="Hotel Refúgio dos Peludos">
+                    <h3 class="nome-hotel">Refúgio dos Peludos</h3>
+                    <div class="avaliacao" data-rating="4">
+                        <p class="p-texto">Avaliação</p>
+                        <div class="patinhas"></div>
+                    </div>
+                    <p class="valor">R$ XX,XX dia</p>
+                </div>
+                <div class="infos-hoteis">
+                    <img src="assets/imagens/hotel3.svg" alt="Bicharada Hotel">
+                    <h3 class="nome-hotel">Bicharada Hotel</h3>
+                    <div class="avaliacao" data-rating="4">
+                        <p class="p-texto">Avaliação</p>
+                        <div class="patinhas"></div>
+                    </div>
+                    <p class="valor">R$ XX,XX dia</p>
+                </div>
+            </section>
+            <a href="">
+                Ver mais hospetagens
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+        <section class="section-teste">
+            <h2 class="h2-titulo">Descubra o Hotel Ideal para Seu Pet!</h2>
+            <p class="p-texto">Cada animal é único e merece o melhor! Responda ao nosso teste interativo e descubra em poucos minutos o hotel ideal que atende às necessidades e à personalidade do seu pet.</p>
+            <button class="btn-teste">Comece o teste!</button>
+        </section>
+        <section class="elemento"></section>
     </main>
 
     <footer class="footer">

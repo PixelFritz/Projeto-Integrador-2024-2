@@ -28,6 +28,10 @@ body {
         margin: 20px;
         z-index: 1;
 
+        & a {
+            text-decoration: none;
+        }
+
         & h1 {
             color: #93CBDB;
             font-family: 'Rammetto One', sans-serif;
@@ -131,11 +135,11 @@ body {
 
 #genero{
     display: block;
-    background-color:#fffdfd;
+    background-color:#f1f1f1;
     border-radius: 8px;
-    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.705);
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.7);
     text-align: left;
-    padding: 2px 2px;
+    padding: 5px;
     font-size: 12px;
     margin-bottom: 15px;
 }
