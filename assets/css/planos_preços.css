@@ -1,0 +1,75 @@
+
+.titulo_planos{
+    & h1{
+        font-family:'Quicksand', sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+        padding: 40px 0;
+    }
+    & p{
+        font-size: 14px;
+    }
+    text-align: center;
+}
+.plano_basico, .plano_avancado, .plano_premium{
+    background-color: white;
+    & h3{
+        font-size: 15px;
+        text-align: center;
+        padding: 15px 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+    }
+    & ul{
+        padding: 30px 20px 30px 20px ;
+    }
+    & p{
+        text-align: center;
+        padding: 10px 0;
+        font-weight: 900;
+        font-size: 15px;
+    }
+    & span{
+        font-size: 10px;
+        font-weight: 300;
+    }
+    width: 250px;
+    border-radius: 10px;
+}
+
+.conteiner_planos{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.plano_basico{
+    & h3{
+        background-color: #FFE03980;
+
+    }
+    & p{
+        border-top: 0.1px solid #FFE03980;
+    }
+    margin-right: 20px;
+}
+.plano_avancado{
+    & h3{
+        background-color: #FF67C5B2;
+    }
+    margin-left: 20px;
+    & p{
+        border-top: 0.1px solid #FF67C5B2;
+    }
+}
+.plano_premium{
+    & h3{
+        background-color: #93CBDB;
+    }
+    margin: auto;
+    margin-top: 40px;
+    & p{
+        border-top: 0.1px solid #93CBDB ;
+    }
+}
