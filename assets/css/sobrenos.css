@@ -1,141 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    font-family: "Zen Kurenaido", sans-serif;
+body {
+    background-image: url('/assets/imagens/brinquedo-verde.jpg.png'), url('/assets/imagens/brinquedo-vermelho.jpg.png'), url('/assets/imagens/brinquedo-roxo.png');
+    background-position-x: left, right, left;
+    background-position-y: 20%, 35%, 75%;
+    background-repeat: no-repeat;
+    background-size: 25rem;
 }
 
-body{
-    background-color: #f8f4ec;
-}
+.principal {
+    width: 70%;
+    margin: auto;
+    text-align: center;
 
-h2 {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 30px;
-    font-weight: 200;
+    h2 {
+        font-family: "Quicksand", sans-serif;
+        font-size: 4.3em;
+        font-weight: 200;
+        padding: .5em 0;
+    }
+    
+    p, li {
+        font-size: 1.5em;
+        font-family: "Quicksand", sans-serif;
+    }
 
-}
+    .infos {
+        text-align: justify;
+        margin: 2.5rem auto;
+    }
 
-p, li {
-    font-family: "Quicksand", sans-serif;
-}    
+    .img-principal {
+        width: 75%;
+    }
 
+    .div-mais-info {
+        width: 90%;
+        margin: auto
+    }
 
-.header-sobrenos {
-    position: relative;
-    margin-top: 5px;
-    margin-left: 5px;
-}
+    .info-secundaria {
+        width: 70%;
+        margin: 5rem 2rem;
+        display: flex;
+        flex-direction: column;
+    }
 
-.logo-icone {
-    font-size: 25px;
-    font-family: 'Rammetto One', sans-serif;
-    color: #f494d4;
+    .lado-a-lado {
+        display: flex;
+        flex-direction: row;
+        margin-top: 3em;
+        justify-content: space-between;
+        align-items: center;
 
-    & span {
-        color: #93CBDB;
-        font-family: 'Rammetto One',sans-serif;
+        .img-diferente {
+            width: 35%;
+            margin: 0 5rem;
+            height: fit-content;
+        }
+    }
+
+    .direita {
+        float: right;
+    }
+
+    .li {
+        padding: 0.5em;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        hyphens: auto;
     }
 }
 
-.titulo-sobrenos {
-    text-align: center;
-    font-family: 'Quicksand';
-    font-size: 50px;
-    font-weight: 100;
-}
+@media (max-width: 975px) {
+    body {
+        background-size: 20rem;
+    }
 
-.login {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #FFE03980;
-    color: black;
-    height: 30px;
-    width: 110px;
-    text-align: center;
-    margin-top: 5px;
-    margin-right: 5px;
-    border-radius: 20px;
-    padding-top: 5px;
-}
+    .principal {
+        .info-secundaria {
+            margin: 2em 3em;
+        }
 
-.nossa-historia {
-    margin: 50px;
-    margin-left: 150px;
-    
+        .lado-a-lado {
+            .img-diferente {
+                margin: 0 2rem;
+            }
+        }
 
-    & p {
-        margin-top: 10px;
     }
 }
 
-.brinquedo-verde{
-    opacity: 90%;
-    width: 250px;
-    
-    
-}
+@media (max-width: 768px) {
+    body {
+        background-position-y: 20%, 55%, 75%;
+        background-size: 15rem;
+    }
 
-.img-principal {
-    text-align: center;
+    .principal {
+        .img-principal {
+            width: 90%;
+        }
+        .div-mais-info {
+            width: 70%;
+        }
 
+        .info-secundaria {
+            width: 100%;
+            margin: 2em 0;
+        }
 
-    & img {
-        width: 600px;
+        .lado-a-lado {
+            flex-direction: column;
+            margin-top: 0;
+
+            .img-diferente {
+                width: 75%;
+            }
+        }
+
+        .direita {
+            float: none;
+        }
     }
 }
 
-.Nossos-servicos {
-    display: flex;
-    align-items: flex-start;
-    margin-left: 100px;
-    margin-top: 30px;
-    justify-content: space-between;
-}
+@media (max-width: 480px) {
+    body {
+        background-image: none;
+    }
 
-.img-servico {
-    margin-right: 0;
-}
-
-.li1 {
-    list-style-image: url(../img/pata-azul.png);
-    padding:0;
-}
-
-.li2 {
-    list-style-image: url(../img/pata-rosa.png);
-}
-
-.li3 {
-    list-style-image: url(../img/pata-amarela.png);
-}
-
-
-.nossa-missao {
-    display: flex;
-    margin-left: 150px;
-    margin-right: 50px;
-}
-
-.nosso-contato {
-    display: flex;
-}
-.img-sobrenos3{
-    width: 434px;
-    height: 300px;
-    margin-top: 100px;
-}
-
-.feedback {
-    margin-left: 300px;
-    margin-right: 400px;
-    margin-bottom: 50px;
+    .principal {
+        h2 {
+            font-size: 3.7em;
+            text-align: center;
+        }
+        
+        .div-mais-info {
+            width: 90%;
+        }
+    }
 }
