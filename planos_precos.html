@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link rel="shortcut icon" href="assets/imagens/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-    
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/planos_precos.css">
+
+
     <script src="https://kit.fontawesome.com/e8db2f40d0.js" crossorigin="anonymous" defer></script>
     <script src="assets/js/menu_index.js" defer></script>
-    <script src="assets/js/avaliacao_paw.js" defer></script>
 </head>
 <body>
     <header>
@@ -38,7 +36,7 @@
                     <a href="como_funciona.html" class="link-nav">Como Funciona</a>
                 </li>
                 <li class="lista-nav">
-                    <a href="sobrenos.html" class="menu-hide link-nav entrar">Sobre Nós</a>
+                    <a href="sobrenos.html" class="link-nav">Sobre Nós</a>
                 </li>
                 <li class="lista-nav">
                     <a href="planos_precos.html" class="link-nav">Planos e Preços</a>
@@ -66,62 +64,46 @@
                 Filtrar
             </button>
         </section>
-        <section class="section-icon-text">
-            <div class="icon-text-info">
-                <img src="assets/imagens/icon-info1.svg" alt="ícone cachorro tendo ideia">
-                <p>Busque entre diversas opções de hospedagem e garanta a melhor experiência.</p>
-            </div class="section-icon-text">
-            <div class="icon-text-info">
-                <img src="assets/imagens/icon-info2.svg" alt="ícone cachorro com corações">
-                <p>Seu pet merece um lugar onde o amor está sempre presente. Acolhimento é nossa prioridade!</p>
-            </div class="section-icon-text">
-            <div class="icon-text-info">
-                <img src="assets/imagens/icon-info3.svg" alt="ícone cachorro para feedback">
-                <p>Nossos hóspedes sempre saem com um sorriso. Confira o que os outros dizem!</p>
-            </div>
+
+        <section class="titulo_planos">
+            <h1>Planos e Preços</h1>
+            <p>Descubra os planos disponíveis para cadastrar a sua hospedagem e alcançar mais clientes!</p>
         </section>
-        <section class="section-hoteis">
-            <h2 class="h2-titulo">Destaques Exclusivos para o seu Pet</h2>
-            <section class="section-infos-hoteis">
-                <div class="infos-hoteis">
-                    <img src="assets/imagens/hotel1.svg" alt="Hotel PetVille Hospedagem">
-                    <h3 class="nome-hotel">PetVille Hospedagem</h3>
-                    <div class="avaliacao" data-rating="5">
-                        <p class="p-texto">Avaliação</p>
-                        <div class="patinhas"></div>
-                    </div>
-                    <p class="valor">R$ XX,XX dia</p>
-                </div>
-                <div class="infos-hoteis">
-                    <img src="assets/imagens/hotel2.svg" alt="Hotel Refúgio dos Peludos">
-                    <h3 class="nome-hotel">Refúgio dos Peludos</h3>
-                    <div class="avaliacao" data-rating="4">
-                        <p class="p-texto">Avaliação</p>
-                        <div class="patinhas"></div>
-                    </div>
-                    <p class="valor">R$ XX,XX dia</p>
-                </div>
-                <div class="infos-hoteis">
-                    <img src="assets/imagens/hotel3.svg" alt="Bicharada Hotel">
-                    <h3 class="nome-hotel">Bicharada Hotel</h3>
-                    <div class="avaliacao" data-rating="4">
-                        <p class="p-texto">Avaliação</p>
-                        <div class="patinhas"></div>
-                    </div>
-                    <p class="valor">R$ XX,XX dia</p>
-                </div>
+        <div class="conteiner_planos">
+            <section class="plano_basico">
+                <h3>Plano Básico</h3>
+                <ul>
+                    <li><i class="fa-solid fa-paw" style="color: #FFD43B;"></i>Cadastro de até 5 pets</li>
+                    <li><i class="fa-solid fa-paw" style="color: #FFD43B;"></i>Perfil básico da hospedagem</li>
+                    <li><i class="fa-solid fa-paw" style="color: #FFD43B;"></i>Acesso a comentários e avaliações</li>
+                    <li><i class="fa-solid fa-paw" style="color: #FFD43B;"></i>Suporte ao cliente via email</li>
+                    <li><i class="fa-solid fa-paw" style="color: #FFD43B;"></i>Comissão: 10% sobre cada reserva realizada</li>
+                </ul>
+                <p>R$ XX,XX<span>/mês</span></p>
             </section>
-            <a href="">
-                Ver mais hospetagens
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
+            <section class="plano_avancado">
+                <h3>Plano Avançado</h3>
+                <ul>
+                    <li><i class="fa-solid fa-paw" style="color: #FFD43B;"></i>Cadastro de até 15 pets</li>
+                    <li><i class="fa-solid fa-paw" style="color: #FFD43B;"></i>Perfil detalhado da hospedagem com fotos e descrição</li>
+                    <li><i class="fa-solid fa-paw" style="color: #FFD43B;"></i>Respostas a comentários e avaliações </li> 
+                    <li><i class="fa-solid fa-paw" style="color: #FFD43B;"></i>Suporte prioritário ao cliente</li>
+                    <li><i class="fa-solid fa-paw" style="color: #FFD43B;"></i>Comissão: 8% sobre cada reserva realizada</li>
+                </ul>
+                <p>R$ XX,XX<span>/mês</span></p>
+            </section>
+        </div>
+        <section class="plano_premium">
+            <h3>Plano Premium</h3>
+            <ul>
+                <li><i class="fa-solid fa-paw" style="color: #FFD43B;"></i>Cadastro ilimitado de pets  </li>
+                <li><i class="fa-solid fa-paw" style="color: #FFD43B;"></i>Perfil completo com vídeos e fotos</li>
+                <li><i class="fa-solid fa-paw" style="color: #FFD43B;"></i>Promoção em destaque na página principal</li>
+                <li><i class="fa-solid fa-paw" style="color: #FFD43B;"></i>Suporte VIP ao cliente </li>
+                <li><i class="fa-solid fa-paw" style="color: #FFD43B;"></i>Comissão: 5% sobre cada reserva realizada</li>
+            </ul>
+            <p>R$ XX,XX<span>/mês</span></p>
         </section>
-        <section class="section-teste">
-            <h2 class="h2-titulo">Descubra o Hotel Ideal para Seu Pet!</h2>
-            <p class="p-texto">Cada animal é único e merece o melhor! Responda ao nosso teste interativo e descubra em poucos minutos o hotel ideal que atende às necessidades e à personalidade do seu pet.</p>
-            <button class="btn-teste">Comece o teste!</button>
-        </section>
-        <section class="elemento"></section>
     </main>
 
     <footer class="footer">
