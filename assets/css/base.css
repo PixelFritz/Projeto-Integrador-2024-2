@@ -309,10 +309,11 @@ i:hover {
 
     .footer {
         width: 100vw;
+        text-align: center;
 
         & .img-footer {
             top: 5.6em;
-            
+
             & .cachorro-footer {
                 width:10em;
             }
@@ -324,6 +325,14 @@ i:hover {
 
             & .info-footer {
                 width: auto;
+
+                & .icon-footer {
+                    display: block;
+
+                    & i {
+                        padding: 0 .4em;
+                    }
+                }
             }
         }
     }
