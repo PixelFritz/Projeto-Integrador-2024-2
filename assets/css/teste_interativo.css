@@ -1,21 +1,25 @@
-.titulo{
+.titulo {
     text-align: center;
     font-family:'Quicksand';
     font-size: 15px;
     margin-top: 60px;
     margin-bottom: 30px;
+
     & span{
         color: #FF67C5B2;
     }
 }
-.teste_interativo{
+
+.teste_interativo {
     text-align: center;
+
     & h2 {
         margin-top: 80px;
         margin-bottom: 40px;
         font-size: 30px;
         font-weight: 400;
     }
+
     & img{
         width: 150px;
         margin: 0 20px;
@@ -24,15 +28,17 @@
     & button{
         background-color: #f8f4ec;
     }
-    
+
     & button:hover {
         cursor: pointer;
         transform: scale(1.05);
         transition: 0.3s ease-in-out;
     }   
 }
-.btn-explorar{
+
+.btn-explorar {
     text-align: center;
+
     & button{
         font-size: 20px;
         font-weight: 600;
@@ -42,14 +48,14 @@
         margin-top: 60px;
         
     }
+
     & button:hover {
         background-color: #bfbfbf;
         cursor: pointer;
     }
-    
 }
+
 .selected img {
     border: 3px solid gray;
     border-radius: 90px;
-
 }
