@@ -37,5 +37,3 @@ pontos.forEach((dot, index) => {
         autoSlide = setInterval(showNextSlide, intervalTime); // Reinicia o intervalo
     });
 });
-
-const cep = document.getElementById('teste');
