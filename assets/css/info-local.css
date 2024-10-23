@@ -69,28 +69,32 @@
 
     & .titulo-secoes {
         font-size: 2.5rem;
-        padding: 1.5rem 8rem;
+        padding: 1.5rem 5rem;
     }
 
-    & .lista-beneficios {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 1.5rem 5rem;
-        margin: auto;
-        gap: 0 50px;
-        max-width: 70%;
+    & .lista {
+        display: flex;
+        justify-content: center;
 
-        & .beneficios {
-            padding: .5em;
-            display: flex;
-            font-size: 1.2em;
-            
+        & .lista-beneficios {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 1.5rem 5rem;
+            gap: 0 100px;
+            max-width: 90%;
 
-            & img {
-                width: 2.5em;
-                margin: 0 1em;
+            & .beneficios {
+                padding: .5em;
+                display: flex;
+                align-items: center;
+                font-size: 1.2em;
+
+                & img {
+                    width: 2.5em;
+                    margin: 0 1em;
+                }
             }
-        }
+        }    
     }
 
     & .outros-servicos {
@@ -100,7 +104,7 @@
         background-color: #FF67C599;
         padding: 1rem 2rem;
         border-radius: 10px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         cursor: pointer;
     }
 
@@ -111,22 +115,22 @@
         border-top: 1px solid rgba(0, 0, 0, 0.3);
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
         padding: 2.5rem 0;
-    
+
         & .div-avaliacao {
-            padding: 20px;
+            padding: 0 20px;
             width: 200px;
-    
+
             & h2 {
                 font-size: 20px;
                 margin-bottom: 10px;
             }
-    
+
             & .estrelas {
                 display: flex;
                 align-items: center;
                 margin-bottom: 10px;
             }
-    
+
             & .barra {
                 background-color: #fff;
                 border-radius: 10px;
@@ -136,32 +140,32 @@
                 overflow: hidden;
                 position: relative;
             }
-    
+
             & .preenchido {
                 background-color: #f7db6a;
                 height: 100%;
                 border-radius: 10px;
             }
-    
+
             & span {
                 font-size: 14px;
                 color: #553e4e;
             }
-    
+
             & button {
                 margin-top: 20px;
                 padding: 10px;
                 background-color: white;
                 border: none;
                 border-radius: 10px;
-                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
                 cursor: pointer;
                 width: 100%;
                 color: #000;
                 font-size: 14px;
             }
         }
-    
+
         & .div-feedback {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -169,7 +173,7 @@
             margin-left: 2rem;
             gap: 3rem 5rem;
             font-size: 1.5rem;
-    
+
             & .feedback-titulo {
                 display: flex;
                 flex-direction: row;
@@ -188,7 +192,7 @@
         height: 30rem;
         display: block;
         margin: auto;
-        box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.7);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
 
     & .collapse {
@@ -202,6 +206,7 @@
         margin-top: 5rem;
         margin-left: auto;
         cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
         & i {
             position: relative;
@@ -214,7 +219,13 @@
             display: none;
         }
 
-        &:hover {
+        &:focus {
+            outline: 2px solid #398ea5;
+            color: #93cbdb9d;
+        }
+
+        &:hover,
+        &:focus {
             width: 200px;
             padding: .5rem;
             border-radius: 10px;
@@ -241,6 +252,106 @@
             & i {
                 display: none;
             }
+        }
+    }
+}
+
+@media (max-width: 975px) {
+    
+}
+@media (max-width: 768px) {
+    .principal {
+        & .section-info-hotel {
+            & .div-carrosel {
+                padding: 0 5rem;
+            }
+        }
+
+        & .lista {
+            display: flex;
+            justify-content: center;
+
+            & .lista-beneficios {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                gap: 0;
+            }
+        }
+
+        & .titulo-secoes {
+            padding: 1rem;
+        }
+
+        & .section-feedback {
+            & .div-avaliacao {
+                align-self: flex-start;
+                padding: 0 1rem;
+            }
+
+            & .div-feedback {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .principal {
+        & .section-info-hotel {
+            & .div-carrosel {
+                padding: 0 2rem;
+                & .carrosel-inner {
+                    & .carrosel-item {
+                        padding: .5rem;
+                    }
+                }
+            }
+        }
+
+        & .p-principal {
+            padding: 2rem;
+        }
+
+        & .lista {
+            padding-bottom: 2rem;
+
+            & .lista-beneficios {
+                display: flex;
+                flex-direction: column;
+
+                & .beneficios {
+                    border-top: 1px solid rgba(0, 0, 0, 0.3);
+
+                    &:first-of-type {
+                        border: none;
+                    }
+                }
+            }
+        }
+
+        & .section-feedback {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            & .div-avaliacao {
+                align-self: center;
+                margin-bottom: 3rem;
+            }
+
+            & .div-feedback {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                text-align: justify;
+            }
+        }
+
+        & iframe {
+            width: 100%;
+            height: 25rem;
         }
     }
 }

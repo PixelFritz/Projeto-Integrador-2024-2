@@ -103,6 +103,11 @@
             &:focus {
                 outline: 1px solid #ffd900;
             }
+
+            & a {
+                font-size: 1.4rem;
+                color: #000;
+            }
         }
     }
 }

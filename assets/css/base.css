@@ -161,7 +161,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 30px 90px;
+        padding: 3rem 9rem;
         width: 100%;
         margin: auto;
         background-color: #93CBDB;
@@ -264,7 +264,31 @@ i:hover {
     transition: 300ms;
 }
 
-@media (max-width: 490px) {
+@media (max-width: 768px) {
+    .principal {
+        & .pesquisa {
+            & .pesquisa-barra {
+                & input {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    .footer {
+        & .infos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 3rem 6rem;
+
+            & .info-footer {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
     .info-principal {
         & .nome-sistema {
             text-align: center;
@@ -320,6 +344,7 @@ i:hover {
         }
 
         & .infos {
+            display: flex;
             flex-direction: column;
             padding: 3em;
 

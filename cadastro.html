@@ -11,6 +11,7 @@
     
     <script src="assets/js/particulas.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="assets/js/cep_cpf.js" defer></script>
 </head>
 
 <body>
@@ -22,33 +23,49 @@
                     <h1>Hos<span>pet</span>agem</h1>
                 </a>
             </div>
+            
             <div class="login-cad-box">
                 <form action="" method="post">
                     <h2 class="titulo-login-cad">Cadastre-se</h2>
                 
                     <label for="nome">Nome: *</label>
-                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+                    <input type="text" name="Nome" id="nome" placeholder="Digite seu nome" required>
                 
-                    <label for="CPF">CPF: *</label>
-                    <input type="text" name="CPF" id="CPF" placeholder="000.000.00-00" maxlength="14" required>
+                    <label for="cpf">CPF: *</label>
+                    <input type="text" name="CPF" id="cpf" placeholder="000.000.00-00" maxlength="14"  oninput="aplicarMascaraCPF(this)" required>
 
-                    <label for="Email">Email: *</label>
-                    <input type="email" name="Email" id="Email" placeholder="Digite seu e-mail" required>
+                    <label for="email">Email: *</label>
+                    <input type="email" name="Email" id="email" autocomplete="email" placeholder="Digite seu e-mail" required>
 
                     <label for="senha">Criar senha: *</label>
-                    <input type="password" name="senha" id="senha" placeholder="Crie sua senha" required>
+                    <input type="password" name="Senha" id="senha" placeholder="Crie sua senha" required>
 
-                    <label for="senha">Confirmar senha: *</label>
-                    <input type="password" name="senha" id="senha" placeholder="Confirme sua senha" required>
+                    <label for="senha-confirma">Confirmar senha: *</label>
+                    <input type="password" name="Senha-confirma" id="senha-confirma" placeholder="Confirme sua senha" required>
 
-                    <label for="Endereço">Endereço: *</label>
-                    <input type="text" name="Endereço" id="Endereço" placeholder="Digite seu endereço" required>
+                    <label for="cep">CEP: *</label>
+                    <input type="text" name="CEP" id="cep" autocomplete="postal-code" placeholder="Digite seu CEP" onblur="pesquisacep(this.value);" required>
+                    
+                    <label for="cep">Logradouro: *</label>
+                    <input type="text" name="Logradouro" id="log" placeholder="Logradouro" required>
 
-                    <label for="Telefone">Telefone: *</label>
-                    <input type="tel" name="Telefone" id="Telefone" placeholder="Digite seu telefone" required>
+                    <label for="cidade">Cidade: *</label>
+                    <input type="text" name="Cidade" id="cidade" placeholder="Digite sua Cidade" required>
+                    
+                    <label for="uf">Estado: *</label>
+                    <input type="text" name="uf" id="uf" placeholder="Digite seu Estado" required>
+
+                    <label for="numero">Número: *</label>
+                    <input type="text" name="Numero" id="" placeholder="Digite o Número" required>
+
+                    <label for="bairro">Bairro: *</label>
+                    <input type="text" name="Bairro" id="bairro" placeholder="Digite seu Bairro" required>
+
+                    <label for="telefone">Telefone: *</label>
+                    <input type="tel" name="Telefone" id="telefone" placeholder="Digite seu telefone" required>
 
                     <label for="data">Data de Nascimento: *</label>
-                    <input type="date" name="data" id="data" placeholder="seu Nascimento" required>
+                    <input type="date" name="Data" id="data" placeholder="seu Nascimento" required>
 
                     <label for="genero">Gênero:</label>
                     <select id="genero" name="genero">
