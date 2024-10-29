@@ -108,6 +108,69 @@
         cursor: pointer;
     }
 
+    .div-reserva {
+        background-color: #fff;
+        width: 40%;
+        margin: 5rem auto 3rem;
+        border-radius: 5px;
+        text-align: center;
+        padding: 1.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+        & .p-reserva-valor {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            width: fit-content;
+            margin: auto;
+            font-size: 1.5rem;
+            padding-bottom: 2rem;
+
+            & span {
+                font-size: 3.5rem;
+                font-weight: 600;
+                padding: 0;
+            }
+        }
+
+        & .data-reserva {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: fit-content;
+            margin: auto;
+
+            & label {
+                font-size: 1.5rem;
+            }
+
+            & input {
+                border-radius: 5px;
+                background-color: rgba(0, 0, 0, 0.05);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                padding: .5rem;
+            }
+        }
+
+        & .btn-reserva {
+            margin: 3rem 0 1rem;
+            padding: 1rem 2rem;
+            font-size: 2rem;
+            background-color: #93CBDB;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+            &:hover,
+            &:focus {
+                background-color: #93cbdb9d;
+            }
+        }
+
+        & .cancelamento {
+            font-size: 1.1rem;
+        }
+    }
+
     .section-feedback {
         display: flex;
         flex-direction: row;
@@ -279,6 +342,10 @@
             }
         }
 
+        & .div-reserva {
+            width: 70%;
+        }
+
         & .titulo-secoes {
             padding: 1rem;
         }
@@ -328,6 +395,10 @@
                     }
                 }
             }
+        }
+
+        & .div-reserva {
+            width: 100%;
         }
 
         & .section-feedback {
