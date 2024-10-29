@@ -12,16 +12,16 @@ h2{
     .infos{
         display: block;
         width: 40vw;
-        height: 4vh;
         margin-bottom: 1rem;
         border-radius: 5px;
+        background-image: url(/assets/imagens/img_perfil/icon_form.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 12px;
+        padding: .7rem;
     }
     .info_tel{
-        display: block;
         width: 15vw;
-        height: 4vh;
-        margin-bottom: 1rem;
-        border-radius: 5px;
     }
 }
 
@@ -34,8 +34,7 @@ h2{
 
     & .cards_pet {
         background-color: #fff;
-        width: 10vw;
-        height: 30vh;
+        width: 15%;
         border-radius: 5px;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
         padding: 10px;
@@ -61,13 +60,9 @@ h2{
         }
     }
     .card_adicionar{
-        background-color: #fff;
-        width: 10vw;
-        height: 30vh;
-        border-radius: 5px;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        padding-top: 5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img{
             width: 6em;
         }
@@ -109,22 +104,44 @@ h2{
 .forma_pagamento{
     width: 122vh;
     
-    div{
+    .div-pagamento{
         background-color: #fff;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         margin-top: 2rem;
-        padding: 1em 0;
+        padding: 1rem;
     }
+    
     span{
         font-size: 1.5em;
         margin-bottom: 1em;
     }
+    
     .bandeira_cartao{
         width: 4em;
     }
+
+    .pagamento-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .cartao-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        p {
+            font-size: 1.5rem;
+            padding: 0 .5rem;
+        }
+
+        .icons-container {
+            display: flex;
+            gap: 15px;
+        }
+    }
     .icons{
         width: 1.5em;
-        margin: 0 3em;
     }
 }
