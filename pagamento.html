@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/pagamento.css">
+
+    <script src="https://kit.fontawesome.com/e8db2f40d0.js" crossorigin="anonymous" defer></script>
+    <script src="assets/js/menu_index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <section class="info-principal">
+            <div class="nome-sistema">
+                <a href="index.html">
+                    <h1>Hos<span>pet</span>agem</h1>
+                </a>
+            </div>
+            <button class="perfil">
+                <a href="login.html">Entrar</a>
+            </button>
+            <button id="menu-btn" class="menu-btn"><i class="fa-solid fa-bars fa-2x"></i></button>
+        </section>
+
+        <section>
+            <nav class="menu-nav menu-hidden" id="menu-nav">
+                <li class="lista-nav">
+                    <a href="login.html" class="menu-hide link-nav entrar">Entrar</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="index.html" class="link-nav">Início</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="como_funciona.html" class="link-nav">Como Funciona</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="sobrenos.html" class="link-nav">Sobre Nós</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="planos_precos.html" class="link-nav">Planos e Preços</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="#" class="link-nav">FAQ</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="teste_interativo.html" class="menu-hide link-nav entrar">Faça o teste</a>
+                </li>
+            </nav>
+        </section>
+    </header>
+
+    <main class="principal">
+        <section class="pesquisa">
+            <div class="pesquisa-barra">
+                <input type="text" placeholder="Digite algo...">
+                <button class="btn-pesquisa">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <button class="btn-filtro">
+                <i class="fa fa-sliders"></i>
+                Filtrar
+            </button>
+        </section>
+
+        <section class="forma_pagamento">
+            <h2 class="titulo_pagamento">Escolha o Método de Pagamento</h2>
+            <p class="p_pagamento">Qual será a forma de pagamento: </p>
+            <div class="div-radio-btn">
+                <div>
+                    <input type="radio" name="pagamento">
+                    <label for="pagamento" class="op_pagamento">Pix<i class="fa-brands fa-pix"></i></label>
+                </div>
+                <div>
+                    <input type="radio" name="pagamento">
+                    <label for="pagamento" class="op_pagamento">Cartão de Débito<i
+                            class="fa-regular fa-credit-card"></i></label>
+                </div>
+                <div>
+                    <input type="radio" name="pagamento">
+                    <label for="pagamento" class="op_pagamento">Cartão de Crédito<i
+                            class="fa-regular fa-credit-card"></i></label>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="dados_cartao">
+            <h2 class="titulo_pagamento">Insira os Dados do Cartão</h2>
+            <form action="">
+                <div class="container_forms">
+                    <div class="itens_forms">
+                        <label class="label_pagamento" for="">Nome do Titular:
+                            <input class="input_dados" type="text">
+                        </label>
+                    </div>
+                    <div class="itens_forms">
+                        <label class="label_pagamento" for="">Número do Cartão:
+                            <input class="input_dados" type="text">
+                        </label>
+                    </div>
+                    <div class="itens_forms">
+                        <div>
+                            <label class="label_pagamento" for="">Data de Validade:</label>
+                            <input type="date" name="" id="">
+                            <label class="label_pagamento" for="">CVV (Código de Segurança):</label>
+                            <input class="cod_cartao" type="text">
+                        </div>
+                    </div>
+                    <div class="itens_forms">
+                        <div class="container_check">
+                            <input class="check_salvar" type="checkbox" name="" id="">
+                            <label class="label_check" for="">Salvar este cartão para futuras transações
+                                (opcional)</label>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_salvar">Salvar Cartão</button>
+            </form>
+        </section>
+        <section>
+            <h2 class="titulo_pagamento">Revisão dos Dados de Pagamento</h2>
+            <p class="nome_hotel"><span>Nome da Hospedagem:</span> Cãotinho Feliz</p>
+            <div class="infos_hospedagem">
+                <div class="cards_infos">
+                    <p><span>Quantos pets para a reserva:</span> 1</p>
+                </div>
+                <div class="cards_infos">
+                    <p><span>Seu Pet cadastrado:</span> Simba</p>
+                </div>
+                <div class="cards_infos">
+                    <p><span>Data:</span> 01/11/2024 - 05/11/2024</p>
+                </div>
+                <div class="cards_infos">
+                    <p><span>Horário de entrada e de saída:</span> 14:00 - 11:00</p>
+                </div>
+            </div>
+
+            <div class="servicos_extras">
+                <h3 class="subtitulo_servico">Serviços Extras:</h3>
+                <div class="container_sevicos">
+                    <div class="itens_servicos">
+                        <div class="cards_servicos">
+                            <img class="icons_servicos" src="assets/imagens/icons/banho-tosa-icon.svg">
+                            <p class="tipo_servico">Banho e tosa</p>
+                        </div>
+                        <p class="preco_servicos">R$ 30,00</p>
+                    </div>
+                    <div class="itens_servicos">
+                        <div class="cards_servicos">
+                            <img class="icons_servicos" src="assets/imagens/icons/passeio-icon.svg" alt="">
+                            <p class="tipo_servico">Passeio ao ar livre</p>
+                        </div>
+                        <p class="preco_servicos"> R$ 20,00 por dia (4 dias = R$ 80,00)</p>
+                    </div>
+                    <div class="itens_servicos">
+                        <div class="cards_servicos">
+                            <img class="icons_servicos" src="assets/imagens/icons/cuidados-icon.svg" alt="">
+                            <p class="tipo_servico">Cuidados Personalizados</p>
+                        </div>
+                        <p class="preco_servicos"> R$ 50,00 (taxa fixa)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preco_final">
+                <h3 class="subtitulo_pagamento">Preço Total:</h3>
+                <p class="p_preco_final">Diária da Hospedagem: R$ 480,00 + Serviços Extras: R$ 160,00</p>
+                <div class="valor_final">
+                    <p>Valor Final:</p>
+                    <p><span>R$ 704,00</span></p>
+                </div>
+                <button class="btn_confirmar">Confirmar pagamento</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="img-footer">
+            <img src="assets/imagens/cachorro.svg" alt="" class="cachorro-footer">
+        </section>
+        <section class="infos">
+            <section class="info-footer">
+                <h2>Sobre Nós</h2>
+                <li><a href="" class="info-links">Sobre Nós</a></li>
+                <li><a href="" class="info-links">Hospedar um Pet</a></li>
+                <li><a href="" class="info-links">Contato</a></li>
+                <li><a href="" class="info-links">Termos de Serviço</a></li>
+                <li><a href="" class="info-links">Política de Privacidade</a></li>
+            </section>
+
+            <section class="info-footer">
+                <h2>Suporte</h2>
+                <li>
+                    <p>Email:</p>
+                </li>
+                <li><a href="" class="info-links">contato@hospedagemdepets.com</a></li>
+                <li>
+                    <p>Telefone:</p>
+                </li>
+                <li><a href="" class="info-links">(XX) XXXXX-XXXX</a></li>
+            </section>
+
+            <section class="info-footer">
+                <h2>Redes Sociais</h2>
+                <div class="icon-footer">
+                    <i class="fa-brands fa-instagram fa-3x"></i>
+                    <i class="fa-brands fa-facebook fa-3x"></i>
+                </div>
+            </section>
+        </section>
+    </footer>
+</body>
+
+</html>
