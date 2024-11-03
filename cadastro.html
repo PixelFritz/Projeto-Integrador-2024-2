@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title> 
-    
+    <title>Cadastro</title>
+
     <link rel="shortcut icon" href="assets/imagens/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/login-cad.css">
-    
+
     <script src="assets/js/particulas.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="assets/js/cep_cpf.js" defer></script>
+    <script src="https://kit.fontawesome.com/e8db2f40d0.js" crossorigin="anonymous" defer></script>
+    <script src="assets/js/paginacao.js" defer></script>
+    <script src="assets/js/cidade-estado.js" defer></script>
 </head>
 
 <body>
@@ -23,70 +27,192 @@
                     <h1>Hos<span>pet</span>agem</h1>
                 </a>
             </div>
-            
+
             <div class="login-cad-box">
                 <form action="" method="post">
-                    <h2 class="titulo-login-cad">Cadastre-se</h2>
-                
-                    <label for="nome">Nome: *</label>
-                    <input type="text" name="Nome" id="nome" placeholder="Digite seu nome" required>
-                
-                    <label for="cpf">CPF: *</label>
-                    <input type="text" name="CPF" id="cpf" placeholder="000.000.00-00" maxlength="14"  oninput="aplicarMascaraCPF(this)" required>
+                    <div class="pagina ativo" id="pagina-1">
+                        <h2 class="titulo-login-cad">Cadastre-se</h2>
 
-                    <label for="email">Email: *</label>
-                    <input type="email" name="Email" id="email" autocomplete="email" placeholder="Digite seu e-mail" required>
+                        <div class="div-inputs input">
+                            <label for="nome">Nome:</label>
+                            <div class="icone-input">
+                                <i class="fa-solid fa-user borda-i"></i>
+                                <input type="text" name="Nome" id="nome" placeholder="Digite seu nome" required>
+                            </div>
+                        </div>
 
-                    <label for="senha">Criar senha: *</label>
-                    <input type="password" name="Senha" id="senha" placeholder="Crie sua senha" required>
+                        <div class="div-inputs input">
+                            <label for="cpf">CPF:</label>
+                            <div class="icone-input">
+                                <i class="fa-solid fa-id-card borda-i"></i>
+                                <input type="text" name="CPF" id="cpf" placeholder="000.000.00-00" maxlength="14"
+                                    oninput="aplicarMascaraCPF(this)" required>
+                            </div>
+                        </div>
 
-                    <label for="senha-confirma">Confirmar senha: *</label>
-                    <input type="password" name="Senha-confirma" id="senha-confirma" placeholder="Confirme sua senha" required>
+                        <div class="div-inputs input">
+                            <label for="email">Email:</label>
+                            <div class="icone-input">
+                                <i class="fa-solid fa-envelope borda-i"></i>
+                                <input type="email" name="Email" id="email" autocomplete="email"
+                                    placeholder="Digite seu e-mail" required>
+                            </div>
+                        </div>
 
-                    <label for="cep">CEP: *</label>
-                    <input type="text" name="CEP" id="cep" autocomplete="postal-code" placeholder="Digite seu CEP" onblur="pesquisacep(this.value);" required>
-                    
-                    <label for="cep">Logradouro: *</label>
-                    <input type="text" name="Logradouro" id="log" placeholder="Logradouro" required>
+                        <div class="div-inputs input">
+                            <label for="senha">Criar senha:</label>
+                            <div class="icone-input">
+                                <i class="fa-solid fa-lock borda-i"></i>
+                                <input type="password" name="Senha" id="senha" placeholder="Crie sua senha" required>
+                            </div>
+                        </div>
 
-                    <label for="cidade">Cidade: *</label>
-                    <input type="text" name="Cidade" id="cidade" placeholder="Digite sua Cidade" required>
-                    
-                    <label for="uf">Estado: *</label>
-                    <input type="text" name="uf" id="uf" placeholder="Digite seu Estado" required>
+                        <div class="div-inputs input">
+                            <label for="senha-confirma">Confirmar senha:</label>
+                            <div class="icone-input">
+                                <i class="fa-solid fa-lock borda-i"></i>
+                                <input type="password" name="Senha-confirma" id="senha-confirma"
+                                    placeholder="Confirme sua senha" required>
+                            </div>
+                        </div>
 
-                    <label for="numero">Número: *</label>
-                    <input type="text" name="Numero" id="" placeholder="Digite o Número" required>
+                        <div class="termos3">
+                            <input type="checkbox" id="termos" required>
+                            <label for="termos">Eu li e concordo com os <a href="#" class="link-termos">Termos de
+                                    Uso</a> e a <a href="#" class="link-termos">Política de Privacidade</a>.</label>
+                        </div>
 
-                    <label for="bairro">Bairro: *</label>
-                    <input type="text" name="Bairro" id="bairro" placeholder="Digite seu Bairro" required>
+                        <a id="proximo" onclick="proximaPagina()">Próximo <i class="fa-solid fa-angle-right"></i></a>
 
-                    <label for="telefone">Telefone: *</label>
-                    <input type="tel" name="Telefone" id="telefone" placeholder="Digite seu telefone" required>
-
-                    <label for="data">Data de Nascimento: *</label>
-                    <input type="date" name="Data" id="data" placeholder="seu Nascimento" required>
-
-                    <label for="genero">Gênero:</label>
-                    <select id="genero" name="genero">
-                        <option value="..." selected disabled></option>
-                        <option value="Masculino">Masculino</option>
-                        <option value="Feminino">Feminino</option>
-                        <option value="Outros">Outros</option>
-                        <option value="Prefiro não dizer">Prefiro não dizer</option>
-                    </select>
-
-                    <div class="termos3">
-                        <input type="checkbox" id="termos" required>
-                        <label for="termos">"Eu li e concordo com os [<a href="#">Termos de Uso</a>] e a [<a href="#">Política de Privacidade</a>].</label>
+                        <p class="p-login-cad">Já possui uma conta? <a href="login.html" tabindex="0">Faça seu
+                                login.</a>
+                        </p>
                     </div>
 
-                    <p class="p-login-cad">Já possui uma conta? <a href="login.html" tabindex="0">Faça seu login.</a></p>
+                    <div class="pagina" id="pagina-2">
+                        <h2 class="titulo-login-cad">Informações Pessoais</h2>
 
-                    <button>Finalizar meu cadastro</button>
+                        <div class="div-inputs input">
+                            <label for="telefone">Telefone:</label>
+                            <div class="icone-input">
+                                <i class="fa-solid fa-phone borda-i"></i>
+                                <input type="tel" name="Telefone" id="telefone" placeholder="Digite seu telefone"
+                                    required>
+                            </div>
+                        </div>
+
+
+                        <div class="div-dupla">
+                            <div class="div-inputs input">
+                                <label for="data">Data de Nascimento:</label>
+                                <div class="icone-input">
+                                    <i class="fa-solid fa-calendar borda-i"></i>
+                                    <input type="date" name="Data" id="data" required>
+                                </div>
+                            </div>
+
+                            <div class="div-inputs input">
+                                <label for="genero">Gênero:</label>
+                                <div class="icone-input">
+                                    <i class="fa-solid fa-user borda-i"></i>
+                                    <select id="genero" class="select name=" genero">
+                                        <option value="default" selected disabled>...</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Feminino">Feminino</option>
+                                        <option value="Outros">Outros</option>
+                                        <option value="Prefiro não dizer">Prefiro não dizer</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="proximo-anterior">
+                            <a id="anterior" onclick="paginaAnterior()"><i class="fa-solid fa-angle-left"></i>
+                                Anterior</a>
+                            <a id="proximo" onclick="proximaPagina()">Próximo <i
+                                    class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="pagina" id="pagina-3">
+                        <h2 class="titulo-login-cad">Informações de Endereço</h2>
+
+                        <div class="div-inputs input">
+                            <label for="rua">Logradouro:</label>
+                            <div class="icone-input">
+                                <i class="fa-solid fa-road borda-i"></i>
+                                <input type="text" name="rua" id="log" placeholder="Logradouro" required>
+                            </div>
+                        </div>
+
+                        <div class="div-dupla">
+                            <div class="div-inputs input">
+                                <label for="numero">Número:</label>
+                                <div class="icone-input">
+                                    <i class="fa-solid fa-hashtag borda-i"></i>
+                                    <input type="text" name="numero" id="" placeholder="Digite o Número" required>
+                                </div>
+                            </div>
+
+                            <div class="div-inputs input">
+                                <label for="bairro">Bairro:</label>
+                                <div class="icone-input">
+                                    <i class="fa-solid fa-home borda-i"></i>
+                                    <input type="text" name="bairro" id="bairro" placeholder="Digite seu Bairro"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-inputs input">
+                            <label for="complemento">Complemento:</label>
+                            <div class="icone-input">
+                                <i class="fa-solid fa-plus-square borda-i"></i>
+                                <input type="text" name="complemento" id="complemento"
+                                    placeholder="Digite o Complemento">
+                            </div>
+                        </div>
+
+                        <div class="div-dupla">
+                            <div class="div-inputs input">
+                                <label for="cidade">Cidade:</label>
+                                <div class="icone-input">
+                                    <i class="fa-solid fa-city borda-i"></i>
+                                    <select name="cidade" id="cidade" class="select" required>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="div-inputs input">
+                                <label for="uf">Estado:</label>
+                                <div class="icone-input">
+                                    <i class="fa-solid fa-globe borda-i"></i>
+                                    <select name="uf" id="uf" class="select" required>
+                                        <option value="default" selected disabled>Selecione o seu estado</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-inputs input">
+                            <label for="cep">CEP:</label>
+                            <div class="icone-input">
+                                <i class="fa-solid fa-map-pin borda-i"></i>
+                                <input type="text" name="CEP" id="cep" autocomplete="postal-code"
+                                    placeholder="Digite seu CEP" onblur="pesquisacep(this.value);" required>
+                            </div>
+                            <a href="https://buscacepinter.correios.com.br/app/localidade_logradouro/index.php#"
+                                class="cep">Não sabe o CEP? Busque aqui. <i class="fa-solid fa-question-circle"></i></a>
+                        </div>
+
+                        <a id="anterior" onclick="paginaAnterior()"><i class="fa-solid fa-angle-left"></i> Anterior</a>
+
+                        <button>Finalizar meu cadastro</button>
+                    </div>
                 </form>
             </div>
         </section>
-    </main>    
+    </main>
 </body>
+
 </html>
