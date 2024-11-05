@@ -3,7 +3,8 @@
         text-align: center;
 
         & .nome-hotel {
-            font-size: 4rem;
+            font-size: 3.5rem;
+            padding-top: 2rem;
         }
         
         & .div-carrosel {
@@ -58,17 +59,16 @@
         border-top: 1px solid rgba(0, 0, 0, 0.3);
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
         padding: 2.5rem 5rem;
-        margin: 1em 0;
-        font-size: 1.7em;
+        margin: 1rem 0;
         text-align: justify;
     }
 
     & .p-texto, .patinhas {
-        font-size: 1.5em;
+        font-size: 1.7rem;
     }
 
     & .titulo-secoes {
-        font-size: 2.5rem;
+        font-size: 3rem;
         padding: 1.5rem 5rem;
     }
 
@@ -84,14 +84,13 @@
             max-width: 90%;
 
             & .beneficios {
-                padding: .5em;
+                padding: .5rem;
                 display: flex;
                 align-items: center;
-                font-size: 1.2em;
 
                 & img {
-                    width: 2.5em;
-                    margin: 0 1em;
+                    width: 2.5rem;
+                    margin: 0 1rem;
                 }
             }
         }    
@@ -100,12 +99,9 @@
     & .outros-servicos {
         display: block;
         margin: 2rem auto;
-        font-size: 1.5rem;
         background-color: #FF67C599;
-        padding: 1rem 2rem;
         border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        cursor: pointer;
+        box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
     }
 
     .div-reserva {
@@ -115,7 +111,7 @@
         border-radius: 5px;
         text-align: center;
         padding: 1.5rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.7);
 
         & .p-reserva-valor {
             display: flex;
@@ -123,7 +119,6 @@
             text-align: left;
             width: fit-content;
             margin: auto;
-            font-size: 1.5rem;
             padding-bottom: 2rem;
 
             & span {
@@ -141,24 +136,22 @@
             margin: auto;
 
             & label {
-                font-size: 1.5rem;
+                font-size: 1.7rem;
             }
 
             & input {
                 border-radius: 5px;
                 background-color: rgba(0, 0, 0, 0.05);
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
                 padding: .5rem;
             }
         }
 
         & .btn-reserva {
             margin: 3rem 0 1rem;
-            padding: 1rem 2rem;
-            font-size: 2rem;
             background-color: #93CBDB;
             border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
 
             &:hover,
             &:focus {
@@ -180,18 +173,18 @@
         padding: 2.5rem 0;
 
         & .div-avaliacao {
-            padding: 0 20px;
-            width: 200px;
+            padding: 0 2rem;
+            width: 250px;
 
-            & h2 {
-                font-size: 20px;
-                margin-bottom: 10px;
+            & h3 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
             }
 
             & .estrelas {
                 display: flex;
                 align-items: center;
-                margin-bottom: 10px;
+                margin-bottom: 1rem;
             }
 
             & .barra {
@@ -199,7 +192,7 @@
                 border-radius: 10px;
                 height: 10px;
                 flex: 1;
-                margin-right: 10px;
+                margin-right: 1rem;
                 overflow: hidden;
                 position: relative;
             }
@@ -211,21 +204,17 @@
             }
 
             & span {
-                font-size: 14px;
+                font-size: 1.5rem;
                 color: #553e4e;
             }
 
             & button {
-                margin-top: 20px;
-                padding: 10px;
+                margin-top: 2rem;
                 background-color: white;
                 border: none;
                 border-radius: 10px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-                cursor: pointer;
                 width: 100%;
                 color: #000;
-                font-size: 14px;
             }
         }
 
@@ -243,7 +232,7 @@
                 margin-bottom: 1rem;
                 
                 & .patinhas {
-                    font-size: 1.5rem;
+                    font-size: 1.7rem;
                     margin: 0 1rem;
                 }
             }
@@ -255,7 +244,7 @@
         height: 30rem;
         display: block;
         margin: auto;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
     }
 
     & .collapse {
@@ -268,8 +257,7 @@
         display: block;
         margin-top: 5rem;
         margin-left: auto;
-        cursor: pointer;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
 
         & i {
             position: relative;
@@ -319,12 +307,13 @@
     }
 }
 
-@media (max-width: 975px) {
-    
-}
 @media (max-width: 768px) {
     .principal {
         & .section-info-hotel {
+            & .nome-hotel {
+                font-size: 3rem;
+            }
+
             & .div-carrosel {
                 padding: 0 5rem;
             }
@@ -366,6 +355,10 @@
 @media (max-width: 480px) {
     .principal {
         & .section-info-hotel {
+            & .nome-hotel {
+                font-size: 2.5rem;
+            }
+
             & .div-carrosel {
                 padding: 0 2rem;
                 & .carrosel-inner {

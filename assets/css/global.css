@@ -33,3 +33,19 @@ a {
         text-decoration: underline;
     }
 }
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    padding: 1rem 4.5rem;
+    cursor: pointer;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+p, li, button {
+    font-size: 1.7rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}

@@ -15,10 +15,6 @@
                 width: 60%;
                 text-align: center;
             }
-
-            & p {
-                font-size: 1.5rem;
-            }
         }
     }
 
@@ -37,7 +33,7 @@
     
                 & img {
                     width: 100%;
-                    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.7);
+                    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
                     border-radius: 10px;
                 }
 
@@ -88,9 +84,7 @@
         }
 
         & .btn-teste {
-            margin: 2em;
-            padding: .4em 1.3em;
-            font-size: 1.7rem;
+            margin-top: 2rem;
             background-color: #FFE03980;
             border-radius: 10px;
 
@@ -113,24 +107,21 @@
 }
 
 .h2-titulo {
-    font-size: 2.5rem;
-    font-family: "Quicksand", sans-serif;
+    font-size: 3rem;
     margin-bottom: 1em;
-    font-weight: 400;
-}
-
-.p-texto, .valor {
-    font-size: 1.5rem
-
 }
 
 /* css: main como funciona */
 .como_funciona {
-    width: 100%; 
-    text-align: left; 
-    font-size: 17px;
-    font-family: 'Quicksand',sans-serif;
-    margin-top: 3em;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+
+    & .titulo_comofunciona {
+        text-align: center;
+        padding: 2rem 0 1rem;
+        font-size: 3.5rem;
+    }
 
     & span{
         font-weight: bold;
@@ -186,6 +177,16 @@
                 }
             }
         }
+
+        & .h2-titulo {
+            font-size: 2.5rem;
+        }
+    }
+
+    .como_funciona {
+        & .titulo_comofunciona {
+            font-size: 3rem;
+        }
     }
 }
 
@@ -217,6 +218,19 @@
                     margin: 1.5em;
                 }
             }
+        }
+
+        & .h2-titulo {
+            text-align: center;
+            font-size: 2rem;
+        }   
+    }
+
+    .como_funciona {
+        width: 100%;
+
+        & .titulo_comofunciona {
+            font-size: 2.5rem;
         }
     }
 }

@@ -27,7 +27,8 @@
         width: 6em;
         height: 2em;
         border-radius: 20px;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+        padding: 0;
 
         &:hover {
             background-color: #ffd900a1;
@@ -47,10 +48,10 @@
 
     & .menu-btn {
         display: none;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         background: none;
         border: none;
-        cursor: pointer;
+        box-shadow: none;
     }
 }
 
@@ -64,7 +65,8 @@
         & .link-nav {
             color: black;
             text-decoration: 1px underline #FF67C5B2;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
+            font-family: 'Open Sans', sans-serif;
 
             &:hover {
                 text-decoration: 1px underline #93CBDB;
@@ -86,13 +88,13 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin: 2em;
+        margin: 2rem;
 
         & .pesquisa-barra {
             & input {
-                width: 20em;
+                width: 20rem;
                 border-right: 1px solid #93CBDB;
-                padding: 0.3em 0.7em;
+                padding: 0.56rem 0.7rem;
                 border-radius: 10px 0 0 10px;
 
                 &:focus {
@@ -101,14 +103,16 @@
             }
 
             & .btn-pesquisa {
-                padding: 0.3em;
-                padding-right: 20px;
-                margin-right: 25px;
-                width: 1.5em;
+                padding: 0.5rem;
+                padding-right: 2rem;
+                margin-right: 2.5rem;
+                width: 1.5rem;
                 position: relative;
-                right: 2.5px;
+                right: 3px;
                 border-radius: 0 10px 10px 0;
                 background-color: #FFF;
+                font-size: 1.5rem;
+                box-shadow: none;
 
                 &:hover {
                     background-color: #0000000a;
@@ -128,6 +132,8 @@
             right: 2.5px;
             border-radius: 10px;
             background-color: #FFF;
+            font-size: 1.5rem;
+            box-shadow: none;
 
             &:hover {
                 background-color: #0000000a;
