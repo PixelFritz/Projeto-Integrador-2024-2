@@ -52,11 +52,11 @@
     padding: 15px 60px;
     border-radius: 10px;
     margin-top: 60px;
+    cursor: pointer;
 }
 
 .btn-explorar button:hover {
     background-color: #bfbfbf;
-    cursor: pointer;
 }
 
 .selected img {
