@@ -1,0 +1,164 @@
+.principal{
+    & .titulo_pagamento{
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 5rem;
+
+    }
+
+    & .p_pagamento{
+        font-size: 1.7rem;
+        margin: 2rem 0;
+    }
+
+    & .op_pagamento{
+        font-size: 1.5rem;
+            margin: 0 .5rem;
+
+            & i {
+                margin: .5rem 1rem;
+            }
+    }
+    & .container_forms{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+        margin: 5rem 0;
+    }
+    & .itens_forms{
+        display: flex;
+        flex-direction: column;
+
+        & .label_pagamento{
+            font-size: 1.5rem;
+        }
+        & .cod_cartao{
+            width: 6rem;
+            padding: .4rem .1rem;
+        }
+        & .input_dados{
+            width: 40rem;
+            padding: .4rem .1rem;
+        }
+        
+        & .container_check{
+            display: flex;
+            align-items: center;
+        }
+        & .check_salvar{
+            width: 1em;
+        }
+        & .label_check{
+            font-size: 1.2rem;
+        }
+        
+    }
+    & .btn_salvar{
+        display: block;
+        margin: auto;
+        background-color: #93CBDB;
+        color: #fff;
+        font-size: 2rem;
+        padding: 0.8rem 4rem;
+        border-radius: 0.5rem;
+    }
+
+    & .nome_hotel{
+        font-size: 1.3rem;
+        margin: 3rem 0;
+        & span{
+            font-weight: 600;
+        }
+    }
+
+    & .infos_hospedagem{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        
+        & .cards_infos{
+            border: .1em solid #B0B0B0E5;
+            background-color: #fff;
+            padding: 1em 1.5em;
+            width: 25rem;
+            & p{
+                font-size: 1.5rem;
+            }
+            & span{
+                font-weight: 600;
+            }
+
+        }
+        
+    }
+    & .servicos_extras{
+        & .subtitulo_servico{
+            text-align: center;
+            font-size: 1.4rem;
+            margin: 5rem 0 3rem;
+        }
+        
+        & .container_sevicos{
+            display: flex;
+            gap: 3rem;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        & .cards_servicos{
+            background-color: #93CBDB4D;
+            display: flex;
+            width: 20rem;
+            align-items: stretch;
+            justify-content: flex-start;
+            gap: 1rem;
+            padding: .5rem 2rem;
+            border-radius: .3rem;
+            & .icons_servicos{
+                width: 2rem;
+            }
+            & .tipo_servico{
+                font-size: 1.7rem;
+            }
+        }
+        & .preco_servicos{
+            text-align: center;
+        }
+    }
+
+    & .preco_final{
+        text-align: center;
+        
+        & .subtitulo_pagamento{
+            font-size: 1.4rem;
+        }
+        & .p_preco_final{
+            font-size: 1.4rem;
+            margin-top: 2rem;
+        }
+
+        & .valor_final{
+            background-color: #FFE03980;
+            width: 15rem;
+            margin: auto;
+            padding: 1rem;
+            border-radius: .3rem;
+            margin-top: 3rem;
+            & p{
+                font-size: 1.3rem;
+            }
+            & span{
+                font-weight: 600;
+                font-size: 1.7rem;
+            }
+        }
+    }
+    & .btn_confirmar{
+        background-color: #93CBDB;
+        color: #fff;
+        font-size: 2.5rem;
+        padding: 1rem 2rem;
+        border-radius: .4rem;
+        margin-top: 5rem;
+    }
+}

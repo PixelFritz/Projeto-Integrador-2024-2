@@ -46,6 +46,7 @@ h2{
         
         .delete{
             position: absolute;
+            width: 1.5rem;
 
         }
 
@@ -106,6 +107,7 @@ h2{
     
     .div-pagamento{
         background-color: #fff;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         margin-top: 2rem;
         padding: 1rem;
@@ -145,3 +147,4 @@ h2{
         width: 1.5em;
     }
 }
+
