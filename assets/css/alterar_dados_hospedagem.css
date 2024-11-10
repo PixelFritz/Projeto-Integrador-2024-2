@@ -1,0 +1,268 @@
+.container{
+    margin: 100px;
+    margin-top: -10px;
+}
+
+body {
+    font-size: 25px; 
+    line-height: 1.5; 
+    font-weight: lighter;
+} 
+
+h3 {
+    font-size: 40px; 
+    text-align: center;
+    margin-bottom: 50px;
+    color: #000000;
+} 
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+    font-weight: lighter;
+}
+
+.input-nome {
+    font-size: 20px;
+    width: 300px; 
+    padding: 5px;
+    border-radius: 10px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+.input-descricao {
+    font-size: 20px;
+    width: 100%;
+    height: 180px; 
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom:30px;
+}
+
+
+.input-valor {
+    font-size: 20px;
+    width: 200px; 
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom:30px;
+    
+}
+.input-dias {
+    font-size: 20px;
+    width: 150px; 
+    padding: 8px;
+    border-radius: 10px;
+ 
+}
+
+.dias{
+    font-size: 20px;
+    max-width: 20px;
+    padding: 15px;
+    border-radius: 10px;
+
+}
+
+.horario {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 5px;
+}
+
+.horario label {
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+.input-horario-inicio,
+.input-horario-final {
+    font-size: 20px;
+    width: 150px;
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 20px;
+
+}
+
+
+
+.input-cep {
+    width: 110px; 
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom:30px;
+    
+}
+
+.input-endereço {
+    width:480px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+}  
+
+.NBC{
+    display: flex;
+    align-items: center; 
+    gap: 15px;
+
+}
+
+.input-numero {
+    width: 50px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    
+}
+
+.input-bairro {
+    width: 200px; 
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.input-cidade {
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+
+.mapa{
+    width: 100%;
+    border-radius: 8px;
+    margin: 20px auto;
+    height: 400px;
+    overflow: hidden;
+    max-width: 800px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+} 
+
+.fotos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.foto-upload-1 {
+    width: 500px;
+    height: 500px;
+    background-color: #e9e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #999;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.foto-upload-2,
+.foto-upload-3,
+.foto-upload-4,
+.foto-upload-5,
+.foto-upload-6,
+.foto-upload-7,
+.foto-upload-8,
+.foto-upload-9,
+.foto-upload-10 {
+    width: 250px; 
+    height:250px; 
+    background-color: #e9e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #999;
+    border-radius: 10px; 
+    cursor: pointer;
+    margin-bottom: 10px; 
+} 
+
+
+.servicos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    
+
+}
+
+.servicos button {
+    padding: 5px 10px;
+    background-color: #e0f3eb;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #555;
+    font-size: 0.9em;
+    border-radius: 10px;
+}
+.div-servicos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem 3rem;
+    margin: 1rem auto 2rem;
+    width: 80%;
+
+     .servicos-btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: .5rem;
+        background-color: #f8f4ec;
+        border-radius: 7px;
+        border: 1px solid #ff67c5a2;
+        
+        &:hover {
+            background-color: #fff;
+        }
+        
+        &.ativo {
+            background-color: #93CBDB4D;
+            border: 1px solid #93CBDB;
+        }
+
+        & img {
+            width: 3.2rem;
+            margin: 0 1rem;
+        }
+    }
+}
+
+.btn-salvar {
+    display: block; 
+    width: 400px; 
+    height: 80px; 
+    padding: 10px; 
+    margin: 20px auto; 
+    background-color: #93CBDB; 
+    border: none; 
+    border-radius: 10px; 
+    color: white; 
+    font-size: 1em; 
+    cursor: pointer; 
+    margin-top:150px;
+}
+
+
+.btn-salvar:hover {
+    background-color: #82b0a2;
+}

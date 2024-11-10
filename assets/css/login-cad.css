@@ -161,7 +161,7 @@ form {
 .termos3{
     display: flex;
     align-items: baseline;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.2rem;
 
     & #termos{
         width: 15px;

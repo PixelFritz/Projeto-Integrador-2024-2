@@ -1,16 +1,27 @@
-h2{
+h2 {
     font-size: 3rem;
     font-weight: 100;
-    font-family: 'Quicksand',sans-serif;
+    font-family: 'Quicksand', sans-serif;
     margin-top: 10rem;
 }
-.info_usuario{
-    label{
-        font-size: 1.8em;
+
+.info_usuario {
+    display: flex;
+    flex-direction: column;
+
+    .itens_usuario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    label {
+        font-size: 1.8rem;
         font-weight: 100;
     }
-    .infos{
-        display: block;
+
+    .infos {
+        /* display: flex; */
         width: 40vw;
         margin-bottom: 1rem;
         border-radius: 5px;
@@ -20,7 +31,8 @@ h2{
         background-size: 12px;
         padding: .7rem;
     }
-    .info_tel{
+
+    .info_tel {
         width: 15vw;
     }
 }
@@ -32,92 +44,101 @@ h2{
     margin-top: 2rem;
 
 
+
     & .cards_pet {
         background-color: #fff;
-        width: 15%;
+        width: 15rem;
         border-radius: 5px;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
         padding: 10px;
         display: flex;
         flex-direction: column;
-        align-items: flex-start; /* Alinha conteúdo à esquerda */
-        text-align: left; /* Garante o alinhamento à esquerda para textos */
+        align-items: flex-start;
+        /* Alinha conteúdo à esquerda */
+        text-align: left;
+        /* Garante o alinhamento à esquerda para textos */
 
-        
-        .delete{
+
+        .delete {
             position: absolute;
+            width: 1.5rem;
 
         }
 
         .perfil_pet {
-            width: 6em; 
-            align-self: center; 
+            width: 6em;
+            align-self: center;
             margin-bottom: 10px;
         }
-        
+
         p {
             margin: 4px 0;
         }
     }
-    .card_adicionar{
+
+    .card_adicionar {
         display: flex;
         justify-content: center;
         align-items: center;
-        img{
+
+        img {
             width: 6em;
         }
     }
 }
 
-.historico{
-    h2{
+.historico {
+    h2 {
         margin-bottom: 2rem;
     }
-    .conteiner_historico{
+
+    .conteiner_historico {
+        display: flex;
+        justify-content: space-between;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        width: 60%;
         background-color: #fff;
         border-radius: 5px;
+        padding: 1rem;
     }
-    h4{
+
+    h4 {
         font-weight: 100;
         font-size: 1.6em;
         margin-bottom: 1rem;
     }
-    p{
-        font-size: 1.2em;
-        margin-bottom: 2rem ;
-    }
-    div{
-        display: inline-block;
-        margin: 0 1em 1em;
 
+    p {
+        font-size: 1.2em;
+        margin-bottom: 2rem;
     }
-    .data_reserva{
-        padding: 0 20em;
-    }
-    img{
+
+    .data_reserva {}
+
+    img {
         width: 1em;
         margin-left: 2em;
     }
 }
 
-.forma_pagamento{
-    width: 122vh;
-    
-    .div-pagamento{
+.forma_pagamento {
+
+    .div-pagamento {
         background-color: #fff;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
+        width: 60%;
         margin-top: 2rem;
         padding: 1rem;
     }
-    
-    span{
-        font-size: 1.5em;
-        margin-bottom: 1em;
+
+    span {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
-    
-    .bandeira_cartao{
-        width: 4em;
+
+    .bandeira_cartao {
+        width: 4rem;
     }
 
     .pagamento-container {
@@ -125,12 +146,12 @@ h2{
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-
         .cartao-container {
             display: flex;
             flex-direction: row;
             align-items: center;
         }
+
         p {
             font-size: 1.5rem;
             padding: 0 .5rem;
@@ -141,7 +162,41 @@ h2{
             gap: 15px;
         }
     }
-    .icons{
-        width: 1.5em;
+
+    .icons {
+        width: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 480px) {
+    h2 {
+        text-align: center;
+    }
+    .infos {
+        margin: 0 auto 1rem;
+    }
+    .info_usuario{
+        text-align: center;
+        justify-content: center;
+    } 
+    .historico {
+        .conteiner_historico{
+            width: 100%;
+            gap: 1rem;
+    
+        }
+        
+    }
+    .forma_pagamento{
+        .div-pagamento{
+            width: 100%;
+        }
+    }
+    .cards_conteiner{
+        .card_adicionar{
+            height: 20rem;
+        }
     }
 }

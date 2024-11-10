@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/cadastrehotel.css">
+
+    <script src="https://kit.fontawesome.com/e8db2f40d0.js" crossorigin="anonymous" defer></script>
+    <script src="assets/js/menu_index.js" defer></script>
+</head>
+<body>
+    <header>
+        <section class="info-principal">
+            <div class="nome-sistema">
+                <a href="index.html"><h1>Hos<span>pet</span>agem</h1></a>
+            </div>
+            <button class="perfil">
+                <a href="login.html">Entrar</a>
+            </button>
+            <button id="menu-btn" class="menu-btn"><i class="fa-solid fa-bars fa-2x"></i></button>
+        </section>
+
+        <section>
+            <nav class="menu-nav menu-hidden" id="menu-nav">
+                <li class="lista-nav">
+                    <a href="login.html" class="menu-hide link-nav entrar">Entrar</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="index.html" class="link-nav">Início</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="como_funciona.html" class="link-nav">Como Funciona</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="sobrenos.html" class="link-nav">Sobre Nós</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="planos_precos.html" class="link-nav">Planos e Preços</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="#" class="link-nav">FAQ</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="teste_interativo.html" class="menu-hide link-nav entrar">Faça o teste</a>
+                </li>
+            </nav>
+        </section>
+    </header>
+
+    <main class="principal">
+        <section class="pesquisa">
+            <div class="pesquisa-barra">
+                <input type="text" placeholder="Digite algo...">
+                <button class="btn-pesquisa">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <button class="btn-filtro">
+                <i class="fa fa-sliders"></i>
+                Filtrar
+            </button>
+        </section>
+    </main>
+
+    <div class="container">
+        <h3> Editar Dados da sua Hospedagem </h3>
+
+        <form>
+            <label for="nome">Nome da hospedagem</label>
+            <input type="text" id="nome" class="input-nome" value="Cãotinho Feliz"><img src="assets/css/Imagens/icons/editar.svg" alt="">
+
+            <label for="descricao">Descrição da hospedagem</label>
+            <textarea id="descricao" class="input-descricao" placeholder="Fale mais...">Hospedagem segura e divertida para o seu pet. Oferecemos passeios, brincadeiras e muito carinho!</textarea>
+
+            <label for="valor">Defina o valor inicial</label>
+            <input type="text" id="valor" class="input-valor" placeholder="R$" value="150,00">
+
+            <label for="horario"> Horários de funcionamento</label>
+            <div class="horario">
+                <label>Início</label>
+                <input type="time" id="horario-inicio" class="input-horario-inicio" value="08:00">
+
+                <label>Término</label>
+                <input type="time" id="horario-final" class="input-horario-final" value="18:00">
+            </div>
+
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" class="input-cep" placeholder="00000-000" value="12345-678">
+
+            <label for="endereco">Endereço completo:</label>  
+            <input type="text" class="input-endereço" value="Rua das Flores, 123"><img src="assets/css/Imagens/icons/editar.svg" alt="">
+
+            <div class="NBC"> 
+                <br>
+                <br>
+                <label for="numero">Número:</label>  
+                <input type="text" class="input-numero" value="123">
+                <label for="bairro">Bairro:</label>  
+                <input type="text" class="input-bairro" value="Jardim das Rosas">
+                <label for="cidade">Cidade:</label>  
+                <input type="text" class="input-cidade" value="Cidade das Flores">
+            </div>
+
+            <div class="mapa">
+                <label>Mapa Integrado</label>
+                <iframe 
+                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d77016.54037812188!2d-49.28152740217497!3d-16.751569374378942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1730825125229!5m2!1spt-BR!2sbr"
+                 allowfullscreen=""
+                 loading="lazy">
+                </iframe>
+            </div>
+
+            <label>Adicione as Fotos do Local</label>
+            <div class="fotos">
+                <div class="foto-upload-1">
+                    <img src="assets/css/Imagens/icons/fotos.svg" alt="Imagem Destaque">
+                    <label>Imagem Destaque</label>
+                </div>
+                <div class="foto-upload-2"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div> 
+                <div class="foto-upload-3"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
+                <div class="foto-upload-4"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
+                <div class="foto-upload-6"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
+                <div class="foto-upload-7"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
+                <div class="foto-upload-8"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
+                <div class="foto-upload-9"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
+                <div class="foto-upload-10"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
+            </div>
+
+            <label>Serviços Adicionais</label>
+            <div class="div-servicos">
+                <button class="servicos-btn" onclick="toggleBackground(this)">
+                    <img src="assets/css/Imagens/icons/brincadeira-icon.svg" alt="">
+                    <p class="p-input">Área de Brincadeiras</p>
+                </button>
+                <button class="servicos-btn" onclick="toggleInput(this)">
+                    <img src="assets/css/Imagens/icons/piscina-icon.svg" alt="">
+                    <p class="p-input">Piscina para Cães</p>
+                </button>
+                <button class="servicos-btn" onclick="toggleInput(this)">
+                    <img src="assets/css/Imagens/icons/treinamento-icon.svg" alt="">
+                    <p class="p-input">Treinamento</p>
+                </button>
+                <button class="servicos-btn" onclick="toggleInput(this)">
+                    <img src="assets/css/Imagens/icons/cuidados-icon.svg" alt="">
+                    <p class="p-input">Cuidados Personalizados</p>
+                </button>
+                <button class="servicos-btn" onclick="toggleInput(this)">
+                    <img src="assets/css/Imagens/icons/transporte-icon.svg" alt="">
+                    <p class="p-input">Serviço de Transporte</p>
+                </button>
+                <button class="servicos-btn" onclick="toggleInput(this)">
+                    <img src="assets/css/Imagens/icons/passeio-icon.svg" alt="">
+                    <p class="p-input">Passeio ao Ar Livre</p>
+                </button>
+                <button class="servicos-btn" onclick="toggleInput(this)">
+                    <img src="assets/css/Imagens/icons/descanso-icon.svg" alt="">
+                    <p class="p-input">Área de Descanso</p>
+                </button>
+                <button class="servicos-btn" onclick="toggleInput(this)">
+                    <img src="assets/css/Imagens/icons/banho-tosa-icon.svg" alt="">
+                    <p class="p-input">Banho e Tosa</p>
+                </button>
+                <button class="servicos-btn" onclick="toggleInput(this)">
+                    <img src="assets/css/Imagens/icons/hospedagem-icon.svg" alt="">
+                    <p class="p-input">Hospedagem Noturna</p>
+                </button>
+                <button class="servicos-btn" onclick="toggleInput(this)">
+                    <img src="assets/css/Imagens/icons/adicionar.svg" alt="">
+                    <p class="p-input">Adicionar Novo Serviço</p>
+            </button>
+            </div>
+
+            <button type="submit" class="btn-salvar"> Salvar dados </button>
+        </form>
+    </div>
+
+
+
+
+    <footer class="footer">
+        <section class="img-footer">
+            <img src="assets/css/imagens/cachorro.svg" alt="" class="cachorro-footer">
+        </section>
+        <section class="infos">
+            <section class="info-footer">
+                <h2>Sobre Nós</h2>
+                <li><a href="" class="info-links">Sobre Nós</a></li>
+                <li><a href="" class="info-links">Hospedar um Pet</a></li>
+                <li><a href="" class="info-links">Contato</a></li>
+                <li><a href="" class="info-links">Termos de Serviço</a></li>
+                <li><a href="" class="info-links">Política de Privacidade</a></li>
+            </section>
+    
+            <section class="info-footer">
+                <h2>Suporte</h2>
+                <li><p>Email:</p></li>
+                <li><a href="" class="info-links">contato@hospedagemdepets.com</a></li>
+                <li><p>Telefone:</p></li>
+                <li><a href="" class="info-links">(XX) XXXXX-XXXX</a></li>
+            </section>
+    
+            <section class="info-footer">
+                <h2>Redes Sociais</h2>
+                <div class="icon-footer">
+                    <i class="fa-brands fa-instagram fa-3x"></i>
+                    <i class="fa-brands fa-facebook fa-3x"></i>    
+                </div>
+            </section>
+        </section>
+    </footer>
+</body>
+</html>
