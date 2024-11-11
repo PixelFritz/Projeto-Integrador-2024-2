@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/cadastrehotel.css">
+    <link rel="stylesheet" href="assets/css/editardadoshotel.css">
 
     <script src="https://kit.fontawesome.com/e8db2f40d0.js" crossorigin="anonymous" defer></script>
     <script src="assets/js/menu_index.js" defer></script>
@@ -66,7 +66,7 @@
     </main>
 
     <div class="container">
-        <h3> Editar Dados da sua Hospedagem </h3>
+        <h1> Editar Dados da sua Hospedagem </h1>
 
         <form>
             <label for="nome">Nome da hospedagem</label>
@@ -78,6 +78,7 @@
             <label for="valor">Defina o valor inicial</label>
             <input type="text" id="valor" class="input-valor" placeholder="R$" value="150,00">
 
+
             <label for="horario"> Horários de funcionamento</label>
             <div class="horario">
                 <label>Início</label>
@@ -87,8 +88,26 @@
                 <input type="time" id="horario-final" class="input-horario-final" value="18:00">
             </div>
 
+
+            <h2>Dias de funcionamento:</h2>
+            <div class="dias-funcionamento">
+            <div class="dropdown">
+              <button type="button" class="dropdown-button">Selecione os dias <span class="seta"></span></button>
+              <div class="dropdown-options">
+                <button type="button" class="dia" data-dia="segunda">Segunda</button>
+                <button type="button" class="dia" data-dia="terca">Terça</button>
+                <button type="button" class="dia" data-dia="quarta">Quarta</button>
+                <button type="button" class="dia" data-dia="quinta">Quinta</button>
+                <button type="button" class="dia" data-dia="sexta">Sexta</button>
+                <button type="button" class="dia" data-dia="sabado">Sábado</button>
+                <button type="button" class="dia" data-dia="domingo">Domingo</button>
+              </div>
+            </div>
+          </div>
+
+
             <label for="cep">CEP</label>
-            <input type="text" id="cep" class="input-cep" placeholder="00000-000" value="12345-678">
+            <input type="text" id="cep" class="input-cep" placeholder="00000-000" value="12345-678" maxlength="10">
 
             <label for="endereco">Endereço completo:</label>  
             <input type="text" class="input-endereço" value="Rua das Flores, 123"><img src="assets/css/Imagens/icons/editar.svg" alt="">
@@ -104,8 +123,9 @@
                 <input type="text" class="input-cidade" value="Cidade das Flores">
             </div>
 
+
             <div class="mapa">
-                <label>Mapa Integrado</label>
+                <h2>Mapa Integrado</h2>
                 <iframe 
                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d77016.54037812188!2d-49.28152740217497!3d-16.751569374378942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1730825125229!5m2!1spt-BR!2sbr"
                  allowfullscreen=""
@@ -113,23 +133,23 @@
                 </iframe>
             </div>
 
-            <label>Adicione as Fotos do Local</label>
+
+            <h2>Adicione as Fotos do Local</h2>
             <div class="fotos">
                 <div class="foto-upload-1">
-                    <img src="assets/css/Imagens/icons/fotos.svg" alt="Imagem Destaque">
-                    <label>Imagem Destaque</label>
+                    <img src="https://cobasiblog.blob.core.windows.net/production-ofc/2021/01/hotel-para-cachorro-meio-2.png" alt="Imagem Destaque">
+                    <button class="excluir">X</button>
                 </div>
-                <div class="foto-upload-2"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div> 
-                <div class="foto-upload-3"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
-                <div class="foto-upload-4"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
-                <div class="foto-upload-6"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
-                <div class="foto-upload-7"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
-                <div class="foto-upload-8"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
-                <div class="foto-upload-9"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
-                <div class="foto-upload-10"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
-            </div>
+                <div class="foto-upload-2"> <img src="https://www.casadakaparacaes.com.br/img/imagens-casa-ka/imagens-casa-ka-2.jpg" alt=""><img src="" alt=""> <button class="excluir">X</button> </div>
+                <div class="foto-upload-3"><img src="https://clubpetrj.com.br/wp-content/uploads/2023/05/hote-para-cachorro.webp" alt=""> <button class="excluir">X</button></div>
+                <div class="foto-upload-4"><img src="https://vidadeturista.com/wp-content/uploads/2008/09/hotel-para-cachorro.jpg" alt=""> <button class="excluir">X</button></div>
+                <div class="foto-upload-5"><img src="https://wp-prod-images.simples.vet/wp-content/uploads/2023/01/Como-montar-um-hotel-para-cachorro.png.webp" alt=""> <button class="excluir">X</button></div>
+                <div class="foto-upload-6"><img src="https://dogparque.com.br/wp-content/uploads/2023/04/IMG-20200219-WA0017-01.jpeg" alt=""> <button class="excluir">X</button></div>
+                <div class="foto-upload-7"><img src="https://www.casadakaparacaes.com.br/img/imagens-casa-ka/imagens-casa-ka-12.jpg" alt=""> <button class="excluir">X</button></div>
+              </div>
+              
 
-            <label>Serviços Adicionais</label>
+            <h2>Serviços Adicionais</h2>
             <div class="div-servicos">
                 <button class="servicos-btn" onclick="toggleBackground(this)">
                     <img src="assets/css/Imagens/icons/brincadeira-icon.svg" alt="">
@@ -173,10 +193,10 @@
             </button>
             </div>
 
-            <button type="submit" class="btn-salvar"> Salvar dados </button>
+            <button type="submit" class="btn-salvar"> Salvar dados</button>
         </form>
     </div>
-
+  
 
 
 
