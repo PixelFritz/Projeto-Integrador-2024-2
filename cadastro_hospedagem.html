@@ -66,9 +66,6 @@
     </main>
 
 
-
-
-
     <div class="container">
         <h3>Cadastre sua Hospedagem</h3>
 
@@ -78,20 +75,14 @@
             <input type="text" id="nome" class="input-nome"><img src="assets/css/Imagens/icons/editar.svg" alt="">
             
 
-
-
             <label for="descricao">Descrição da hospedagem</label>
             <textarea id="descricao" class="input-descricao" placeholder="Fale mais..."></textarea>
 
-         
-            
          
             <label for="valor">Defina o valor inicial</label>
             <input type="text" id="valor" class="input-valor" placeholder="R$">
         
 
-
-        
             <label for="horario"> Horários de funcionamento</label>
         <div class="horario">
             <label>Início</label>
@@ -101,11 +92,27 @@
             <input type="time" id="horario-final" class="input-horario-final" >
         </div>
 
-
+        
+            <h2>Dias de funcionamento:</h2>
+            <div class="dias-funcionamento">
+            <div class="dropdown">
+              <button type="button" class="dropdown-button">Selecione os dias <span class="seta"></span></button>
+              <div class="dropdown-options">
+                <button type="button" class="dia" data-dia="segunda">Segunda</button>
+                <button type="button" class="dia" data-dia="terca">Terça</button>
+                <button type="button" class="dia" data-dia="quarta">Quarta</button>
+                <button type="button" class="dia" data-dia="quinta">Quinta</button>
+                <button type="button" class="dia" data-dia="sexta">Sexta</button>
+                <button type="button" class="dia" data-dia="sabado">Sábado</button>
+                <button type="button" class="dia" data-dia="domingo">Domingo</button>
+              </div>
+            </div>
+          </div>
+          
 
 
             <label for="cep">CEP</label>
-            <input type="text" id="cep" class="input-cep" placeholder="00000-000">
+            <input type="text" id="cep" class="input-cep" placeholder="00000-000" maxlength="10">
      
             <label for="endereco">Endereço completo:</label>  
                 <input type="text" class="input-endereço"><img src="assets/css/Imagens/icons/editar.svg" alt="">
@@ -124,37 +131,31 @@
 
 
             <div class="mapa">
-            <label>Mapa Integrado</label>
+                <h2>Mapa Integrado</h2>
                 <iframe 
                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d77016.54037812188!2d-49.28152740217497!3d-16.751569374378942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1730825125229!5m2!1spt-BR!2sbr"
                  allowfullscreen=""
                  loading="lazy">
                 </iframe>
-             </div>
+            </div>
 
-
-
-             <label>Adicione as Fotos do Local</label>
+            <h2>Adicione as Fotos do Local</h2>
             <div class="fotos">
                 <div class="foto-upload-1">
                     <img src="assets/css/Imagens/icons/fotos.svg" alt="Imagem Destaque">
                     <label>Imagem Destaque</label>
+                    <button class="excluir">X</button>
                 </div>
-                <div class="foto-upload-2"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div> 
-                <div class="foto-upload-3"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
-                <div class="foto-upload-4"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
-                <div class="foto-upload-6"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
-                <div class="foto-upload-7"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
-                <div class="foto-upload-8"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
-                <div class="foto-upload-9"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
-                <div class="foto-upload-10"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""></div>
-            </div>
+                <div class="foto-upload-2"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""> <button class="excluir">X</button> </div>
+                <div class="foto-upload-3"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""> <button class="excluir">X</button></div>
+                <div class="foto-upload-4"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""> <button class="excluir">X</button></div>
+                <div class="foto-upload-5"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""> <button class="excluir">X</button></div>
+                <div class="foto-upload-6"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""> <button class="excluir">X</button></div>
+                <div class="foto-upload-7"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""> <button class="excluir">X</button></div>
+              </div>
+              
 
- 
-
-
-
-            <label>Serviços Adicionais</label>
+            <h2>Serviços Adicionais</h2>
             <div class="div-servicos">
                 <button class="servicos-btn" onclick="toggleBackground(this)">
                     <img src="assets/css/Imagens/icons/brincadeira-icon.svg" alt="">
@@ -191,13 +192,12 @@
                 <button class="servicos-btn" onclick="toggleInput(this)">
                     <img src="assets/css/Imagens/icons/hospedagem-icon.svg" alt="">
                     <p class="p-input">Hospedagem Noturna</p>
-                <button class="servicos-btn" onclick="toggleInput(this)">
-                        <img src="assets/css/Imagens/icons/adicionar.svg" alt="">
-                        <p class="p-input">Adicionar Novo Serviço</p>
                 </button>
+                <button class="servicos-btn" onclick="toggleInput(this)">
+                    <img src="assets/css/Imagens/icons/adicionar.svg" alt="">
+                    <p class="p-input">Adicionar Novo Serviço</p>
+            </button>
             </div>
-            
-
 
 
             <button type="submit" class="btn-adicionar">Adicionar Hospedagem</button>
