@@ -68,7 +68,7 @@
     }
 
     & .titulo-secoes {
-        font-size: 3rem;
+        font-size: 2.5rem;
         padding: 1.5rem 5rem;
     }
 
@@ -310,10 +310,6 @@
 @media (max-width: 768px) {
     .principal {
         & .section-info-hotel {
-            & .nome-hotel {
-                font-size: 3rem;
-            }
-
             & .div-carrosel {
                 padding: 0 5rem;
             }
@@ -355,12 +351,9 @@
 @media (max-width: 480px) {
     .principal {
         & .section-info-hotel {
-            & .nome-hotel {
-                font-size: 2.5rem;
-            }
-
             & .div-carrosel {
                 padding: 0 2rem;
+
                 & .carrosel-inner {
                     & .carrosel-item {
                         padding: .5rem;

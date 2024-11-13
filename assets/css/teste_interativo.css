@@ -76,14 +76,6 @@
 }
 
 @media (max-width: 768px) {
-    .titulo {
-        font-size: 3rem;
-    }
-
-    .teste_interativo h2 {
-        font-size: 2.5rem;
-    }
-
     .teste_interativo img {
         width: 100px;
         margin: 0 1rem;
@@ -101,14 +93,6 @@
 }
 
 @media (max-width: 480px) {
-    .titulo {
-        font-size: 2.5rem;
-    }
-
-    .teste_interativo h2 {
-        font-size: 2rem;
-    }
-
     .teste_interativo img {
         width: 80px;
         margin: 0 .5rem;
