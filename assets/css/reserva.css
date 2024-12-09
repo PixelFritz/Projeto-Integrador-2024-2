@@ -30,12 +30,13 @@
     }
     
     & .p-input {
-        font-size: 1.5rem;
-        margin: 0 .5rem;
+        box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.3);
+        width: 100%;
         
-        & i {
-            margin: .5rem 1rem;
-        }
+    }
+
+    .i {
+        margin: .5rem 1rem;
     }
 
     & .p-label {
@@ -57,7 +58,7 @@
             padding: .5rem;
             background-color: #f8f4ec;
             border-radius: 7px;
-            border: 1px solid #ff67c5a2;
+            border: 1px solid #FF67C5B2;
             box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.3);
             
             &:hover {
@@ -82,13 +83,10 @@
         border-radius: 10px;
         background-color: #93CBDB;
 
-        &:hover {
+        &:hover,
+        &:focus {
             transform: scale(1.03);
             transition: 300ms;
-        }
-
-        &:focus {
-            outline: 1px solid #93CBDB4D;
         }
 
         & a {
@@ -109,6 +107,7 @@
         border: 1px solid #FF67C5B2;
         border-radius: 7px;
         box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.3);
+        font-size: 1.7rem;
     }
 
     & form {
@@ -129,8 +128,6 @@
                 padding: .5rem;
                 display: block;
                 border-radius: 5px;
-                background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="gray" d="M7 10l5 5 5-5H7z"/></svg>') no-repeat right 10px center;
-                appearance: none;
                 align-self: flex-end;
             }
 
@@ -141,8 +138,6 @@
 
         & .collapse {
             position: relative;
-            border: 1px solid #FF67C5B2;
-            border-radius: 5px;
 
             & .nome-menu {
                 display: flex;
@@ -250,4 +245,8 @@
             }
         }
     }
+}
+
+select {
+    appearance: none;
 }
