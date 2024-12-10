@@ -1,10 +1,8 @@
 
 .titulo {
     text-align: center;
-    font-family: 'Quicksand';
-    font-size: 15px;
-    margin-top: 60px;
-    margin-bottom: 30px;
+    font-size: 3.5rem;
+    padding-top: 2rem;
 }
 
 .titulo span {
@@ -16,18 +14,16 @@
 }
 
 .teste_interativo h2 {
-    margin-top: 80px;
-    margin-bottom: 40px;
-    font-size: 30px;
-    font-weight: 400;
+    padding: 6rem 0 2rem;
+    font-size: 3rem;
 }
 
 .teste_interativo img {
     width: 150px;
-    margin: 0 20px;
+    margin: 0 2rem;
 }
 
-.teste_interativo button {
+.btn-teste {
     background-color: #f8f4ec;
     display: inline-flex;
     flex-direction: column;
@@ -35,66 +31,84 @@
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    box-shadow: none;
 }
 
-.teste_interativo button:hover {
+.btn-teste:hover {
     transform: scale(1.05);
+}
+
+.btn-teste p {
+    width: 100px;
 }
 
 .btn-explorar {
     text-align: center;
-}
-
-.btn-explorar button {
-    font-size: 20px;
-    font-weight: 600;
-    background-color: #D9D9D9;
-    padding: 15px 60px;
+    background-color: #FFE03980;
     border-radius: 10px;
-    margin-top: 60px;
-    cursor: pointer;
+    display: block;
+    margin: 6rem auto 0;
 }
 
-.btn-explorar button:hover {
-    background-color: #bfbfbf;
+.btn-explorar:hover {
+    background-color: #ffd900a1;
+}
+
+.btn-explorar:focus {
+    outline: 1px solid #ffd900;
 }
 
 .selected img {
-    border: 3px solid #888888;
+    border: 3px solid #999;
     border-radius: 90px;
 }
 
+.cover {
+    width: 80%;
+    height: 97%;
+    border-radius: 50%;
+    left: 1.9rem;
+}
+
+.img-container img {
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
 
 @media (max-width: 768px) {
-    .teste_interativo h2 {
-        font-size: 24px;
-    }
     .teste_interativo img {
         width: 100px;
-        margin: 0 10px;
+        margin: 0 1rem;
     }
-    .teste_interativo button {
-        font-size: 14px;
-        padding: 10px;
+
+    .btn-teste {
+        padding: 1rem;
+    }
+
+    .cover {
+        width: 83%;
+        height: 95%;
+        left: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .teste_interativo h2 {
-        font-size: 20px;
-        margin-top: 40px;
-        margin-bottom: 20px;
-    }
     .teste_interativo img {
         width: 80px;
-        margin: 0 5px;
+        margin: 0 .5rem;
     }
-    .teste_interativo button {
-        font-size: 12px;
-        padding: 8px;
+
+    .btn-teste {
+        padding: .8rem;
     }
-    .btn-explorar button {
-        font-size: 16px;
-        padding: 10px 40px;
+
+    .btn-teste p {
+        width: 80px;
+    }
+
+    .cover {
+        width: 89%;
+        height: 96%;
+        left: .5rem;
     }
 }

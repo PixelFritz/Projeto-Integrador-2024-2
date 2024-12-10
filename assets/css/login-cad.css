@@ -52,14 +52,14 @@ form {
         border-radius: 15px;
         text-align: center;
         padding: 1.5rem;
-        box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.705);
+        box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.7);
         z-index: 1;
         font-weight: 600;
         margin-bottom: 5rem;
 
         & .titulo-login-cad {
             margin: 1.5rem;
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
 
         & label {
@@ -81,11 +81,12 @@ form {
                 font-size: 1.6rem;
                 border-radius: 30px;
                 padding: .8rem 1.5rem;
-                box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.705);
+                box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
             }
 
             & input {
                 background-color: transparent;
+                width: 100%;
             }
             
             & i {
@@ -113,15 +114,13 @@ form {
         }
 
         & button {
-            margin-top: 2.5rem;
-            margin-bottom: 1.5rem;
+            margin: 2.5rem 0 1.5rem;
             width: 100%;
             padding: .5rem;
             border-radius: 15px;
             font-size: 1.6rem;
             background-color: #93CBDB;
-            box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.705);
-            font-weight: 600;
+            box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
 
             &:hover {
                 background-color: #93CBDB;
@@ -138,12 +137,17 @@ form {
             display: flex;
             justify-content: flex-end;
             margin-bottom: 1.5rem;
+            font-size: 1.2rem;
         }
 
         & .p-login-cad {
             margin: .5rem;
             font-family: 'Open Sans', sans-serif;
             font-size: 1.2rem;
+
+            & a {
+                font-size: 1.2rem;
+            }
         }
     }
 }
@@ -157,7 +161,7 @@ form {
 .termos3{
     display: flex;
     align-items: baseline;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.2rem;
 
     & #termos{
         width: 15px;

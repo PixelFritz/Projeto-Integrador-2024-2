@@ -4,13 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela Usuário</title>
+    <title>Perfil do Usuário - Hospetagem</title>
+    <link rel="shortcut icon" href="/assets/imagens/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/perfil_do_usuario.css">
 
     <script src="https://kit.fontawesome.com/e8db2f40d0.js" crossorigin="anonymous" defer></script>
     <script src="assets/js/menu_index.js" defer></script>
+    <script src="assets/js/cidade-estado.js" defer></script>
+    <script src="assets/js/cep_cpf.js" defer></script>
+    <script src="assets/js/alterar_info_perfil.js" defer></script>
+    <script src="assets/js/popup.js" defer></script>
+    <script src="assets/js/adicionar_imagem.js" defer></script>
+    <script src="assets/js/reservas.js" defer></script>
 </head>
 
 <body>
@@ -57,7 +64,7 @@
     <main class="principal">
         <section class="pesquisa">
             <div class="pesquisa-barra">
-                <input type="text" placeholder="Digite algo...">
+                <input type="text" placeholder="Pesquisar...">
                 <button class="btn-pesquisa">
                     <i class="fa fa-search"></i>
                 </button>
@@ -67,63 +74,283 @@
                 Filtrar
             </button>
         </section>
-        <section class="info_usuario">
-            <h2>Minhas informações</h2>
-            <form action="">
-                <div class="itens_usuario">
-                    <label for="nome">Nome completo:</label>
-                    <input class="infos" type="text">
+        <section class="secoes info-usuario">
+            <h2 class="titulo-secao">Minhas informações</h2>
+            <form method="post" class="form" id="form1">
+                <div class="profile-container">
+                    <label for="profileInput" class="profile-image profilePreview" id="profilePreview">
+                        <span><i class="fa-solid fa-user"></i></span>
+                    </label>
+                    <input type="file" class="able profileInput" id="profileInput" accept="image/*" disabled>
                 </div>
-                <div class="itens_usuario">
-                    <label for="">E-mail</label>
-                    <input class="infos" type="email">
+                <div class="div-inputs">
+                    <div class="itens-perfil">
+                        <label class="label" for="nome">Nome completo:</label>
+                        <input class="infos-input able" type="text" name="nome" placeholder="Digite seu nome:" disabled>
+                    </div>
+                    <div class="itens-perfil">
+                        <label class="label" for="cpf">CPF:</label>
+                        <input class="infos-input disabled" type="text" name="cpf" disabled>
+                    </div>
+                    <div class="itens-perfil">
+                        <label class="label" for="email">E-mail:</label>
+                        <input class="infos-input able" type="email" name="email" placeholder="Digite seu e-mail" disabled>
+                    </div>
+                    <div class="itens-perfil">
+                        <label class="label" for="telefone">Telefone:</label>
+                        <input class="infos-input able info-tel" type="tel" name="telefone" placeholder="Digite seu telefone" disabled>
+                    </div>
+                    <div class="itens-perfil">
+                        <label class="label" for="data-nasc">Data Nascimento:</label>
+                        <input class="infos-input disabled" type="date" name="data-nasc" disabled>
+                    </div>
+                    <div class="itens-perfil">
+                        <label class="label" for="genero">Gênero:</label>
+                        <select name="genero" class="infos-input able select" disabled>
+                            <option value="default" selected disabled>...</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outros">Outros</option>
+                            <option value="prefiro não dizer">Prefiro não dizer</option>
+                        </select>
+                    </div>
+                    <div class="itens-perfil">
+                        <label class="label" for="senha">Mudar a senha:</label>
+                        <button type="button" class="btn-senha able popupButton" data-popup-id="popup1" disabled>Trocar senha</button>
+                        <div class="popup" id="popup1">
+                            <div class="box-popup">
+                                <h3 class="titulos-form">Mudança de senha</h3>
+
+                                <div class="itens-perfil">
+                                    <label for="">Senha Atual:</label>
+                                    <input type="password" class="infos-input">
+                                </div>
+                                
+                                <div class="itens-perfil">
+                                    <label for="">Nova Senha:</label>
+                                    <input type="password" class="infos-input">
+                                </div>
+                                
+                                <div class="itens-perfil">
+                                    <label for="">Confirmar Senha:</label>
+                                    <input type="password" class="infos-input">
+                                </div>
+
+                                <button type="button" class="btn-salvar" onclick="closePopup('popup1')">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="itens_usuario">
-                    <label for="">Endereço completo:</label>
-                    <input class="infos" type="text">
-                </div>
-                <div class="itens_usuario">
-                    <label for="">Telefone</label>
-                    <input class="infos info_tel" type="tel">
-                </div>
+                <button type="button" class="btn-salvar editButton">Alterar Informações</button>
             </form>
         </section>
-        <section class="info_pet">
-            <h2>Meus pets</h2>
-            <div class="cards_conteiner">
-                <div class="cards_pet">
+        <section class="secoes info-usuario">
+            <h2 class="titulo-secao">Meu endereço</h2>
+            <form action="" method="post" class="form" id="form2">
+                <div class="div-inputs">
+                    <div class="itens-perfil">
+                        <label class="label" for="logradouro">Logradouro:</label>
+                        <input type="text" class="infos-input able" name="logradouro" id="log" placeholder="Digite o Logradouro" required disabled>
+                    </div>
+                    <div class="itens-perfil">
+                        <label class="label" for="numero">Número:</label>
+                        <input type="text" class="infos-input able" name="numero" placeholder="Digite o Número" required disabled>
+                    </div>
+                    <div class="itens-perfil">
+                        <label class="label" for="bairro">Bairro:</label>
+                        <input type="text" class="infos-input able" name="bairro" id="bairro" placeholder="Digite seu Bairro"
+                        required disabled>
+                    </div>
+                    <div class="itens-perfil">
+                        <label class="label" for="complemento">Complemento:</label>
+                        <input type="text" class="infos-input able" name="complemento" id="complemento" placeholder="Digite o Complemento" disabled>
+                    </div>
+                    <div class="itens-perfil">
+                        <label class="label" for="">Cidade:</label>
+                        <select name="cidade" id="cidade" class="infos-input able select" required disabled>
+                            <option value="default" selected disabled>Selecione a sua cidade</option>
+                        </select>
+                    </div>
+                    <div class="itens-perfil">
+                        <label class="label" for="">Estado:</label>
+                        <select name="uf" id="uf" class="infos-input able select" required disabled>
+                            <option value="default" selected disabled>Selecione o seu estado</option>
+                        </select>
+                    </div>
+                    <div class="itens-perfil">
+                        <label class="label" for="cep">CEP:</label>
+                        <input type="text" class="infos-input able" name="cep" id="cep" autocomplete="postal-code" placeholder="Digite seu CEP" onblur="pesquisacep(this.value);" required disabled>
+                        <a href="https://buscacepinter.correios.com.br/app/localidade_logradouro/index.php#" class="cep">Não sabe o CEP? Busque aqui. <i class="fa-solid fa-question-circle"></i></a>
+                    </div>
+                </div>
+                <button type="button" class="btn-salvar editButton">Alterar Informações</button>
+            </form>
+        </section>
+        <section class="secoes info-pet">
+            <h2 class="titulo-secao">Meus pets</h2>
+            <div class="cards-conteiner">
+                <div class="cards-pet popupButton" data-popup-id="popup2">
                     <img class="delete" src="assets/imagens/img_perfil/delete.svg" alt="">
-                    <img class="perfil_pet" src="assets/imagens/img_perfil/perfil1.svg" alt="">
+                    <img class="perfil-pet" src="assets/imagens/img_perfil/perfil1.svg" alt="">
                     <p>Nome:</p>
                     <p>Raça</p>
                     <p>Idade:</p>
                     <p>Comportamento:</p>
                     <p>Cuidado especial:</p>
                 </div>
-                <div class="cards_pet">
+                <div class="cards-pet popupButton" data-popup-id="popup2">
                     <img class="delete" src="assets/imagens/img_perfil/delete.svg" alt="">
-                    <img class="perfil_pet" src="assets/imagens/img_perfil/perfil2.svg" alt="">
+                    <img class="perfil-pet" src="assets/imagens/img_perfil/perfil2.svg" alt="">
                     <p>Nome:</p>
                     <p>Raça</p>
                     <p>Idade:</p>
                     <p>Comportamento:</p>
                     <p>Cuidado especial:</p>
                 </div>
-                <div class="cards_pet card_adicionar">
-                    <img src="assets/imagens/img_perfil/adicionar.svg" alt="">
-                    <p>Adicionar</p>
+                <div class="cards-pet card-adicionar">
+                    <a href="">
+                        <img src="assets/imagens/img_perfil/adicionar.svg" alt="">
+                        <p>Adicionar</p>
+                    </a>
+                </div>
+                <div class="popup" id="popup2">
+                    <form method="post" class="form box-popup">
+                        <h3 class="titulos-form">Editar informações do animal</h3>
+                        <div class="profile-container">
+                            <label for="profileInput" class="profile-image profile-able profilePreview">
+                                <span><i class="fa-solid fa-user"></i></span>
+                            </label>
+                            <input type="file" class="profileInput" accept="image/*">
+                        </div>
+
+                        <div class="itens-perfil">
+                            <label class="label" for="nome-pet">Nome:</label>
+                            <input class="infos-input" type="text" name="nome-pet" placeholder="Digite o nome do pet">
+                        </div>
+                        
+                        <div class="itens-perfil">
+                            <label class="label" for="idade-pet">Idade:</label>
+                            <input class="infos-input" type="number" name="idade-pet" placeholder="Digite a idade do pet">
+                        </div>
+
+                        <div class="itens-perfil">
+                            <label for="especie-pet" class="label">Espécie:</label>
+                            <select name="especie-pet" class="infos-input select">
+                                <option value="default" selected disabled>Selecione a espécie</option>
+                                <option value="cachorro">Cachorro</option>
+                                <option value="gato">Gato</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="itens-perfil">
+                            <label class="label" for="peso-pet">Porte:</label>
+                            <select name="peso-pet" class="infos-input select">
+                                <option value="default" selected disabled>Selecione o porte</option>
+                                <option value="pequeno">Pequeno</option>
+                                <option value="medio">Médio</option>
+                                <option value="grande">Grande</option>
+                                <option value="gigante">Gigante</option>
+                            </select>
+                        </div>
+                        
+                        <div class="itens-perfil">
+                            <label class="label" for="sexo-pet">Sexo:</label>
+                            <select name="sexo-pet" class="infos-input select">
+                                <option value="default" selected disabled>Selecione o sexo</option>
+                                <option value="macho">Macho</option>
+                                <option value="femea">Fêmea</option>
+                            </select>
+                        </div>
+                        
+                        <div class="itens-perfil">
+                            <label class="label" for="castrado-pet">Castrado:</label>
+                            <select name="castrado-pet" class="infos-input select">
+                                <option value="default" selected disabled>Selecione uma opção</option>
+                                <option value="sim">Sim</option>
+                                <option value="nao">Não</option>
+                            </select>
+                        </div>
+
+                        <div class="itens-perfil">
+                            <p class="label">Temperamento:</p>
+                            <div class="collapse" id="collapse" tabindex="0">
+                                <div class="nome-menu infos-input">
+                                    <p >...</p>
+                                </div>
+                                <div class="menu-collapse" tabindex="1">
+                                    <ul class="lista-menu">
+                                        <li class="item-menu">
+                                            <input type="checkbox" value="calmo" id="calmo">
+                                            <label for="calmo" class="p-input">Calmo</label>
+                                        </li>
+                                        <li class="item-menu">
+                                            <input type="checkbox" value="agitado" id="agitado">
+                                            <label for="agitado" class="p-input">Agitado</label>
+                                        </li>
+                                        <li class="item-menu">
+                                            <input type="checkbox" value="agressivo" id="agressivo">
+                                            <label for="agressivo" class="p-input">Agressivo</label>
+                                        </li>
+                                        <li class="item-menu">
+                                            <input type="checkbox" value="reservado" id="reservado">
+                                            <label for="reservado" class="p-input">Reservado</label>
+                                        </li>
+                                        <li class="item-menu">
+                                            <input type="checkbox" value="independente" id="independente">
+                                            <label for="independente" class="p-input">Independente</label>
+                                        </li>
+                                        <li class="item-menu">
+                                            <input type="checkbox" value="medroso" id="medroso">
+                                            <label for="medroso" class="p-input">Medroso</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="itens-perfil">
+                            <label class="label" for="historico-pet">Histórico de doenças e/ou alergias:</label>
+                            <select name="historico-pet" class="infos-input select">
+                                <option value="default" selected disabled>Selecione uma opção</option>
+                                <option value="sim">Sim</option>
+                                <option value="nao">Não</option>
+                            </select>
+                        </div>
+
+                        <div class="itens-perfil">
+                            <label class="label" for="convive-pet">Pet convive bem com outros animais:</label>
+                            <select name="convive-pet" class="infos-input select">
+                                <option value="default" selected disabled>Selecione uma opção</option>
+                                <option value="sim">Sim</option>
+                                <option value="nao">Não</option>
+                            </select>
+                        </div>
+
+                        <div class="itens-perfil">
+                            <label class="label" for="contato-emergencia">Contato de emergência:</label>
+                            <input class="infos-input" type="tel" name="contato-emergencia" placeholder="Digite o contato de emergência">
+                        </div>
+
+                        <div class="itens-perfil">
+                            <label class="label" for="observacoes">Outras observações (opcional):</label>
+                            <textarea class="infos-input textarea" name="observacoes" placeholder="Digite outras observações"></textarea>
+                        </div>
+
+                        <button type="button" class="btn-salvar" onclick="closePopup('popup2')">Salvar</button>
+                    </form>
                 </div>
             </div>
         </section>
-        <section class="historico">
-            <h2>Histórico de reservas</h2>
-            <div class="conteiner_historico">
+        <section class="secoes historico">
+            <h2 class="titulo-secao">Histórico de reservas</h2>
+            <div class="conteiner-historico">
                 <div>
                     <h4>Nome da hospedagem</h4>
                     <p>Creche cantinho feliz</p>
                     <p>Cãotinho Feliz</p>
                 </div>
-                <div class="data_reserva">
+                <div class="data-reserva">
                     <h4>Data da reserva</h4>
                     <p>16/05/2024 - 17/05/2024</p>
                     <p>22/07/2024 - 29/07/2024</p>
@@ -135,12 +362,12 @@
                 </div>
             </div>
         </section>
-        <section class="forma_pagamento">
-            <h2>Formas de pagamentos salvas</h2>
+        <section class="secoes forma-pagamento">
+            <h2 class="titulo-secao">Formas de pagamentos salvas</h2>
             <div class="div-pagamento">
-                <div class="pagamento-container">
+                <div class="pagamento-container popupButton" data-popup-id="popup4">
                     <div class="cartao-container">
-                        <img class="bandeira_cartao" src="assets/imagens/img_perfil/mastercard.svg" alt="">
+                        <img class="bandeira-cartao" src="assets/imagens/img_perfil/mastercard.svg" alt="">
                         <p>Mastercard : *********4586</p>
                     </div>
                     <div class="icons-container">
@@ -148,9 +375,9 @@
                         <img class="icons" src="assets/imagens/img_perfil/icon_form.svg" alt="">
                     </div>
                 </div>
-                <div class="pagamento-container">
+                <div class="pagamento-container popupButton" data-popup-id="popup4">
                     <div class="cartao-container">
-                        <img class="bandeira_cartao" src="assets/imagens/img_perfil/visa.svg" alt="">
+                        <img class="bandeira-cartao" src="assets/imagens/img_perfil/visa.svg" alt="">
                         <p>Visa : *********7474</p>
                     </div>
                     <div class="icons-container">
@@ -158,15 +385,55 @@
                         <img class="icons" src="assets/imagens/img_perfil/icon_form.svg" alt="">
                     </div>
                 </div>
-                <div class="pagamento-container">
+                <div class="pagamento-container popupButton" data-popup-id="popup4">
                     <div class="cartao-container">
-                        <img class="bandeira_cartao" src="assets/imagens/img_perfil/elo.svg" alt="">
+                        <img class="bandeira-cartao" src="assets/imagens/img_perfil/elo.svg" alt="">
                         <p>elo : *********1215</p>
                     </div>
                     <div class="icons-container">
                         <img class="icons" src="assets/imagens/img_perfil/delete.svg" alt="">
                         <img class="icons" src="assets/imagens/img_perfil/icon_form.svg" alt="">
                     </div>
+                </div>
+                <div class="popup" id="popup4">
+                    <form action="" method="post" class="form box-popup">
+                        <h3 class="titulos-form">Editar ou adicionar informações do cartão</h3>
+                        <div class="lado-a-lado">
+                            <div class="radio-btn">
+                                <input type="radio" name="tipo-cartao" value="credito">
+                                <label class="label" for="tipo-cartao">Crédito</label>    
+                            </div>
+
+                            <div class="radio-btn">
+                                <input type="radio" name="tipo-cartao" value="debito">
+                                <label class="label" for="tipo-cartao">Débito</label>
+                            </div>
+                        </div>
+
+                        <div class="itens-perfil">
+                            <label class="label" for="numero-cartao">Número do Cartão:</label>
+                            <input class="infos-input" type="text" name="numero-cartao" placeholder="Digite o número do cartão">
+                        </div>
+
+                        <div class="itens-perfil">
+                            <label class="label" for="titular">Nome Completo do Titular:</label>
+                            <input class="infos-input" type="text" name="titular" placeholder="Digite o nome do titular">
+                        </div>
+
+                        <div class="lado-a-lado">
+                            <div class="itens-perfil">
+                                <label class="label" for="data-vencimento">Data de Validade:</label>
+                                <input class="infos-input" type="text" name="data-vencimento" placeholder="Digite a data de validade">
+                            </div>
+
+                            <div class="itens-perfil">
+                                <label class="label" for="cvv">CVV:</label>
+                                <input class="infos-input" type="text" name="cvv" placeholder="Digite o código de segurança">
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn-salvar" onclick="closePopup('popup4')">Salvar</button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -179,7 +446,7 @@
         <section class="infos">
             <section class="info-footer">
                 <h2>Sobre Nós</h2>
-                <li><a href="" class="info-links">Sobre Nós</a></li>
+                <li><a href="sobrenos.html" class="info-links">Sobre Nós</a></li>
                 <li><a href="" class="info-links">Hospedar um Pet</a></li>
                 <li><a href="" class="info-links">Contato</a></li>
                 <li><a href="" class="info-links">Termos de Serviço</a></li>

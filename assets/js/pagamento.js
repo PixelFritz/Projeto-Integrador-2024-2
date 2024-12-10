@@ -5,18 +5,33 @@ document.addEventListener("DOMContentLoaded", () => {
     const creditoRadio = document.querySelector('input[type="radio"][value="Cartão de Crédito"]');
     const dadosCartaoSection = document.querySelector(".dados-cartao");
     const pagamentoPixSection = document.querySelector(".pagamento_pix");
+    const opCartoesSections = document.querySelectorAll(".op-cartoes");
+
+    // Inicializa as seções op-cartoes como ocultas
+    opCartoesSections.forEach(section => section.style.display = "none");
 
     // Função para alternar as seções
     function toggleSections() {
         if (pixRadio.checked) {
             pagamentoPixSection.style.display = "block";
             dadosCartaoSection.style.display = "none";
-        } else if (debitoRadio.checked || creditoRadio.checked) {
+            opCartoesSections.forEach(section => section.style.display = "none");
+        } else if (debitoRadio.checked) {
             dadosCartaoSection.style.display = "block";
             pagamentoPixSection.style.display = "none";
+            opCartoesSections.forEach(section => section.style.display = "block");
+            document.querySelector(".debito-section").style.display = "block";
+            document.querySelector(".credito-section").style.display = "none";
+        } else if (creditoRadio.checked) {
+            dadosCartaoSection.style.display = "block";
+            pagamentoPixSection.style.display = "none";
+            opCartoesSections.forEach(section => section.style.display = "block");
+            document.querySelector(".debito-section").style.display = "none";
+            document.querySelector(".credito-section").style.display = "block";
         } else {
             pagamentoPixSection.style.display = "none";
             dadosCartaoSection.style.display = "none";
+            opCartoesSections.forEach(section => section.style.display = "none");
         }
     }
 

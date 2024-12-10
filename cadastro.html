@@ -29,7 +29,7 @@
             </div>
 
             <div class="login-cad-box">
-                <form action="" method="post">
+                <form autocomplete="on" method="post">
                     <div class="pagina ativo" id="pagina-1">
                         <h2 class="titulo-login-cad">Cadastre-se</h2>
 
@@ -115,12 +115,12 @@
                                 <label for="genero">Gênero:</label>
                                 <div class="icone-input">
                                     <i class="fa-solid fa-user borda-i"></i>
-                                    <select id="genero" class="select name=" genero">
+                                    <select id="genero" class="select" name="genero">
                                         <option value="default" selected disabled>...</option>
-                                        <option value="Masculino">Masculino</option>
-                                        <option value="Feminino">Feminino</option>
-                                        <option value="Outros">Outros</option>
-                                        <option value="Prefiro não dizer">Prefiro não dizer</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="feminino">Feminino</option>
+                                        <option value="outros">Outros</option>
+                                        <option value="prefiro não dizer">Prefiro não dizer</option>
                                     </select>
                                 </div>
                             </div>
@@ -141,7 +141,7 @@
                             <label for="rua">Logradouro:</label>
                             <div class="icone-input">
                                 <i class="fa-solid fa-road borda-i"></i>
-                                <input type="text" name="rua" id="log" placeholder="Logradouro" required>
+                                <input type="text" name="rua" id="log" placeholder="Digite o Logradouro" required>
                             </div>
                         </div>
 
@@ -150,7 +150,7 @@
                                 <label for="numero">Número:</label>
                                 <div class="icone-input">
                                     <i class="fa-solid fa-hashtag borda-i"></i>
-                                    <input type="text" name="numero" id="" placeholder="Digite o Número" required>
+                                    <input type="text" name="numero" placeholder="Digite o Número" required>
                                 </div>
                             </div>
 
@@ -168,8 +168,7 @@
                             <label for="complemento">Complemento:</label>
                             <div class="icone-input">
                                 <i class="fa-solid fa-plus-square borda-i"></i>
-                                <input type="text" name="complemento" id="complemento"
-                                    placeholder="Digite o Complemento">
+                                <input type="text" name="complemento" id="complemento" placeholder="Digite o Complemento">
                             </div>
                         </div>
 
@@ -179,6 +178,7 @@
                                 <div class="icone-input">
                                     <i class="fa-solid fa-city borda-i"></i>
                                     <select name="cidade" id="cidade" class="select" required>
+                                        <option value="default" selected disabled>Selecione a sua cidade</option>
                                     </select>
                                 </div>
                             </div>
@@ -201,13 +201,12 @@
                                 <input type="text" name="CEP" id="cep" autocomplete="postal-code"
                                     placeholder="Digite seu CEP" onblur="pesquisacep(this.value);" required>
                             </div>
-                            <a href="https://buscacepinter.correios.com.br/app/localidade_logradouro/index.php#"
-                                class="cep">Não sabe o CEP? Busque aqui. <i class="fa-solid fa-question-circle"></i></a>
+                            <a href="https://buscacepinter.correios.com.br/app/localidade_logradouro/index.php#" class="cep">Não sabe o CEP? Busque aqui. <i class="fa-solid fa-question-circle"></i></a>
                         </div>
 
                         <a id="anterior" onclick="paginaAnterior()"><i class="fa-solid fa-angle-left"></i> Anterior</a>
 
-                        <button>Finalizar meu cadastro</button>
+                        <button type="submit">Finalizar meu cadastro</button>
                     </div>
                 </form>
             </div>

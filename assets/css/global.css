@@ -33,3 +33,46 @@ a {
         text-decoration: underline;
     }
 }
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    padding: 1rem 4.5rem;
+    cursor: pointer;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
+
+    &:hover,
+    &:focus {
+        transform: scale(1.03);
+        transition: 300ms;
+    }
+}
+
+p, li, button, input, select, label {
+    font-size: 1.7rem;
+}
+
+input, select, .collapse {
+    cursor: pointer;
+}
+
+select {
+    appearance: none;
+    background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="gray" d="M7 10l5 5 5-5H7z"/></svg>') no-repeat right 10px center;
+}
+
+input[type="text"], input[type="number"], input[type="tel"] {
+    cursor: text;
+
+    &:disabled {
+        cursor: default;
+    }
+}
+
+*:disabled {
+    cursor: default;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
