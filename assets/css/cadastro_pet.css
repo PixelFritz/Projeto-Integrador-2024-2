@@ -1,0 +1,106 @@
+.cadastro-pet{
+    & .titulo-pet{
+        text-align: center;
+        font-size: 2.4rem;
+        margin: 3rem 0;
+    }
+    & .perfil-pet{
+        text-align: center;
+        & p{
+            font-size: 1.4rem;
+        }
+        & img{
+            width: 10rem;
+            background-color: #D9D9D9;
+            padding: 4rem;
+            border-radius: 50%;
+            margin: 1rem 0;
+        }
+    }
+    & .info-pet{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 5rem 0 0 15rem;
+        & label{
+            font-size: 1.4rem;
+        }
+
+        & .nome-pet{
+            width: 30%;
+        }
+        & .input-pet{
+            width: 8rem;
+        }
+        & .icon-info{
+            background-image: url(/assets/imagens/arrow_right.svg);
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: 1.5rem;
+        }
+        & .input-info-pet{
+            width: 5rem;
+        }
+        & .input-temperamento{
+            width: 10rem;
+        }
+        & .info-adicional{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            & textarea{
+                resize: none;
+                width: 70%;
+                height: 7rem;
+            }
+        }
+
+    }
+    & .btn-salvar{
+        background-color: #93CBDB;
+        color: #ffff;
+        font-size: 2rem;
+        width: 20rem;
+        padding: 1.5rem 2.5rem;
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px){
+    .cadastro-pet{
+        & .info-pet{
+            margin: 5rem 0 0 5rem;
+            & .nome-pet{
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 480px){
+    .cadastro-pet{
+        & .info-pet{
+            margin: 0;
+            & div{
+                margin: auto;
+            }
+            & .flex-pet{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            & .nome-pet{
+                width: 20rem;
+            }
+            & .info-adicional{
+                align-items: center;
+                width: 100%;
+            }
+        }
+    }
+
+
+}
