@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagamento</title>
+    <title>Pagamento - Hospetagem</title>
+    <link rel="shortcut icon" href="/assets/imagens/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/pagamento.css">
@@ -59,7 +60,7 @@
     <main class="principal">
         <section class="pesquisa">
             <div class="pesquisa-barra">
-                <input type="text" placeholder="Digite algo...">
+                <input type="text" placeholder="Pesquisar...">
                 <button class="btn-pesquisa">
                     <i class="fa fa-search"></i>
                 </button>
@@ -82,7 +83,7 @@
                     <div class="op-pagamento">
                         <input type="radio" name="pagamento" value="Cartão de Débito" id="debito">
                         <label for="debito">Cartão de Débito <i class="fa-regular fa-credit-card"></i></label>
-                        <div class="op-cartoes">
+                        <div class="op-cartoes debito-section">
                             <div class="cartao-alinhamento">
                                 <input type="checkbox" name="cartao-escolhido" id="cartao">
                                 <label for="cadastrado">
@@ -105,6 +106,12 @@
                     <div class="op-pagamento">
                         <input type="radio" name="pagamento" value="Cartão de Crédito" id="credito">
                         <label for="credito">Cartão de Crédito <i class="fa-regular fa-credit-card"></i></label>
+                        <div class="op-cartoes credito-section">
+                            <div class="cartao-alinhamento">
+                                <input type="checkbox" name="cartao-escolhido" id="adicionar">
+                                <label class="ad-cartao" for="adicionar">Adicionar Cartao</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,29 +120,30 @@
 
         <section class="dados-cartao">
             <h2 class="titulo-pagamento">Insira os Dados do Cartão</h2>
-            <form action="method">
+            <form action="" method="post">
                 <div class="container-forms">
                     <div class="itens-forms">
-                        <label class="label-pagamento" for="titular">Nome do Titular: </label>
-                        <input class="input-dados" type="text" id="titular">
-                    </div>
-                    <div class="itens-forms">
                         <label class="label-pagamento" for="num-cartao">Número do Cartão: </label>
-                        <input class="input-dados" type="text" id="num-cartao">
+                        <input class="input-dados" type="text" id="num-cartao" placeholder="Digite o número do cartão">
                     </div>
                     <div class="itens-forms">
-                        <label class="label-pagamento" for="data">Data de Validade:</label>
-                        <input type="date" id="data">
+                        <label class="label-pagamento" for="titular">Nome do Titular: </label>
+                        <input class="input-dados" type="text" id="titular" placeholder="Digite o nome do titular">
                     </div>
-                    <div class="itens-forms">
-                        <label class="label-pagamento" for="cod-seg">CVV (Código de Segurança):</label>
-                        <input class="cod-cartao" type="text" id="cod-seg">
+                    <div class="lado-a-lado">
+                        <div class="itens-forms">
+                            <label class="label-pagamento" for="data">Data de Validade:</label>
+                            <input type="text" id="data" class="cod-cartao" placeholder="Digite a data de validade">
+                        </div>
+                        <div class="itens-forms">
+                            <label class="label-pagamento" for="cod-seg">CVV:</label>
+                            <input class="cod-cartao" type="text" id="cod-seg" placeholder="Digite o código de segurança">
+                        </div>
                     </div>
                     <div class="itens-forms">
                         <div class="container-check">
                             <input class="check-salvar" type="checkbox" id="salvar">
-                            <label class="label-check" for="salvar">Salvar este cartão para futuras
-                                transações(opcional)</label>
+                            <label class="label-check" for="salvar">Salvar este cartão para futuras transações (opcional)</label>
                         </div>
                     </div>
                 </div>
@@ -144,7 +152,7 @@
         </section>
         <section>
             <h2 class="titulo-pagamento">Revisão dos Dados de Pagamento</h2>
-            <p class="nome-hotel"><span>Nome da Hospedagem:</span> Cãotinho Feliz</p>
+            <h3 class="nome-hotel"><span>Nome da Hospedagem:</span> Cãotinho Feliz</h3>
             <div class="infos-hospedagem">
                 <div class="cards-infos">
                     <p><span>Quantos pets para a reserva:</span> 1</p>
@@ -214,7 +222,6 @@
                 <img src="assets/imagens/img_perfil/delete.svg" alt="" class="delete">
                 <h1 class="titulo-modal">Confirmação de Pagamento</h1>
                 <div class="infos-hospedagem">
-                    <!-- Conteúdo do modal aqui -->
                     <div class="alinhamento">
                         <p class="paragrafo-modal">Pet Cadastrado : Simba</p>
                         <p class="paragrafo-modal">Data de Início: 01/11/2024 ás 14:00hrs</p>
@@ -246,7 +253,7 @@
                         </div>
 
                         <div class="valor-total">
-                            <p>Valor Total: R$704,00</p>
+                            <p>Valor Total: <span>R$704,00</span></p>
                         </div>
 
                         <div class="container-cartao">

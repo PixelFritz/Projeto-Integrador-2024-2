@@ -172,6 +172,9 @@
 
                 & .item-menu {
                     padding: .6rem 1rem;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1rem;
 
                     &:hover {
                     background-color: #93CBDB4D;
@@ -205,6 +208,20 @@
             border-bottom: 1px solid rgba(0, 0, 0, 0.3);
         }
     }
+}
+
+.item-menu input[type="radio"] {
+    display: none;
+}
+
+.item-menu input[type="radio"]:checked + label {
+    background-color: #93CBDB;
+}
+
+.item-menu input[type="radio"] + label {
+    display: block;
+    width: 100%;
+    padding: .5rem 1rem;
 }
 
 @media (max-width: 768px) {

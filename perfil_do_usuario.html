@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela Usuário</title>
+    <title>Perfil do Usuário - Hospetagem</title>
+    <link rel="shortcut icon" href="/assets/imagens/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/perfil_do_usuario.css">
@@ -63,7 +64,7 @@
     <main class="principal">
         <section class="pesquisa">
             <div class="pesquisa-barra">
-                <input type="text" placeholder="Digite algo...">
+                <input type="text" placeholder="Pesquisar...">
                 <button class="btn-pesquisa">
                     <i class="fa fa-search"></i>
                 </button>
@@ -78,7 +79,7 @@
             <form method="post" class="form" id="form1">
                 <div class="profile-container">
                     <label for="profileInput" class="profile-image profilePreview" id="profilePreview">
-                        <span>+</span>
+                        <span><i class="fa-solid fa-user"></i></span>
                     </label>
                     <input type="file" class="able profileInput" id="profileInput" accept="image/*" disabled>
                 </div>
@@ -217,7 +218,7 @@
                         <h3 class="titulos-form">Editar informações do animal</h3>
                         <div class="profile-container">
                             <label for="profileInput" class="profile-image profile-able profilePreview">
-                                <span>+</span>
+                                <span><i class="fa-solid fa-user"></i></span>
                             </label>
                             <input type="file" class="profileInput" accept="image/*">
                         </div>
@@ -280,28 +281,28 @@
                                 <div class="menu-collapse" tabindex="1">
                                     <ul class="lista-menu">
                                         <li class="item-menu">
-                                            <input type="checkbox" value="calmo">
-                                            <label for="" class="p-input">Calmo</label>
+                                            <input type="checkbox" value="calmo" id="calmo">
+                                            <label for="calmo" class="p-input">Calmo</label>
                                         </li>
                                         <li class="item-menu">
-                                            <input type="checkbox" value="agitado">
-                                            <label for="" class="p-input">Agitado</label>
+                                            <input type="checkbox" value="agitado" id="agitado">
+                                            <label for="agitado" class="p-input">Agitado</label>
                                         </li>
                                         <li class="item-menu">
-                                            <input type="checkbox" value="agressivo">
-                                            <label for="" class="p-input">Agressivo</label>
+                                            <input type="checkbox" value="agressivo" id="agressivo">
+                                            <label for="agressivo" class="p-input">Agressivo</label>
                                         </li>
                                         <li class="item-menu">
-                                            <input type="checkbox" value="reservado">
-                                            <label for="" class="p-input">Reservado</label>
+                                            <input type="checkbox" value="reservado" id="reservado">
+                                            <label for="reservado" class="p-input">Reservado</label>
                                         </li>
                                         <li class="item-menu">
-                                            <input type="checkbox" value="independente">
-                                            <label for="" class="p-input">Independente</label>
+                                            <input type="checkbox" value="independente" id="independente">
+                                            <label for="independente" class="p-input">Independente</label>
                                         </li>
                                         <li class="item-menu">
-                                            <input type="checkbox" value="medroso">
-                                            <label for="" class="p-input">Medroso</label>
+                                            <input type="checkbox" value="medroso" id="medroso">
+                                            <label for="medroso" class="p-input">Medroso</label>
                                         </li>
                                     </ul>
                                 </div>
@@ -421,13 +422,13 @@
 
                         <div class="lado-a-lado">
                             <div class="itens-perfil">
-                                <label class="label" for="data-vencimento">Data de Vencimento:</label>
-                                <input class="infos-input" type="text" name="data-vencimento" placeholder="Digite a data de vencimento">
+                                <label class="label" for="data-vencimento">Data de Validade:</label>
+                                <input class="infos-input" type="text" name="data-vencimento" placeholder="Digite a data de validade">
                             </div>
 
                             <div class="itens-perfil">
                                 <label class="label" for="cvv">CVV:</label>
-                                <input class="infos-input" type="text" name="cvv" placeholder="Digite o CVV">
+                                <input class="infos-input" type="text" name="cvv" placeholder="Digite o código de segurança">
                             </div>
                         </div>
 
