@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,17 @@
 
     <script src="https://kit.fontawesome.com/e8db2f40d0.js" crossorigin="anonymous" defer></script>
     <script src="assets/js/menu_index.js" defer></script>
+    <script src="assets/js/cep_cpf.js" defer></script>
+    <script src="assets/js/reservas.js" defer></script>
 </head>
+
 <body>
     <header>
         <section class="info-principal">
             <div class="nome-sistema">
-                <a href="index.html"><h1>Hos<span>pet</span>agem</h1></a>
+                <a href="index.html">
+                    <h1>Hos<span>pet</span>agem</h1>
+                </a>
             </div>
             <button class="perfil">
                 <a href="login.html">Entrar</a>
@@ -64,153 +70,169 @@
                 Filtrar
             </button>
         </section>
-    </main>
+        <section class="container">
+            <h1 class="titulo-h1">Cadastre sua Hospedagem</h1>
+
+            <form>
+                <label for="nome">Nome da hospedagem</label>
+                <input type="text" id="nome" class="input">
 
 
-    <div class="container">
-        <h3>Cadastre sua Hospedagem</h3>
-
-        <form>
-           
-            <label for="nome">Nome da hospedagem</label>
-            <input type="text" id="nome" class="input-nome"><img src="assets/css/Imagens/icons/editar.svg" alt="">
-            
-
-            <label for="descricao">Descrição da hospedagem</label>
-            <textarea id="descricao" class="input-descricao" placeholder="Fale mais..."></textarea>
-
-         
-            <label for="valor">Defina o valor inicial</label>
-            <input type="text" id="valor" class="input-valor" placeholder="R$">
-        
-
-            <label for="horario"> Horários de funcionamento</label>
-        <div class="horario">
-            <label>Início</label>
-            <input type="time" id="horario-inicio" class="input-horario-inicio" >
-
-            <label>Término</label>
-            <input type="time" id="horario-final" class="input-horario-final" >
-        </div>
-
-        
-            <h2>Dias de funcionamento:</h2>
-            <div class="dias-funcionamento">
-            <div class="dropdown">
-              <button type="button" class="dropdown-button">Selecione os dias <span class="seta"></span></button>
-              <div class="dropdown-options">
-                <button type="button" class="dia" data-dia="segunda">Segunda</button>
-                <button type="button" class="dia" data-dia="terca">Terça</button>
-                <button type="button" class="dia" data-dia="quarta">Quarta</button>
-                <button type="button" class="dia" data-dia="quinta">Quinta</button>
-                <button type="button" class="dia" data-dia="sexta">Sexta</button>
-                <button type="button" class="dia" data-dia="sabado">Sábado</button>
-                <button type="button" class="dia" data-dia="domingo">Domingo</button>
-              </div>
-            </div>
-          </div>
-          
+                <label for="descricao">Descrição da hospedagem</label>
+                <textarea id="descricao" class="input-descricao" placeholder="Fale mais..."></textarea>
 
 
-            <label for="cep">CEP</label>
-            <input type="text" id="cep" class="input-cep" placeholder="00000-000" maxlength="10">
-     
-            <label for="endereco">Endereço completo:</label>  
-                <input type="text" class="input-endereço"><img src="assets/css/Imagens/icons/editar.svg" alt="">
+                <label for="valor">Defina o valor inicial</label>
+                <input type="text" id="valor" class="input" placeholder="R$">
 
-            <div class="NBC"> 
-           <br>
-           <br>
-            <label for="numero">Número:</label>  
-                <input type="text" class="input-numero" >
-            <label for="bairro">Bairro:</label>  
-                <input type="text" class="input-bairro" >
-            <label for="cidade">Cidade:</label>  
-                <input type="text" class="input-cidade">
-            </div>
-
-
-
-            <div class="mapa">
-                <h2>Mapa Integrado</h2>
-                <iframe 
-                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d77016.54037812188!2d-49.28152740217497!3d-16.751569374378942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1730825125229!5m2!1spt-BR!2sbr"
-                 allowfullscreen=""
-                 loading="lazy">
-                </iframe>
-            </div>
-
-            <h2>Adicione as Fotos do Local</h2>
-            <div class="fotos">
-                <div class="foto-upload-1">
-                    <img src="assets/css/Imagens/icons/fotos.svg" alt="Imagem Destaque">
-                    <label>Imagem Destaque</label>
-                    <button class="excluir">X</button>
+                <div class="horario">
+                    <div>
+                        <label>Início funcionamento</label>
+                        <input type="time" id="horario-inicio" class="input horario-inicio">
+                    </div>
+                    <div>
+                        <label>Término funcionamento</label>
+                        <input type="time" id="horario-final" class="input horario-final">
+                    </div>
                 </div>
-                <div class="foto-upload-2"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""> <button class="excluir">X</button> </div>
-                <div class="foto-upload-3"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""> <button class="excluir">X</button></div>
-                <div class="foto-upload-4"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""> <button class="excluir">X</button></div>
-                <div class="foto-upload-5"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""> <button class="excluir">X</button></div>
-                <div class="foto-upload-6"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""> <button class="excluir">X</button></div>
-                <div class="foto-upload-7"><img src="assets/css/Imagens/icons/adicionar.svg" alt=""> <button class="excluir">X</button></div>
-              </div>
-              
 
-            <h2>Serviços Adicionais</h2>
-            <div class="div-servicos">
-                <button class="servicos-btn" onclick="toggleBackground(this)">
-                    <img src="assets/css/Imagens/icons/brincadeira-icon.svg" alt="">
-                    <p class="p-input">Área de Brincadeiras</p>
-                </button>
-                <button class="servicos-btn" onclick="toggleInput(this)">
-                    <img src="assets/css/Imagens/icons/piscina-icon.svg" alt="">
-                    <p class="p-input">Piscina para Cães</p>
-                </button>
-                <button class="servicos-btn" onclick="toggleInput(this)">
-                    <img src="assets/css/Imagens/icons/treinamento-icon.svg" alt="">
-                    <p class="p-input">Treinamento</p>
-                </button>
-                <button class="servicos-btn" onclick="toggleInput(this)">
-                    <img src="assets/css/Imagens/icons/cuidados-icon.svg" alt="">
-                    <p class="p-input">Cuidados Personalizados</p>
-                </button>
-                <button class="servicos-btn" onclick="toggleInput(this)">
-                    <img src="assets/css/Imagens/icons/transporte-icon.svg" alt="">
-                    <p class="p-input">Serviço de Transporte</p>
-                </button>
-                <button class="servicos-btn" onclick="toggleInput(this)">
-                    <img src="assets/css/Imagens/icons/passeio-icon.svg" alt="">
-                    <p class="p-input">Passeio ao Ar Livre</p>
-                </button>
-                <button class="servicos-btn" onclick="toggleInput(this)">
-                    <img src="assets/css/Imagens/icons/descanso-icon.svg" alt="">
-                    <p class="p-input">Área de Descanso</p>
-                </button>
-                <button class="servicos-btn" onclick="toggleInput(this)">
-                    <img src="assets/css/Imagens/icons/banho-tosa-icon.svg" alt="">
-                    <p class="p-input">Banho e Tosa</p>
-                </button>
-                <button class="servicos-btn" onclick="toggleInput(this)">
-                    <img src="assets/css/Imagens/icons/hospedagem-icon.svg" alt="">
-                    <p class="p-input">Hospedagem Noturna</p>
-                </button>
-                <button class="servicos-btn" onclick="toggleInput(this)">
-                    <img src="assets/css/Imagens/icons/adicionar.svg" alt="">
-                    <p class="p-input">Adicionar Novo Serviço</p>
-            </button>
-            </div>
+                <p class="p">Dias de funcionamento:</p>
+                <div class="dias-funcionamento">
+                    <div class="dropdown">
+                        <button type="button" class="dropdown-button">Selecione os dias <span
+                                class="seta"></span></button>
+                        <div class="dropdown-options">
+                            <button type="button" class="dia" data-dia="segunda">Segunda</button>
+                            <button type="button" class="dia" data-dia="terca">Terça</button>
+                            <button type="button" class="dia" data-dia="quarta">Quarta</button>
+                            <button type="button" class="dia" data-dia="quinta">Quinta</button>
+                            <button type="button" class="dia" data-dia="sexta">Sexta</button>
+                            <button type="button" class="dia" data-dia="sabado">Sábado</button>
+                            <button type="button" class="dia" data-dia="domingo">Domingo</button>
+                        </div>
+                    </div>
+                </div>
 
+                <h2 class="titulo-secoes">Endereço</h2>
+                <label for="endereco">Logradouro:</label>
+                <input type="text" class="input" placeholder="Digite o logradouro" id="log">
+                
+                <label for="bairro">Bairro:</label>
+                <input type="text" class="input" placeholder="Digite o bairro" id="bairro">
 
-            <button type="submit" class="btn-adicionar">Adicionar Hospedagem</button>
-        </form>
-    </div>
+                <div class="lado-a-lado">
+                    <div>
+                        <label for="numero">Número:</label>
+                        <input type="text" class="input" placeholder="Digite o número">
+                    </div>
+                    <div>
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" class="input" placeholder="00000-000">
+                    </div>
+                </div>
+                <div class="lado-a-lado">
+                    <div>
+                        <label for="estado">Estado:</label>
+                        <input type="text" class="input" placeholder="Digite o estado" id="uf">
+                    </div>
+                    <div>
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" class="input" placeholder="Digite a cidade" id="cidade">
+                    </div>
+                </div>
 
+                <div class="mapa">
+                    <h2 class="titulo-secoes">Mapa Integrado</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d77016.54037812188!2d-49.28152740217497!3d-16.751569374378942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1730825125229!5m2!1spt-BR!2sbr"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
 
+                <h2 class="titulo-secoes">Adicione as Fotos do Local</h2>
+                <div class="fotos">
+                    <div class="foto-upload-principal 1">
+                        <img src="assets/imagens/icons/fotos.svg" alt="Imagem Destaque">
+                        <label>Imagem Destaque</label>
+                        <button class="excluir" type="button">X</button>
+                    </div>
+                    <div class="foto-upload 2">
+                        <img src="assets/imagens/img_perfil/adicionar.svg" alt="">
+                        <button class="excluir" type="button">X</button>
+                    </div>
+                    <div class="foto-upload 3">
+                        <img src="assets/imagens/img_perfil/adicionar.svg" alt="">
+                        <button class="excluir" type="button">X</button>
+                    </div>
+                    <div class="foto-upload 4">
+                        <img src="assets/imagens/img_perfil/adicionar.svg" alt="">
+                        <button class="excluir" type="button">X</button>
+                    </div>
+                    <div class="foto-upload 5">
+                        <img src="assets/imagens/img_perfil/adicionar.svg" alt="">
+                        <button class="excluir" type="button">X</button>
+                    </div>
+                    <div class="foto-upload 6">
+                        <img src="assets/imagens/img_perfil/adicionar.svg" alt="">
+                        <button class="excluir" type="button">X</button>
+                    </div>
+                    <div class="foto-upload 7">
+                        <img src="assets/imagens/img_perfil/adicionar.svg" alt="">
+                        <button class="excluir" type="button">X</button>
+                    </div>
+                </div>
 
+                <h2 class="titulo-secoes">Serviços Adicionais</h2>
+                <div class="div-servicos">
+                    <button type="button" class="servicos-btn" onclick="toggleBackground(this)">
+                        <img src="assets/imagens/icons/brincadeira-icon.svg" alt="">
+                        <p class="p-input">Área de Brincadeiras</p>
+                    </button>
+                    <button type="button" class="servicos-btn" onclick="toggleBackground(this)">
+                        <img src="assets/imagens/icons/piscina-icon.svg" alt="">
+                        <p class="p-input">Piscina para Cães</p>
+                    </button>
+                    <button type="button" class="servicos-btn" onclick="toggleBackground(this)">
+                        <img src="assets/imagens/icons/treinamento-icon.svg" alt="">
+                        <p class="p-input">Treinamento</p>
+                    </button>
+                    <button type="button" class="servicos-btn" onclick="toggleBackground(this)">
+                        <img src="assets/imagens/icons/cuidados-icon.svg" alt="">
+                        <p class="p-input">Cuidados Personalizados</p>
+                    </button>
+                    <button type="button" class="servicos-btn" onclick="toggleBackground(this)">
+                        <img src="assets/imagens/icons/transporte-icon.svg" alt="">
+                        <p class="p-input">Serviço de Transporte</p>
+                    </button>
+                    <button type="button" class="servicos-btn" onclick="toggleBackground(this)">
+                        <img src="assets/imagens/icons/passeio-icon.svg" alt="">
+                        <p class="p-input">Passeio ao Ar Livre</p>
+                    </button>
+                    <button type="button" class="servicos-btn" onclick="toggleBackground(this)">
+                        <img src="assets/imagens/icons/descanso-icon.svg" alt="">
+                        <p class="p-input">Área de Descanso</p>
+                    </button>
+                    <button type="button" class="servicos-btn" onclick="toggleBackground(this)">
+                        <img src="assets/imagens/icons/banho-tosa-icon.svg" alt="">
+                        <p class="p-input">Banho e Tosa</p>
+                    </button>
+                    <button type="button" class="servicos-btn" onclick="toggleBackground(this)">
+                        <img src="assets/imagens/icons/hospedagem-icon.svg" alt="">
+                        <p class="p-input">Hospedagem Noturna</p>
+                    </button>
+                    <button type="button" class="servicos-btn" onclick="toggleBackground(this)">
+                        <img src="assets/imagens/icons/adicionar.svg" alt="">
+                        <p class="p-input">Adicionar Novo Serviço</p>
+                    </button>
+                </div>
+
+                <button type="submit" class="btn-adicionar">Adicionar Hospedagem</button>
+            </form>
+        </section>
+    </main>
 
     <footer class="footer">
         <section class="img-footer">
-            <img src="assets/css/imagens/cachorro.svg" alt="" class="cachorro-footer">
+            <img src="assets/imagens/cachorro.svg" alt="" class="cachorro-footer">
         </section>
         <section class="infos">
             <section class="info-footer">
@@ -221,23 +243,28 @@
                 <li><a href="" class="info-links">Termos de Serviço</a></li>
                 <li><a href="" class="info-links">Política de Privacidade</a></li>
             </section>
-    
+
             <section class="info-footer">
                 <h2>Suporte</h2>
-                <li><p>Email:</p></li>
+                <li>
+                    <p>Email:</p>
+                </li>
                 <li><a href="" class="info-links">contato@hospedagemdepets.com</a></li>
-                <li><p>Telefone:</p></li>
+                <li>
+                    <p>Telefone:</p>
+                </li>
                 <li><a href="" class="info-links">(XX) XXXXX-XXXX</a></li>
             </section>
-    
+
             <section class="info-footer">
                 <h2>Redes Sociais</h2>
                 <div class="icon-footer">
                     <i class="fa-brands fa-instagram fa-3x"></i>
-                    <i class="fa-brands fa-facebook fa-3x"></i>    
+                    <i class="fa-brands fa-facebook fa-3x"></i>
                 </div>
             </section>
         </section>
     </footer>
 </body>
+
 </html>

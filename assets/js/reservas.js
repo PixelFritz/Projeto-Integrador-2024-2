@@ -6,7 +6,6 @@ toggleButtons.forEach(button => {
     button.addEventListener('click', function(event) {
         event.stopPropagation();
         
-        // Close all other menus
         toggleButtons.forEach(otherButton => {
             if (otherButton !== button) {
                 const otherMenu = document.querySelector(otherButton.getAttribute('data-target'));
