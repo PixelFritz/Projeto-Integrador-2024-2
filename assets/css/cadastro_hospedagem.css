@@ -1,416 +1,321 @@
-.container{
-    margin: 100px;
-    margin-top: -10px;
+.titulo-h1 {
+	font-size: 3.5rem;
+	padding: 2rem 0;
+	text-align: center;
 }
 
-main{ 
-    min-width: 320px;
-    max-width: 800px;
-    margin: auto;
+.titulo-secoes {
+	font-size: 2.5rem;
+	text-align: center;
+	margin: 2rem 0;
+	color: #000000;
 }
 
-body {
-    font-size: 25px; 
-    line-height: 1.5; 
-    font-weight: lighter;
-
-} 
-
-h2 {
-    font-size: 25px;        
-    font-weight: lighter;   
-    margin-bottom: 20px;    
-    margin-top: 20px;
-  } 
-
-h3 {
-    font-size: 40px; 
-    text-align: center;
-    margin-bottom: 50px;
-    color: #000000;
-} 
-
-label {
-    display: block;
-    margin-top: 10px;
-    color: #000000;
-    font-weight: lighter;
+label,
+.p {
+	display: block;
 }
 
-.input-nome {
-    font-size: 20px;
-    width: 300px; 
-    padding: 5px;
-    border-radius: 10px;
-    height: 40px;
-    margin-bottom: 30px;
+.input,
+textarea,
+.dropdown-button {
+	border: 1px solid #FF67C5B2;
+	box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
+	padding: .5rem;
+	border-radius: 10px;
+	margin-bottom: 1rem;
+}
+
+.input,
+.lado-a-lado,
+textarea,
+.horario {
+	width: 80%;
+}
+
+.lado-a-lado {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.lado-a-lado div {
+	width: 45%;
+}
+
+.lado-a-lado div .input {
+	width: 100%;
 }
 
 .input-descricao {
-    font-size: 20px;
-    width: 100%;
-    height: 180px; 
-    padding: 8px;
-    border-radius: 10px;
-    margin-bottom:30px;
+	height: 120px;
+	resize: none;
 }
-
-
-.input-valor {
-    font-size: 20px;
-    width: 200px; 
-    padding: 8px;
-    border-radius: 10px;
-    margin-bottom:30px;
-    
-}
-
 
 .horario {
-    display: flex;
-    align-items: center; 
-    gap: 10px; 
-    margin-top: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
 }
 
-.horario label {
-    font-size: 25px;
-    margin-right: 5px;
+.horario div {
+	width: 45%;
 }
 
-.input-horario-inicio,
-.input-horario-final {
-    font-size: 20px;
-    width: 150px;
-    padding: 8px;
-    border-radius: 10px;
-    margin-top: 20px;
-
-}
-
-.input-dias {
-    font-size: 20px;
-    width: 150px; 
-    padding: 8px;
-    border-radius: 10px;
- 
+.horario-inicio,
+.horario-final {
+	width: 100%;
+	border-radius: 10px;
 }
 
 .dias-funcionamento {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    padding: 2px;
-    border-radius: 10px;
-    width: 290px;
-    margin-left: 0px;
-  }
-  
-  .dias-funcionamento h2 {
-    font-size: 25px;
-    margin-bottom: 10px;
-  }
-  
-  .dropdown {
-    position: relative;
-    
-  }
-  
-  .dropdown-button {
-    background-color: #fff;
-    border: 2px solid #ffffff;
-    padding: 8px 16px;
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    text-align: left;
-    font-size: 16px;
-  }
-  
-  .dropdown-options {
-    display: none;
-    position: absolute;
-    top: 40px; 
-    width: 100%;
-    background-color: #fff;
-    border: 2px solid #ffffff;
-    border-radius: 5px;
-    z-index: 10;
-  }
-  
-  .dias .dia {
-    display: block;
-    width: 100%;
-    background-color: #ccc;
-    border: none;
-    padding: 8px;
-    text-align: left;
-    cursor: pointer;
-  }
-  
-  .dias .dia:hover {
-    background-color: #ccc;
-  }
-  
-
-  .dropdown.open .dropdown-options {
-    display: block;
-  }
-  
-  .seta {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 10px solid #000; 
-    display: inline-block;
-    margin-left: 95px; 
-  }
-  
-  .seta.aberta {
-    transform: rotate(180deg); 
-  }
-
-.input-cep {
-    width: 110px; 
-    height: 40px;
-    font-size: 20px;
-    border-radius: 10px;
-    margin-bottom:30px;
-    
+	border-radius: 10px;
+	width: 290px;
 }
 
-.input-endereço {
-    width:480px;
-    height: 40px;
-    font-size: 20px;
-    border-radius: 10px;
-}  
-
-.NBC{
-    display: flex;
-    align-items: center; 
-    gap: 15px;
-
+.dropdown {
+	position: relative;
 }
 
-.input-numero {
-    width: 50px;
-    height: 40px;
-    font-size: 20px;
-    border-radius: 10px;
-    
+.dropdown-button {
+	background-color: #fff;
+	width: 100%;
+	border-radius: 10px;
 }
 
-.input-bairro {
-    width: 200px; 
-    height: 40px;
-    font-size: 20px;
-    border-radius: 10px;
+.dropdown-options {
+	display: none;
+	position: absolute;
+	top: 40px;
+	width: 100%;
+	background-color: #fff;
+	border: 2px solid #ffffff;
+	border-radius: 5px;
+	z-index: 10;
 }
 
-.input-cidade {
-    width: 200px;
-    height: 40px;
-    font-size: 20px;
-    border-radius: 10px;
+.dias .dia {
+	display: block;
+	width: 100%;
+	background-color: #ccc;
+	border: none;
+	padding: 8px;
+	text-align: left;
+	cursor: pointer;
 }
 
+.dias .dia:hover {
+	background-color: #ccc;
+}
 
-.mapa{
-    width: 100%;
-    border-radius: 8px;
-    margin-left: auto;        
-    margin-right: auto;       
-    margin-bottom: 100px; 
-    margin-top: 30px;
-    height: 400px;
-    overflow: visible;
-    max-width: 800px;
+.dropdown.open .dropdown-options {
+	display: block;
+}
+
+.seta {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid #000;
+	display: inline-block;
+	margin-left: 95px;
+}
+
+.seta.aberta {
+	transform: rotate(180deg);
+}
+
+.mapa {
+	width: 100%;
+	border-radius: 8px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 100px;
+	margin-top: 30px;
+	height: 400px;
+	overflow: visible;
+	max-width: 800px;
 }
 
 iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-} 
-
-.fotos {
-    display: grid;
-    grid-template-areas:
-      "foto-upload-1 foto-upload-2 foto-upload-3 foto-upload-4"
-      "foto-upload-1 foto-upload-5 foto-upload-6 foto-upload-7";
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 10px; 
-  }
-  
-  .foto-upload-1 {
-    grid-area: foto-upload-1;
-    background-color: #ffffff;
-    padding: 40px;
-    text-align: center;
-    min-height: 500px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-  }
-  
-.foto-upload-2,
-.foto-upload-3,
-.foto-upload-4,
-.foto-upload-5,
-.foto-upload-6,
-.foto-upload-7 {
-  background-color: #ffffff;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
+	width: 100%;
+	height: 100%;
+	border: none;
 }
 
-  .excluir {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 5px 10px;
-    font-size: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
+.fotos {
+	display: grid;
+	grid-template-areas:
+		"foto-upload-1 foto-upload-2 foto-upload-3 foto-upload-4"
+		"foto-upload-1 foto-upload-5 foto-upload-6 foto-upload-7";
+	grid-template-columns: 2fr 1fr 1fr 1fr;
+	gap: 10px;
+}
+
+.foto-upload-principal {
+	grid-area: foto-upload-1;
+	background-color: #ffffff;
+	padding: 40px;
+	text-align: center;
+	min-height: 500px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.foto-upload {
+	background-color: #ffffff;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.foto-upload-principal img,
+.foto-upload img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.excluir {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: rgb(255, 255, 255);
+	border: none;
+	padding: 5px 10px;
+	border-radius: 50%;
+	box-shadow: none;
+}
 
 .servicos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-    
-
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 10px;
 }
 
 .servicos button {
-    padding: 5px 10px;
-    background-color: #e0f3eb;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    color: #555;
-    font-size: 0.9em;
-    border-radius: 10px;
+	padding: 5px 10px;
+	background-color: #e0f3eb;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	color: #555;
+	border-radius: 10px;
 }
+
 .div-servicos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem 3rem;
-    margin: 1rem auto 2rem;
-    width: 80%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem 3rem;
+	margin: 1rem auto 2rem;
+	width: 80%;
 
-     .servicos-btn {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: .5rem;
-        background-color: #f8f4ec;
-        border-radius: 7px;
-        border: 1px solid #ff67c5a2;
-        
-        &:hover {
-            background-color: #fff;
-        }
-        
-        &.ativo {
-            background-color: #93CBDB4D;
-            border: 1px solid #93CBDB;
-        }
+	.servicos-btn {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: .5rem;
+		background-color: #f8f4ec;
+		border-radius: 7px;
+		border: 1px solid #ff67c5a2;
 
-        & img {
-            width: 3.2rem;
-            margin: 0 1rem;
-        }
-    }
+		&:hover {
+			background-color: #fff;
+		}
+
+		&.ativo {
+			background-color: #93CBDB4D;
+			border: 1px solid #93CBDB;
+		}
+
+		& img {
+			width: 3.2rem;
+			margin: 0 1rem;
+		}
+	}
 }
 
 .btn-adicionar {
-    display: block; 
-    width: 400px; 
-    height: 80px; 
-    padding: 10px; 
-    margin: 20px auto; 
-    background-color: #93CBDB; 
-    border: none; 
-    border-radius: 10px; 
-    color: white; 
-    font-size: 1em; 
-    cursor: pointer; 
-    margin-top:150px;
+	display: block;
+	margin: 10rem auto 0;
+	background-color: #93CBDB;
+	border: none;
+	border-radius: 10px;
 }
 
-
-.btn-adicionar:hover {
-    background-color: #82b0a2;
+.ativo {
+	background-color: #93CBDB4D;
+	border: 1px solid #93CBDB;
 }
 
 @media (max-width: 768px) {
+	.input,
+	.input-descricao {
+		width: 100%;
+	}
 
+	.lado-a-lado,
+	.horario {
+		width: 100%;
+	}
 
-    .input-nome, .input-descricao, .input-valor, .input-dias, 
-    .input-cep, .input-endereço, .input-numero, .input-bairro, .input-cidade {
-        width: 100%;
-    }
+	.fotos {
+		grid-template-areas:
+			"foto-upload-1 foto-upload-1"
+			"foto-upload-2 foto-upload-3"
+			"foto-upload-4 foto-upload-5"
+			"foto-upload-6 foto-upload-7";
+		grid-template-columns: 1fr 1fr;
+	}
 
-    .NBC, .horario {
-        flex-direction: column;
-        width: 100%;
-    }
+	.foto-upload-principal {
+		min-height: 300px;
+	}
 
-    .fotos {
-      grid-template-areas:
-        "foto-upload-1 foto-upload-1"
-        "foto-upload-2 foto-upload-3"
-        "foto-upload-4 foto-upload-5"
-        "foto-upload-6 foto-upload-7";
-      grid-template-columns: 1fr 1fr;
-    }
-  
-    .foto-upload-1 {
-      min-height: 300px; 
-    }
-  
-    .div-servicos {
-      grid-template-columns: 1fr 1fr;
-      width: 100%; 
-      gap: 0.8rem; 
-    }
-  
-    .btn-salvar {
-      width: 100%; 
-      height: 60px; 
-    }
+	.div-servicos {
+		grid-template-columns: 1fr 1fr;
+		width: 100%;
+		gap: 0.8rem;
+	}
+
+	.btn-salvar {
+		width: 100%;
+		height: 60px;
+	}
 }
-  @media (max-width: 480px) {
 
-    .foto-upload-1 {
-        min-height: 250px; 
-    }
+@media (max-width: 480px) {
+	.foto-upload-principal {
+		min-height: 250px;
+	}
 
- 
-    .div-servicos {
-        grid-template-columns: 1fr;
-        width: 100%;
-        gap: 0.6rem;
-    }
+	.lado-a-lado,
+	.horario {
+		flex-direction: column;
+	}
 
-    
-    .btn-adicionar {
-        width: 100%; 
-        height: 90px; 
-    }
+	.lado-a-lado div,
+	.horario div,
+	.dias-funcionamento {
+		width: 100%;
+	}
+
+	.div-servicos {
+		grid-template-columns: 1fr;
+		width: 100%;
+		gap: 0.6rem;
+	}
 }

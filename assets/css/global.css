@@ -47,7 +47,7 @@ button {
     }
 }
 
-p, li, button, input, select, label {
+p, li, button, input, select, label, textarea {
     font-size: 1.7rem;
 }
 

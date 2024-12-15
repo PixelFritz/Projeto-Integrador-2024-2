@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="assets/imagens/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/cadastro_pet.css">
 
     <script src="https://kit.fontawesome.com/e8db2f40d0.js" crossorigin="anonymous" defer></script>
     <script src="assets/js/menu_index.js" defer></script>
+    <script src="assets/js/adicionar_imagem.js" defer></script>
 </head>
 
 <body>
@@ -69,50 +71,62 @@
         </section>
         <section class="cadastro-pet">
             <h1 class="titulo-pet">Cadastrar Meu Pet</h1>
-            <div class="perfil-pet">
-                <p>Foto de perfil:</p>
-                <img src="assets/imagens/adicionar-foto.svg" alt="">
-            </div>
             <form class="info-pet" action="">
-                <div class="flex-pet">
-                    <label for="">Nome:</label>
-                    <input class="nome-pet" type="text">
+                <div class="profile-container">
+                    <label for="profileInput" class="profile-image profilePreview" id="profilePreview">
+                        <span><i class="fa-solid fa-user"></i></span>
+                    </label>
+                    <input type="file" class="able profileInput" id="profileInput" accept="image/*">
                 </div>
-                <div>
-                    <label for="">Idade:  </label>
-                    <input class="input-pet" type="text">
+                <div class="lado-a-lado">
+                    <div class="flex-pet">
+                        <label for="">Nome:</label>
+                        <input class="nome-pet" type="text">
+                    </div>
+                    <div>
+                        <label for="">Idade:  </label>
+                        <input class="input-pet" type="text">
+                    </div>
                 </div>
-                <div>
-                    <label for="">Raça:  </label>
-                    <input class="input-pet" type="text">
+                <div class="lado-a-lado">
+                    <div>
+                        <label for="">Raça:  </label>
+                        <input class="input-pet" type="text">
+                    </div>
+                    <div>
+                        <label for="">Peso: </label>
+                        <input class="input-pet" type="text">
+                    </div>
                 </div>
-                <div>
-                    <label for="">Peso: </label>
-                    <input class="input-pet" type="text">
+                <div class="lado-a-lado">
+                    <div>
+                        <label for="">Sexo:</label>
+                        <input class="input-pet" type="text">
+                    </div>
+                    <div>
+                        <label for="">Castrado:</label>
+                        <input class="icon-info input-info-pet" type="text">
+                    </div>
                 </div>
-                <div>
-                    <label for="">Sexo:</label>
-                    <input class="input-pet" type="text">
+                <div class="lado-a-lado">
+                    <div>
+                        <label for="">Temperamento:</label>
+                        <input class="icon-info input-temperamento" type="text">
+                    </div>
+                    <div>
+                        <label for="">Historico de doeças e/ou alergias:</label>
+                        <input class="icon-info input-info-pet" type="text">
+                    </div>
                 </div>
-                <div>
-                    <label for="">Castrado:</label>
-                    <input class="icon-info input-info-pet" type="text">
-                </div>
-                <div>
-                    <label for="">Temperamento:</label>
-                    <input class="icon-info input-temperamento" type="text">
-                </div>
-                <div>
-                    <label for="">Historico de doeças e/ou alergias:</label>
-                    <input class="icon-info input-info-pet" type="text">
-                </div>
-                <div>
-                    <label for="">Pet convive bem com outros animais?</label>
-                    <input class="icon-info input-info-pet" type="text">
-                </div>
-                <div class="flex-pet">
-                    <label for="">Contato de emergência:</label>
-                    <input type="text">
+                <div class="lado-a-lado">
+                    <div>
+                        <label for="">Pet convive bem com outros animais?</label>
+                        <input class="icon-info input-info-pet" type="text">
+                    </div>
+                    <div class="flex-pet">
+                        <label for="">Contato de emergência:</label>
+                        <input type="text">
+                    </div>
                 </div>
                 <div class="info-adicional">
                     <label for="">Há algo que o pet gosta ou não gosta? (opcional)</label>
