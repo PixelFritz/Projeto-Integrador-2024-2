@@ -7,9 +7,9 @@ Site desenvolvido para hotéis e creches fictícias oferecerem o seu trabalho, m
 ## Funcionalidades e tarefas
 - ✅ Telas principais
 - ✅ Refinamento de telas
+- ✅ Cadastro de clientes
 - ⏳ Cadastro de Reservas
 - ⏳ Cadastro de animais
-- ⏳ Cadastro de clientes
 - ⏳ Alterações de informações
 
 ## Informações da Equipe
