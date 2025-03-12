@@ -6,18 +6,18 @@ Site desenvolvido para hotéis e creches fictícias oferecerem o seu trabalho, m
 
 ## Estrutura do Projeto
 ```
-assets/
-    css/
-    imagens/
-        favicon/
-        icons/
-    js/
-    json/
-    py/
-        request.py
+project/
+    assets/
+        css/
+        imagens/
+            favicon/
+            icons/
+        js/
+        json/
+        py/
+            request.py
 docs/
     404.md
-project/
 README.md
 ```
 
