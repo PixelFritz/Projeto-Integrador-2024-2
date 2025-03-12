@@ -18,6 +18,7 @@ project/
             request.py
 docs/
     404.md
+index.html
 README.md
 ```
 
