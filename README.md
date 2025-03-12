@@ -1,8 +1,25 @@
-# _Projeto Integrador 2024/2_
-Projeto elaborado como forma de avaliação durante o curso de Análise e Desenvolvimento de Sistemas, realizado durante o segundo período. O presente projeto, foi planejado e executado pelos colegas, com reuniões e discussões periódicas conduzidas pelos professores de Programação Web, Banco de Dados e o orientador da matéria.  
+# _Projeto Integrador_
+Projeto elaborado como forma de avaliação durante o curso de Análise e Desenvolvimento de Sistemas, realizado a partir do segundo período. O presente projeto, foi planejado e executado pelos colegas, com reuniões e discussões periódicas conduzidas pelos professores de `Programação Web`, `Banco de Dados`, `Linguagem de Programação - Java` e o orientador da matéria.  
 
 ## Ideia
 Site desenvolvido para hotéis e creches fictícias oferecerem o seu trabalho, mostrando valores, informações, serviços disponíveis e datas e horários para reserva.
+
+## Estrutura do Projeto
+```
+assets/
+    css/
+    imagens/
+        favicon/
+        icons/
+    js/
+    json/
+    py/
+        request.py
+docs/
+    404.md
+project/
+README.md
+```
 
 ## Funcionalidades e tarefas
 - ✅ Telas principais
@@ -15,11 +32,10 @@ Site desenvolvido para hotéis e creches fictícias oferecerem o seu trabalho, m
 ## Informações da Equipe
 | Equipe | Conta | Função |
 |----------|----------|----------|
-| Gabriella | [@PixelFritz](https://github.com/pixelfritz) | Scrum Master/Front-end |
-| Gustavo | [@gustavol007](https://github.com/gustavol007) | Full Stack |
-| Guilherme | [@Sh1roHebi](https://github.com/sh1rohebi) | Banco de dados |
-| Lucas | [@Lucas703F](https://github.com/lucas703f) | Back-end e Banco de dados |
-| Renata | [@renatakaren](https://github.com/renatakaren) | Designer | 
+| Gabriella | [@PixelFritz](https://github.com/pixelfritz) | Front-end e Designer |
+| Gustavo | [@gustavol007](https://github.com/gustavol007) | Back-end e Banco de dados |
+| Guilherme | [@Sh1roHebi](https://github.com/sh1rohebi) | Back-end e Banco de dados |
+| Lucas | [@Lucas703F](https://github.com/lucas703f) | Front-end |
 
 <details>
 <summary>Tecnologias 🛠️</summary>
