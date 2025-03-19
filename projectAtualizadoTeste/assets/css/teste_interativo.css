@@ -1,0 +1,114 @@
+
+.titulo {
+    text-align: center;
+    font-size: 3.5rem;
+    padding-top: 2rem;
+}
+
+.titulo span {
+    color: #FF67C5B2;
+}
+
+.teste_interativo {
+    text-align: center;
+}
+
+.teste_interativo h2 {
+    padding: 6rem 0 2rem;
+    font-size: 3rem;
+}
+
+.teste_interativo img {
+    width: 150px;
+    margin: 0 2rem;
+}
+
+.btn-teste {
+    background-color: #f8f4ec;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: none;
+}
+
+.btn-teste:hover {
+    transform: scale(1.05);
+}
+
+.btn-teste p {
+    width: 100px;
+}
+
+.btn-explorar {
+    text-align: center;
+    background-color: #FFE03980;
+    border-radius: 10px;
+    display: block;
+    margin: 6rem auto 0;
+}
+
+.btn-explorar:hover {
+    background-color: #ffd900a1;
+}
+
+.btn-explorar:focus {
+    outline: 1px solid #ffd900;
+}
+
+.selected img {
+    border: 3px solid #999;
+    border-radius: 90px;
+}
+
+.cover {
+    width: 80%;
+    height: 97%;
+    border-radius: 50%;
+    left: 1.9rem;
+}
+
+.img-container img {
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .teste_interativo img {
+        width: 100px;
+        margin: 0 1rem;
+    }
+
+    .btn-teste {
+        padding: 1rem;
+    }
+
+    .cover {
+        width: 83%;
+        height: 95%;
+        left: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .teste_interativo img {
+        width: 80px;
+        margin: 0 .5rem;
+    }
+
+    .btn-teste {
+        padding: .8rem;
+    }
+
+    .btn-teste p {
+        width: 80px;
+    }
+
+    .cover {
+        width: 89%;
+        height: 96%;
+        left: .5rem;
+    }
+}

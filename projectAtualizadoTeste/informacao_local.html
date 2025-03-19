@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do Local - Hospetagem</title>
+
+    <link rel="shortcut icon" href="assets/imagens/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/info-local.css">
+
+    <script src="https://kit.fontawesome.com/e8db2f40d0.js" crossorigin="anonymous" defer></script>
+    <script src="assets/js/menu_index.js" defer></script>
+    <script src="assets/js/avaliacao_paw.js" defer></script>
+    <script src="assets/js/info-local.js" defer></script>
+</head>
+<body>
+    <header>
+        <section class="info-principal">
+            <div class="nome-sistema">
+                <a href="index.html"><h1>Hos<span>pet</span>agem</h1></a>
+            </div>
+            <button class="perfil">
+                <a href="login.html">Entrar</a>
+            </button>
+            <button id="menu-btn" class="menu-btn"><i class="fa-solid fa-bars fa-2x"></i></button>
+        </section>
+
+        <section>
+            <nav class="menu-nav menu-hidden" id="menu-nav">
+                <li class="lista-nav">
+                    <a href="login.html" class="menu-hide link-nav entrar">Entrar</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="index.html" class="link-nav">Início</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="como_funciona.html" class="link-nav">Como Funciona</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="sobrenos.html" class="link-nav">Sobre Nós</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="planos_precos.html" class="link-nav">Planos e Preços</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="#" class="link-nav">FAQ</a>
+                </li>
+                <li class="lista-nav">
+                    <a href="teste_interativo.html" class="menu-hide link-nav entrar">Faça o teste</a>
+                </li>
+            </nav>
+        </section>
+    </header>
+
+    <main class="principal">
+        <section class="pesquisa">
+            <div class="pesquisa-barra">
+                <input type="text" placeholder="Pesquisar...">
+                <button class="btn-pesquisa">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <button class="btn-filtro">
+                <i class="fa fa-sliders"></i>
+                Filtrar
+            </button>
+        </section>
+        <section class="section-info-hotel">
+            <h1 class="nome-hotel">Creche Canina Feliz</h1>
+            <p class="p-texto">4,90</p>
+            <div class="avaliacao" data-rating="5">
+                <div class="patinhas"></div>
+                <p class="p-texto">59 avaliações</p>
+            </div>
+            <div class="div-carrosel">
+                <div class="carrosel-inner">
+                    <img src="assets/imagens/img_dif/img-informacoes1.svg" alt="" class="carrosel-item ativo">
+                    <img src="assets/imagens/img_dif/img-informacoes2.svg" alt="" class="carrosel-item">
+                    <img src="assets/imagens/img_dif/img-informacoes3.svg" alt="" class="carrosel-item">
+                </div>
+            </div>
+            <div class="div-carrosel-indicadores">
+                <span class="ponto ativo"></span>
+                <span class="ponto"></span>
+                <span class="ponto"></span>
+            </div>
+        </section>
+        <section>
+            <p class="p-principal">A Creche Canina Feliz oferece um ambiente seguro e divertido para o seu animal. Com profissionais dedicados e diversas atividades, garantimos que seu pet se sinta amado e acolhido.</p>
+            <h2 class="titulo-secoes">Aqui seus pets podem desfrutar de:</h2>
+            <div class="lista">
+                <div class="lista-beneficios">
+                    <div class="beneficios" id="teste">
+                        <img src="assets/imagens/icons/brincadeira-icon.svg">
+                        <p class="p-texto">Área de brincadeiras</p>
+                    </div>
+                    <div class="beneficios">
+                        <img src="assets/imagens/icons/piscina-icon.svg">
+                        <p class="p-texto">Piscina para Cães</p>
+                    </div>
+                    <div class="beneficios">
+                        <img src="assets/imagens/icons/cuidados-icon.svg">
+                        <p class="p-texto">Cuidados Personalizados</p>
+                    </div>
+                    <div class="beneficios">
+                        <img src="assets/imagens/icons/transporte-icon.svg">
+                        <p class="p-texto">Serviço de Transporte</p>
+                    </div>
+                    <div class="beneficios">
+                        <img src="assets/imagens/icons/descanso-icon.svg">
+                        <p class="p-texto">Área de Descanso</p>
+                    </div>
+                    <div class="beneficios">
+                        <img src="assets/imagens/icons/banho-tosa-icon.svg">
+                        <p class="p-texto">Banho e tosa</p>
+                    </div>
+                </div>
+            </div>
+            <button class="outros-servicos">+ Atividades e Serviços</button>
+            <div class="div-reserva">
+                <p class="p-reserva-valor">A partir de<span>R$ 50,00 dia</span></p>
+                <div class="data-reserva">
+                    <label for="data-reserva">Verifique se a data está disponível:</label>
+                    <input type="date" name="data-reserva" id="">
+                </div>
+                <button class="btn-reserva">Faça sua reserva</button>
+                <p class="cancelamento">* Cancelamento feito 48hrs sem custo</p>
+            </div>
+        </section>
+        <section class="section-feedback">
+            <div class="div-avaliacao">
+                <h3>Avaliação</h3>
+                <div class="estrelas">
+                    <div class="barra">
+                        <div class="preenchido" style="width: 70%;"></div>
+                    </div>
+                    <span>5.0</span>
+                </div>
+                <div class="estrelas">
+                    <div class="barra">
+                        <div class="preenchido" style="width: 50%;"></div>
+                    </div>
+                    <span>4.0</span>
+                </div>
+                <div class="estrelas">
+                    <div class="barra">
+                        <div class="preenchido" style="width: 40%;"></div>
+                    </div>
+                    <span>3.0</span>
+                </div>
+                <div class="estrelas">
+                    <div class="barra">
+                        <div class="preenchido" style="width: 20%;"></div>
+                    </div>
+                    <span>2.0</span>
+                </div>
+                <div class="estrelas">
+                    <div class="barra">
+                        <div class="preenchido" style="width: 10%;"></div>
+                    </div>
+                    <span>1.0</span>
+                </div>
+                <button>+ Avaliações</button>
+            </div>
+            <div class="div-feedback">
+                <div class="feedback avaliacao" data-rating="5">
+                    <div class="feedback-titulo">
+                        <p>Maria S.</p>
+                        <div class="patinhas"></div>
+                    </div>
+                    <p>"Meu cachorro voltou para casa tão feliz! Ele adorou as brincadeiras na piscina e fez novos amigos. Recomendo a todos!"</p>
+                </div>
+                <div class="feedback avaliacao" data-rating="5">
+                    <div class="feedback-titulo">
+                        <p>Ana L.</p>
+                        <div class="patinhas"></div>
+                    </div>
+                    <p>"Estou muito satisfeita! A equipe é super profissional e carinhosa. Meu cachorro sempre parece feliz quando o busco."</p>
+                </div>
+                <div class="feedback avaliacao" data-rating="4">
+                    <div class="feedback-titulo">
+                        <p>Roberto G.</p>
+                        <div class="patinhas"></div>
+                    </div>
+                    <p>"Ótimo lugar! Meu cão adorou a socialização com outros pets. Apenas um detalhe: o transporte poderia ser um pouco mais pontual."</p>
+                </div>
+                <div class="feedback avaliacao" data-rating="4">
+                    <div class="feedback-titulo">
+                        <p>João P.</p>
+                        <div class="patinhas"></div>
+                    </div>
+                    <p>"A creche é excelente! O atendimento foi muito atencioso e meu cão ficou bem cuidado. Só gostaria que houvesse mais atividades ao ar livre."</p>
+                </div>
+                <div class="feedback avaliacao" data-rating="3">
+                    <div class="feedback-titulo">
+                        <p>Carlos M.</p>
+                        <div class="patinhas"></div>
+                    </div>
+                    <p>"A creche é boa, mas poderia ter mais opções de alimentação para cães. Meu pet adora variar e ficou um pouco chateado."</p>
+                </div>
+            </div>
+        </section>
+        <section class="mapa">
+            <h2 class="titulo-secoes">Nossa Localização:</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.7301876446795!2d-49.25493042494304!3d-16.690379845655144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef1077239954f%3A0x40ee78e11fd2a527!2sFACINPRO%20-%20Faculdade%20INPRO%20-%20Gradua%C3%A7%C3%A3o%2C%20P%C3%B3s-Gradua%C3%A7%C3%A3o%20e%20MBA!5e0!3m2!1spt-BR!2sbr!4v1729574271937!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <div class="collapse" tabindex="1">
+            <i class="fa-solid fa-angle-left fa-2x"></i>
+            <a>Chat com a Creche Canina</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <section class="img-footer">
+            <img src="assets/imagens/img_dif/cachorro.svg" alt="" class="cachorro-footer">
+        </section>
+        <section class="infos">
+            <section class="info-footer">
+                <h2>Sobre Nós</h2>
+                <li><a href="sobrenos.html" class="info-links">Sobre Nós</a></li>
+                <li><a href="" class="info-links">Hospedar um Pet</a></li>
+                <li><a href="" class="info-links">Contato</a></li>
+                <li><a href="" class="info-links">Termos de Serviço</a></li>
+                <li><a href="" class="info-links">Política de Privacidade</a></li>
+            </section>
+    
+            <section class="info-footer">
+                <h2>Suporte</h2>
+                <li><p>Email:</p></li>
+                <li><a href="" class="info-links">contato@hospedagemdepets.com</a></li>
+                <li><p>Telefone:</p></li>
+                <li><a href="" class="info-links">(XX) XXXXX-XXXX</a></li>
+            </section>
+    
+            <section class="info-footer">
+                <h2>Redes Sociais</h2>
+                <div class="icon-footer">
+                    <i class="fa-brands fa-instagram fa-3x"></i>
+                    <i class="fa-brands fa-facebook fa-3x"></i>    
+                </div>
+            </section>
+        </section>
+    </footer>
+</body>
+</html>

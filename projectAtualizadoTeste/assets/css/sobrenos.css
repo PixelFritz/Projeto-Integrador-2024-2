@@ -1,0 +1,145 @@
+body {
+    background-image: url('/assets/imagens/brinquedo-verde.jpg.png'), url('/assets/imagens/brinquedo-vermelho.jpg.png'), url('/assets/imagens/brinquedo-roxo.png');
+    background-position-x: left, right, left;
+    background-position-y: 20%, 35%, 75%;
+    background-repeat: no-repeat;
+    background-size: 25rem;
+}
+
+.principal {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+
+    h1 {
+        font-size: 3.5rem;
+        padding: 2rem 0 1rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        padding: .5em 0;
+    }
+
+    .infos {
+        text-align: justify;
+        margin: 2rem auto;
+    }
+
+    .img-principal {
+        width: 75%;
+        box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
+        border-radius: 75px;
+    }
+
+    .div-mais-info {
+        width: 90%;
+        margin: auto
+    }
+
+    .info-secundaria {
+        width: 70%;
+        margin: 5rem 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lado-a-lado {
+        display: flex;
+        flex-direction: row;
+        margin-top: 3rem;
+        justify-content: space-between;
+        align-items: center;
+
+        .img-diferente {
+            width: 35%;
+            margin: 0 5rem;
+            height: fit-content;
+            box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 65px;
+        }
+    }
+
+    .span {
+        font-weight: bold;
+    }
+
+    .direita {
+        float: right;
+    }
+
+    .li {
+        padding: .5rem 0;
+        text-align: justify;
+        hyphens: auto;
+    }
+}
+
+@media (max-width: 975px) {
+    body {
+        background-size: 20rem;
+    }
+
+    .principal {
+        .info-secundaria {
+            margin: 2em 3em;
+        }
+
+        .lado-a-lado {
+            .img-diferente {
+                margin: 0 2rem;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-position-y: 20%, 55%, 70%;
+        background-size: 15rem;
+    }
+
+    .principal {
+        .img-principal {
+            width: 90%;
+        }
+        .div-mais-info {
+            width: 70%;
+        }
+
+        .info-secundaria {
+            width: 100%;
+            margin: 2em 0;
+        }
+
+        .lado-a-lado {
+            flex-direction: column;
+            margin-top: 0;
+
+            .img-diferente {
+                width: 75%;
+            }
+        }
+
+        .direita {
+            float: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-image: none;
+    }
+
+    .principal {
+        h1, h2 {
+            text-align: center;
+        }
+        
+        .div-mais-info {
+            width: 90%;
+        }
+    }
+}

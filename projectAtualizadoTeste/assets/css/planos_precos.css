@@ -1,0 +1,87 @@
+.titulo {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 2rem 0;
+}
+
+.p-texto {
+    font-size: 1.7rem;
+    margin-top: auto;
+}
+
+.p-centro {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.conteiner_planos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.plano_basico, .plano_avancado, .plano_premium {
+    background-color: white;
+    width: 250px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    & .nome-plano {
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 1.5rem 0;
+        border-radius: 10px 10px 0 0;
+    }
+
+    & ul {
+        padding: 3rem 2rem;
+
+        & .item-lista {
+            padding: 1rem 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            & i {
+                padding: .5rem 1rem 0 0;
+                margin-bottom: auto;
+            }
+        }
+    }
+}
+
+.plano_basico {
+    & .nome-plano {
+        background-color: #FFE03980;
+    }
+
+    & .borda {
+        border-top: 0.1px solid #FFE03980;
+        font-weight: bold;
+    }
+}
+
+.plano_avancado {
+    & .nome-plano {
+        background-color: #FF67C5B2;
+    }
+
+    & .borda {
+        border-top: 0.1px solid #FF67C5B2;
+        font-weight: bold;
+    }
+}
+
+.plano_premium {
+    & .nome-plano {
+        background-color: #93CBDB;
+    }
+
+    & .borda {
+        border-top: 0.1px solid #93CBDB ;
+        font-weight: bold;
+    }
+}
