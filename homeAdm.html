@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
+        :root {
+            --color-fundo-body: #f4f4f4
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -16,14 +20,14 @@
 
         body {
             display: flex;
-            background-color: #f4f4f4;
+            background-color: var(--color-fundo-body);
             height: 100vh;
         }
 
         header {
             width: 100%;
             height: 107;
-            background: linear-gradient(100deg, #fff, #ffb3ff,  #1eb4ff);
+            background: linear-gradient(100deg, #fff 20%, rgba(255, 179, 255, 0.5) 60%,  rgba(30, 180, 255, 0.3) 100%);
             color: #333;
             font-size: 24px;
             font-weight: bold;
@@ -64,7 +68,7 @@
         }
 
         aside nav ul li:hover, .active {
-            background-color:#2f5074 ;
+            background-color:rgba(0, 34, 79, 0.7) ;
         }
         li:hover, .active{
             color: white;
@@ -91,7 +95,7 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            background-color: #2c3e50;
+            /* background-color: #2c3e50; */
             color: #fff;
             padding: 10px;
             border-radius: 50%;
