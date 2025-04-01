@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospetagem - Painel Administrativo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<<<<<<< HEAD
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
@@ -141,6 +142,37 @@
     <aside>
         <h4>Cargo</h4>
         <h4>Funcionalidades</h4>
+=======
+    <link rel="stylesheet" href="assets/css/adm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="assets/imagens/icons/logo.svg" alt="">
+        <div class="header-right">
+            <div class="toggle-menu" onclick="toggleMenu()"><img src="assets/imagens/icons/Subtract.svg" alt=""></div>
+            <div class="user-profile">
+                <img src="assets/imagens/icons/Shape.svg" alt="Usuário">
+                <div class="user-info">
+                    <span class="user-name">Usuário</span>
+                    <span class="user-role">Cargo</span>
+                </div>
+            </div>
+            <button class="icon-btn">
+                <img src="assets/imagens/icons/box-arrow-right.svg" alt="">
+            </button>
+        </div>
+    </header>
+    <aside>
+        <section class="header-menu">
+            <h4 style="color:rgba(0, 34, 79, 0.500);">Cargo</h4>
+            <h4 style="font-weight: bold;">Funcionalidades</h4>
+            <hr style="margin-top: 10px;">
+        </section>  
+>>>>>>> 008a17f (AdmHome)
         <nav>
             <ul>
                 <li class="active">Dashboard</li>
@@ -154,6 +186,7 @@
             </ul>
         </nav>
     </aside>
+<<<<<<< HEAD
     <div class="toggle-menu" onclick="toggleMenu()"><img src="assets/imagens/icons/Subtract.svg" alt=""></div>
     <div class="floating-menu" id="floatingMenu">
         <h4>Mudar Aparência</h4>
@@ -172,6 +205,35 @@
                 </div>
                 <div class="chart">
                     <h4>Taxa de Ocupação Por Dia</h4>
+=======
+    <div class="floating-menu" id="floatingMenu">
+        <h4>Mudar Aparência</h4>
+        <hr style="margin-top: 10px;">
+        <p> <img src="assets/imagens/icons/Vector.svg" alt="">Modo Noturno</p>
+        <p> <img src="assets/imagens/icons/universal-access.svg" alt="">Modo Daltônico</p>
+        <p> <img src="assets/imagens/icons/fonts (1).svg" alt="">Mudar Tamanho do Texto</p>
+        <div class="font-size-control">
+            <button class="btn">+</button>
+            <span class="font-size-display">Aa</span>
+            <button class="btn">−</button>
+        </div>
+    </div>
+    <main>
+        <div class="dashboard">
+            <section class="painelControle">
+                <h3>Painel de Controle</h3>
+                <p>Olá, boa tarde, Usuário!</p>
+                <p class="calendario"> <img class="calendario"  src="assets/imagens/icons/calendar3.svg" alt="">05 fev 2025</p>    
+            </section>
+            <div class="charts">
+                <div class="chart">
+                    <h4 class="title">Estatísticas de Reservas Realizadas Por Dia</h4>
+                    <h6>Ver mais estatísticas <img src="assets/imagens/icons/arrow-right-short.svg" alt=""></h6>
+                    <canvas id="reservasChart"></canvas>
+                </div>
+                <div class="chart">
+                    <h4 class="title">Taxa de Ocupação por dia</h4>
+>>>>>>> 008a17f (AdmHome)
                     <canvas id="ocupacaoChart"></canvas>
                 </div>
             </div>
