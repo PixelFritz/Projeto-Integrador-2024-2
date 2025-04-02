@@ -257,10 +257,10 @@ li{
 
 
 
-/* Botão do menu */
+
 #menuButton {
     position: fixed;
-    top: 108px; /* Logo abaixo do header */
+    top: 108px; 
     left: 0px;
     background: var(--color-fundo-tab);
     border: 1px solid rgba(0, 0, 0, 0.3); 
@@ -273,10 +273,10 @@ li{
     height: 15px;
 }
 
-/* Sidebar oculta inicialmente */
+
 .sidebar {
     position: fixed;
-    top: 107px; /* Mesma posição do botão */
+    top: 107px; 
     left: 0px;
     width: 280px;
     height: 85%;
@@ -291,12 +291,12 @@ li{
     z-index: 999;
 }
 
-/* Quando a sidebar estiver visível */
+
 .sidebar.show {
     transform: scaleY(1);
 }
 
-/* Conteúdo da página */
+
 #content {
     transition: margin-left 0.3s ease;
     margin-left: 0;
