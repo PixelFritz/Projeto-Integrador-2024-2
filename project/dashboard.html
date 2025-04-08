@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospetagem - Painel Administrativo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/dash.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body id=content>
+    <header class="header">
+        <img class="logo" src="assets/imagens/icons/logo.svg" alt="">
+        <div class="header-right">
+            <div class="toggle-menu" onclick="toggleFloatingMenu()"><img src="assets/imagens/icons/Subtract.svg" alt=""></div>
+            <div class="user-profile">
+                <img src="assets/imagens/icons/Shape.svg" alt="Usuário">
+                <div class="user-info">
+                    <span class="user-name">Usuário</span>
+                    <span class="user-role">Cargo</span>
+                </div>
+            </div>
+            <button class="icon-btn">
+                <img src="assets/imagens/icons/box-arrow-right.svg" alt="">
+            </button>
+        </div>
+    </header>
+
+    <button id="menuButton"><img src="assets/imagens/icons/chevron-down.svg" alt=""></button>
+    <div class="sidebar" id="sidebar">
+        <h4>Cargo</h4>
+        <h3>Funcionalidades</h3>
+        <hr>
+        <ul>
+            <li><img src="assets/imagens/icons/graph-up.svg" alt=""> Dashboard</li>
+            <li><img src="assets/imagens/icons/currency-dollar.svg" alt=""> Financeiro</li>
+            <li><img src="assets/imagens/icons/search.svg" alt=""> Consultar Hospedagens</li>
+            <li><img src="assets/imagens/icons/exclamation-circle.svg" alt=""> Alertas</li>
+            <li><img src="assets/imagens/icons/calendar3.svg" alt=""> Agenda</li>
+            <li><img src="assets/imagens/icons/pencil-square.svg" alt=""> Alterar Informações</li>
+            <li><img src="assets/imagens/icons/chat-right-text.svg" alt=""> Mensagens</li>
+            <li><img src="assets/imagens/icons/chat-right-quote.svg" alt=""> Feedback</li>
+        </ul>
+    </div>
+
+    <div class="floating-menu" id="floatingMenu">
+        <h4>Mudar Aparência</h4>
+        <hr style="margin-top: 10px;">
+        <p> <img src="assets/imagens/icons/Vector.svg" alt="">Modo Noturno</p>
+        <p> <img src="assets/imagens/icons/universal-access.svg" alt="">Modo Daltônico</p>
+        <p> <img src="assets/imagens/icons/fonts (1).svg" alt="">Mudar Tamanho do Texto</p>
+        <div class="font-size-control">
+            <button class="btnFM">+</button>
+            <span class="font-size-display">Aa</span>
+            <button class="btnFM">-</button>
+        </div>
+    </div>
+
+    <main>
+        <div class="dashboard">
+            <section class="dashB">
+                <h3>Dashboard</h3>
+                <p class="calendario"> <img class="calendario" src="assets/imagens/icons/calendar3.svg" alt="">05 fev
+                    2025</p>
+            </section>
+        </div>
+        <section>
+            <div class="dropdown">
+                <div class="estAcess">
+                    <h5>Tenha acesso as estatísticas</h5>
+                    <div class="buttonsNot">
+                        <button class="btn filtro"><img src="assets/imagens/icons/sliders2.svg" alt=""> Filtros</button>
+                        <div class="men" id="menu-filtros">
+                            <p class="menu-title">Filtrar por:</p>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox"> Ano</label>
+                                <label><input type="checkbox"> Mês</label>
+                                <label><input type="checkbox"> Semana</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox"> Todos</label>
+                                <label><input type="checkbox"> Acessos</label>
+                                <label><input type="checkbox"> Reservas</label>
+                            </div>
+                        </div>
+                        <button class="btn not"><img src="assets/imagens/icons/bell-fill.svg" alt=""> Notificar</button>
+                        <div class="men" id="menu-notificar">
+                            <p class="notificar-text">Deseja receber notificações semanais de mudanças?</p>
+                            <label class="switch-label">
+                                <input type="checkbox" class="switch-input">
+                                <span class="switch-slider"></span>
+                                <span class="switch-description">Quero ser notificado</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cardsP">
+            <div class="card1"><img src="assets/imagens/Bloco de acessos - 1366.svg" alt="">
+            </div>
+            <div class="card2">
+                <img src="assets/imagens/Bloco de reservas - 1366.svg" alt="">
+            </div>
+        </section>
+        <!-- Gráfico de barras -->
+      <div class="card chart-card">
+          <div class="export-buttons">
+            <button class="json-btn">JSON</button>
+            <button class="pdf-btn">PDF</button>
+            <button class="csv-btn">CSV</button>
+            <button class="xls-btn">XLS</button>
+          </div>
+          <canvas id="barChart"></canvas>
+        </div>
+    
+        <!-- Outros gráficos -->
+        <div class="cards-bottom">
+          <div class="card small-chart"><canvas id="pieChart"></canvas></div>
+          <div class="card small-chart"><canvas id="lineChart"></canvas></div>
+          <div class="card small-chart"><canvas id="radarChart"></canvas></div>
+        </div>
+      </div>
+
+
+  
+
+    </main>
+
+
+
+    
+    <script>
+
+        function toggleFloatingMenu() {
+            const menu = document.getElementById('floatingMenu');
+            menu.classList.toggle('show');
+        }
+
+        document.getElementById('menuButton').addEventListener('click', function () {
+            const sidebar = document.getElementById('sidebar');
+            const content = document.getElementById('content');
+            const button = document.getElementById('menuButton');
+            const buttonRect = button.getBoundingClientRect();
+
+            if (sidebar.classList.contains('show')) {
+                sidebar.classList.remove('show');
+                content.style.marginLeft = '0';
+            } else {
+                sidebar.style.top = `${buttonRect.bottom}px`; // Começa do botão
+                sidebar.style.left = `${buttonRect.left}px`; // Alinha com o botão
+                sidebar.classList.add('show');
+                content.style.marginLeft = '250px';
+            }
+        });
+
+
+        document.querySelector('.filtro').addEventListener('click', () => {
+            toggleMenu('menu-filtros');
+        });
+
+        document.querySelector('.not').addEventListener('click', () => {
+            toggleMenu('menu-notificar');
+        });
+
+        function toggleMenu(menuId) {
+            const menu = document.getElementById(menuId);
+            const isVisible = menu.style.display === 'block';
+
+            // Fechar todos os menus
+            document.querySelectorAll('.men').forEach(m => m.style.display = 'none');
+
+            // Alternar visibilidade do menu clicado
+            if (!isVisible) {
+                menu.style.display = 'block';
+            }
+        }
+
+        // Fechar menus ao clicar fora
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.dropdown')) {
+                document.querySelectorAll('.men').forEach(m => m.style.display = 'none');
+            }
+        });
+
+
+
+
+
+
+
+
+        const barCtx = document.getElementById('barChart').getContext('2d');
+new Chart(barCtx, {
+    type: 'bar',
+    data: {
+        labels: Array.from({ length: 30 }, (_, i) => i + 1),
+        datasets: [
+            {
+                label: 'Acessos',
+                data: [5, 8, 4, 7, 3, 10, 2, 7, 4, 9, 8, 5, 4, 7, 3, 10, 7, 4, 9, 5, 8, 7, 4, 3, 10, 2, 4, 3, 2, 9],
+                backgroundColor: '#fbb03b'
+            },
+            {
+                label: 'Reservas',
+                data: [8, 5, 3, 4, 7, 2, 10, 4, 3, 5, 7, 4, 3, 4, 2, 7, 10, 4, 3, 9, 5, 8, 7, 4, 3, 10, 2, 4, 3, 9],
+                backgroundColor: '#fd6e98'
+            },
+            {
+                label: 'Visitantes',
+                data: [4, 3, 2, 1, 3, 4, 5, 2, 4, 9, 6, 3, 4, 5, 6, 2, 3, 5, 9, 6, 5, 4, 2, 4, 7, 3, 5, 6, 4, 8],
+                backgroundColor: '#4a90e2'
+            },
+            {
+                label: 'Outros',
+                data: [3, 2, 4, 6, 7, 5, 6, 3, 5, 7, 8, 5, 6, 7, 5, 6, 5, 3, 6, 4, 6, 7, 5, 4, 6, 7, 3, 5, 4, 5],
+                backgroundColor: '#1c1c3b'
+            }
+        ]
+    },
+    options: {
+  responsive: true,
+  plugins: {
+    legend: {
+      display: false
+    },
+    title: {
+      display: true,
+      text: 'Total de Reservas por dia no mês'
+    }
+  },
+  scales: {
+    x: {
+      grid: {
+        display: false // Remove linhas verticais
+      }
+    },
+    y: {
+      beginAtZero: true,
+      grid: {
+        display: false // Remove linhas horizontais
+      }
+    }
+  }
+}
+});
+
+// Gráfico de Pizza
+const pieCtx = document.getElementById('pieChart').getContext('2d');
+new Chart(pieCtx, {
+    type: 'pie',
+    data: {
+        labels: ['Tipo A', 'Tipo B', 'Tipo C', 'Tipo D', 'Tipo E', 'Tipo F'],
+        datasets: [{
+            data: [10, 7, 5, 8, 4, 3],
+            backgroundColor: [
+                '#fbb03b',
+                '#fd6e98',
+                '#4a90e2',
+                '#1c1c3b',
+                '#9b59b6',
+                '#6bd098'
+            ]
+        }]
+    }
+});
+
+// Gráfico de Linha
+const lineCtx = document.getElementById('lineChart').getContext('2d');
+new Chart(lineCtx, {
+    type: 'line',
+    data: {
+        labels: ['1', '5', '7', '8', '9', '11', '13', '15'],
+        datasets: [{
+            label: 'Reservas',
+            data: [5, 7, 8, 4, 3, 10, 7, 5],
+            borderColor: '#fd6e98',
+            backgroundColor: 'rgba(253, 110, 152, 0.3)',
+            fill: true,
+            tension: 0.3,
+            pointRadius: 5
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { display: false }
+        }
+    }
+});
+
+// Gráfico de Radar
+const radarCtx = document.getElementById('radarChart').getContext('2d');
+new Chart(radarCtx, {
+    type: 'radar',
+    data: {
+        labels: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+        datasets: [{
+            label: 'Reservas (%)',
+            data: [70, 50, 80, 40, 70, 30, 100],
+            backgroundColor: 'rgba(253, 110, 152, 0.2)',
+            borderColor: '#fd6e98',
+            pointBackgroundColor: '#fd6e98'
+        }]
+    },
+    options: {
+        scales: {
+            r: {
+                angleLines: { display: false },
+                suggestedMin: 0,
+                suggestedMax: 100
+            }
+        }
+    }
+});
+
+
+
+    </script>

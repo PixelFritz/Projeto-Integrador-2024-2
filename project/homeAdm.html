@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
+<body id=content>
     <header class="header">
         <img class="logo" src="assets/imagens/icons/logo.svg" alt="">
         <div class="header-right">
@@ -28,25 +28,23 @@
             </button>
         </div>
     </header>
-    <aside>
-        <section class="header-menu">
-            <h4 style="color:rgba(0, 34, 79, 0.500);">Cargo</h4>
-            <h4 style="font-weight: bold;">Funcionalidades</h4>
-            <hr style="margin-top: 10px;">
-        </section>  
-        <nav>
-            <ul>
-                <li class="active">Dashboard</li>
-                <li>Financeiro</li>
-                <li>Consultar Hospedagens</li>
-                <li>Alertas</li>
-                <li>Agenda</li>
-                <li>Alterar Informações</li>
-                <li>Mensagens</li>
-                <li>Feedback</li>
-            </ul>
-        </nav>
-    </aside>
+
+    <button id="menuButton"><img src="assets/imagens/icons/chevron-down.svg"  alt=""></button>
+    <div class="sidebar" id="sidebar">
+        <h4>Cargo</h4>
+        <h3>Funcionalidades</h3>
+        <hr>
+        <ul>
+            <li><img src="assets/imagens/icons/graph-up.svg" alt=""> Dashboard</li>
+            <li><img src="assets/imagens/icons/currency-dollar.svg" alt=""> Financeiro</li>
+            <li><img src="assets/imagens/icons/search.svg" alt=""> Consultar Hospedagens</li>
+            <li><img src="assets/imagens/icons/exclamation-circle.svg" alt=""> Alertas</li>
+            <li><img src="assets/imagens/icons/calendar3.svg" alt=""> Agenda</li>
+            <li><img src="assets/imagens/icons/pencil-square.svg" alt=""> Alterar Informações</li>
+            <li><img src="assets/imagens/icons/chat-right-text.svg" alt=""> Mensagens</li>
+            <li><img src="assets/imagens/icons/chat-right-quote.svg" alt=""> Feedback</li>
+        </ul>
+    </div>    
     <div class="floating-menu" id="floatingMenu">
         <h4>Mudar Aparência</h4>
         <hr style="margin-top: 10px;">
@@ -69,13 +67,13 @@
             <div class="charts">
                 <div class="chart">
                     <h4 class="title">Estatísticas de Reservas Realizadas Por Dia</h4>
-                    <h6>Ver mais estatísticas <img src="assets/imagens/icons/arrow-right-short.svg" alt=""></h6>
                     <canvas id="reservasChart"></canvas>
+                    <div>
+                        <h4 class="title">Taxa de Ocupação por dia</h4>
+                        <canvas id="ocupacaoChart"></canvas>
+                    </div>
                 </div>
-                <div class="chart">
-                    <h4 class="title">Taxa de Ocupação por dia</h4>
-                    <canvas id="ocupacaoChart"></canvas>
-                </div>
+                <h6>Ver mais estatísticas <img src="assets/imagens/icons/arrow-right-short.svg" alt=""></h6>
             </div>
         </div>
     </main>
@@ -111,6 +109,28 @@
                 }]
             }
         });
+
+
+
+        document.getElementById('menuButton').addEventListener('click', function() {
+        const sidebar = document.getElementById('sidebar');
+        const content = document.getElementById('content');
+        const button = document.getElementById('menuButton');
+        const buttonRect = button.getBoundingClientRect();
+        
+        if (sidebar.classList.contains('show')) {
+            sidebar.classList.remove('show');
+            content.style.marginLeft = '0';
+        } else {
+            sidebar.style.top = `${buttonRect.bottom}px`; // Começa do botão
+            sidebar.style.left = `${buttonRect.left}px`; // Alinha com o botão
+            sidebar.classList.add('show');
+            content.style.marginLeft = '250px';
+        }
+    });
+
+
+
     </script>
 </body>
 </html>

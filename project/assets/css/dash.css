@@ -1,0 +1,556 @@
+:root {
+    --color-fundo-body: #f4f4f4;
+    --color-fundo-tab: #fff;
+    --color-letras: #00224f;
+    --color-not: rgba(255, 147, 197, 0.3);
+    --color-filtro: rgba(30, 180, 255,0.2);
+    --color-switch: rgba(0, 34, 79,0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: var(--color-fundo-body);
+    height: 100vh;
+}
+
+.header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 107px;
+    background: linear-gradient(100deg, #fff 20%, rgba(255, 179, 255, 0.5) 60%,  rgba(30, 180, 255, 0.3) 100%);
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 11em;
+}
+
+.floating-menu {
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    height: 85%;
+    position: fixed;
+    top: 110px;
+    right: -300px;
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    border-radius: 8px;
+    z-index: 100;
+}
+
+.floating-menu img{
+    position:relative;
+    top: 0.2em;
+    right: 0.5em;
+}
+
+.floating-menu.show {
+    top: 110px;
+    right: 0px;
+}
+
+.floating-menu h4 {
+    font-weight: bold;
+}
+
+.floating-menu p{
+    font-weight: 250;
+}
+
+.toggle-menu {
+    position:relative;
+    top: 0.15em;
+    /* background-color: #2c3e50; */
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+}
+
+main {
+    flex: 1;
+    padding: 80px 20px 20px 20px;
+    margin-left: 15px;
+}
+
+.dashboard {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.title {
+    color: var(--color-letras);
+    display: flex;
+    justify-content:center;
+    font-weight: 100;
+}
+
+h3, h4, p {
+    margin-top: 10px;
+    font-weight:500;
+}
+li{
+    color:#2c3e50 ;
+}
+.dashB{
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    margin-top: 2.2em;
+    color: var(--color-letras);
+    padding: 1.5em;
+    background-color: var(--color-fundo-tab);
+    width: 95% ;
+    height: 2px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.dashB h3{
+    position: relative;
+    top: 10px;
+}
+.calendario {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    bottom: 20px;
+}
+.calendario img{
+    position: relative;
+    top:1px;
+    right: 0.6em;
+}
+.header-menu{
+    color: var(--color-letras);
+}
+
+.estAcess{
+    padding: 0.3em;
+    display: flex;
+    width: 94.3%;
+    justify-content: space-between;
+}
+.estAcess h5{
+    font-size: medium;
+    color: var(--color-letras);
+    font-weight: 500;
+    position: relative;
+    left: 2%;
+}
+.buttonsNot{
+    gap: 10px;
+    display: flex;
+}
+.not{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-not);
+    border: none;
+    border-radius: 3px;
+    padding: 0.2em;
+}
+.not img{
+    margin-right:10px;
+    align-items: center;
+}
+.filtro{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-filtro);
+    border: none;
+    border-radius: 3px;
+    padding: 0.2em;
+}
+.filtro img{
+    margin-right:15px;
+    align-items: center;
+}
+
+.font-size-control {
+    position: relative;
+    left: 1.2em;
+    top: 0.5em;
+    width: 42%;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.3); 
+    border-radius: 15px; 
+    padding: 3px 8px; 
+    gap: 5px; 
+    background-color: white;
+}
+
+.btnFM {
+    border: none;
+    background: transparent;
+    font-size: 14px; 
+    font-weight: bold;
+    cursor: pointer;
+    padding: 3px 6px; 
+    color: #334155; 
+}
+
+.font-size-display {
+    font-size: 14px;
+    font-weight: bold;
+    color: #334155;
+}
+
+.btn:hover {
+    color: #1e293b;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.user-role {
+    font-size: 12px;
+    color: #666;
+}
+
+.icon-btn {
+    margin-right: 1em;
+    margin-top: 0.5em;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon-btn:hover {
+    opacity: 0.7;
+}
+
+#menuButton {
+    position: fixed;
+    top: 108px; 
+    left: 0px;
+    background: var(--color-fundo-tab);
+    border: 1px solid rgba(0, 0, 0, 0.3); 
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000;
+    width: 280px;
+    height: 15px;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 107px; 
+    left: 0px;
+    width: 280px;
+    height: 85%;
+    color: var(--color-letras);
+    background-color: var(--color-fundo-tab);
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleY(0);
+    transform-origin: top;
+    z-index: 999;
+}
+
+
+.sidebar.show {
+    transform: scaleY(1);
+}
+
+
+#content {
+    transition: margin-left 0.3s ease;
+    margin-left: 0;
+}
+
+.sidebar  ul li:hover, .active{
+    color: var(--color-fundo-tab);
+    background-color:rgba(0, 34, 79, 0.7) ;
+}
+.sidebar ul{
+    list-style: none;
+}
+.sidebar ul li {
+    padding: 15px;
+    margin: 5px 0;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.sidebar img {
+    position: relative;
+    top: 1.5px;
+    right: 5px;
+}
+
+
+.btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .men {
+    position: absolute;
+    top: 100%; /* coloca o menu logo abaixo do botão */
+    display: none;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-top: 4px; /* um espacinho entre botão e menu */
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  .menu-title {
+    background-color: var(--color-fundo-tab);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-letras);
+    margin-bottom: 8px;
+  }
+  
+  /* Checkboxes em linha */
+  .checkbox-group {
+    padding: 5px;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  
+  .checkbox-group label {
+    font-size: 13px;
+    color: var(--color-letras);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+
+  .checkbox-group input[type="checkbox"] {
+    appearance: none; /* remove o estilo padrão */
+    width: 16px;
+    height: 16px;
+    border: 1px solid #1f2937;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+  }
+  .checkbox-group input[type = "checkbox"]:checked {
+    align-items: center;
+    background-color: var(--color-switch);
+  }
+  .checkbox-group input[type="checkbox"]:checked::after {
+    content: '✓';
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: -1px;
+    left: 3px;
+  }
+
+
+   #menu-notificar{
+    color: var(--color-letras);
+    background-color: var(--color-fundo-tab);
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 12px;
+    width: fit-content;
+    font-family: sans-serif;
+   }
+
+
+   .notificar-text {
+    color: #1f2937;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  /* Layout do switch com label ao lado */
+  .switch-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
+  /* O input real (escondido) */
+  .switch-input {
+    display: none;
+  }
+  
+  /* Slider do switch */
+  .switch-slider {
+    width: 32px;
+    height: 18px;
+    background-color: #cbd5e1;
+    border-radius: 999px;
+    position: relative;
+    transition: background-color 0.3s;
+  }
+  
+  /* Bolinha do switch */
+  .switch-slider::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  /* Quando marcado, altera cor e move a bolinha */
+  .switch-input:checked + .switch-slider {
+    background-color: var(--color-switch);
+  }
+  
+  .switch-input:checked + .switch-slider::before {
+    transform: translateX(14px);
+  }
+  
+  .switch-description {
+    font-size: 14px;
+    color: var(--color-letras);
+  }
+  .cardsP{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 95%;
+    gap: 20px;
+  }
+  .card1 img{
+    width:60.8em;
+  }
+  .card2 img{
+    width:30em;
+  }
+
+  .card {
+    width: 95%;
+    background-color: white;
+    border-radius: 8px;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+
+  /* Gráfico principal */
+  .chart-card {
+    padding: 10px 20px;
+  }
+  
+  .export-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .export-buttons button {
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+  }
+  
+  .json-btn { color: #f3b500; border-color: #f3b500; }
+  .pdf-btn { color: #ff4c4c; border-color: #ff4c4c; }
+  .csv-btn { color: #4a90e2; border-color: #4a90e2; }
+  .xls-btn { color: #34c759; border-color: #34c759; }
+  
+  /* Gráficos menores */
+  .cards-bottom {
+    display: flex;
+    width: 95%;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  
+  .small-chart {
+    flex: 1;
+    max-width: 300px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  canvas {
+    max-width: 95% ;
+    height: 100% ;
+  }
+
+  

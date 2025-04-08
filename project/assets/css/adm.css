@@ -35,36 +35,8 @@ body {
     z-index: 10;
 }
 
-aside {
-    border: 0.5px solid rgba(0, 0, 0, 0.2);
-    width: 20%;
-    background-color: var(--color-fundo-tab);
-    color: var(--color-fundo-tab);
-    padding: 20px;
-    margin-top: 110px;
-    height: calc(100vh - 60px);
-}
-
 .logo {
     width: 11em;
-}
-aside nav ul {
-    list-style: none;
-}
-
-aside nav ul li {
-    padding: 15px;
-    margin: 5px 0;
-    background-color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-aside nav ul li:hover, .active {
-    background-color:rgba(0, 34, 79, 0.7) ;
-}
-li:hover, .active{
-    color: white;
 }
 
 .floating-menu {
@@ -126,7 +98,7 @@ main {
 }
 
 .charts {
-    width: 699px;
+    width: 95%;
     height: 389px;
 }
 
@@ -148,9 +120,11 @@ main {
     padding-bottom: 40px;
 }
 
-.chart h6{
+.charts h6{
     position:relative ;
-    top: 355px;
+    cursor: pointer;
+    bottom:30px;
+    right: 30px;
     color: var(--color-letras);
     font-weight: 300;
     display: flex;
@@ -171,7 +145,7 @@ li{
     color: var(--color-letras);
     padding: 2em;
     background-color: var(--color-fundo-tab);
-    width:699px ;
+    width:95% ;
     height: 89px;
     display: flex;
     justify-content: center;
@@ -280,4 +254,71 @@ li{
 
 .icon-btn:hover {
     opacity: 0.7;
+}
+
+
+
+
+#menuButton {
+    position: fixed;
+    top: 108px; 
+    left: 0px;
+    background: var(--color-fundo-tab);
+    border: 1px solid rgba(0, 0, 0, 0.3); 
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000;
+    width: 280px;
+    height: 15px;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 107px; 
+    left: 0px;
+    width: 280px;
+    height: 85%;
+    color: var(--color-letras);
+    background-color: var(--color-fundo-tab);
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleY(0);
+    transform-origin: top;
+    z-index: 999;
+}
+
+
+.sidebar.show {
+    transform: scaleY(1);
+}
+
+
+#content {
+    transition: margin-left 0.3s ease;
+    margin-left: 0;
+}
+
+.sidebar  ul li:hover, .active{
+    color: var(--color-fundo-tab);
+    background-color:rgba(0, 34, 79, 0.7) ;
+}
+.sidebar ul{
+    list-style: none;
+}
+.sidebar ul li {
+    padding: 15px;
+    margin: 5px 0;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.sidebar img {
+    position: relative;
+    top: 1.5px;
+    right: 5px;
 }
