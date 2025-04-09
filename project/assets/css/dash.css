@@ -482,6 +482,7 @@ li{
     color: var(--color-letras);
   }
   .cardsP{
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -496,7 +497,7 @@ li{
   }
 
   .card {
-    width: 95%;
+    width: 100%;
     background-color: white;
     border-radius: 8px;
     border: 0.5px solid rgba(0, 0, 0, 0.2);
@@ -532,16 +533,15 @@ li{
   /* Gráficos menores */
   .cards-bottom {
     display: flex;
-    width: 95%;
-    gap: 20px;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 50px;
+    width: 100%;
+    gap: 20px;
+    padding: ;
   }
   
   .small-chart {
     flex: 1;
-    max-width: 300px;
+    max-width: 50%;
     height: 250px;
     display: flex;
     align-items: center;
@@ -549,7 +549,7 @@ li{
   }
   
   canvas {
-    max-width: 95% ;
+    max-width: 100% ;
     height: 100% ;
   }
 
