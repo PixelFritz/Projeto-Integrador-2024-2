@@ -498,10 +498,12 @@ li{
   gap: 20px;
 }
 .card1 img{
-  width:60.8em;
+  width:100%;
+  border-radius: 8px;
 }
 .card2 img{
-  width:30em;
+  width:100%;
+  border-radius: 8px;
 }
 
 .card {
