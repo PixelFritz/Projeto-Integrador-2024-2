@@ -98,7 +98,7 @@ main {
 }
 
 .charts {
-    width: 1270px;
+    width: 95%;
     height: 389px;
 }
 
@@ -120,10 +120,11 @@ main {
     padding-bottom: 40px;
 }
 
-.chart h6{
+.charts h6{
     position:relative ;
     cursor: pointer;
-    top: 640px;
+    bottom:30px;
+    right: 30px;
     color: var(--color-letras);
     font-weight: 300;
     display: flex;
@@ -144,7 +145,7 @@ li{
     color: var(--color-letras);
     padding: 2em;
     background-color: var(--color-fundo-tab);
-    width:1270px ;
+    width:95% ;
     height: 89px;
     display: flex;
     justify-content: center;
