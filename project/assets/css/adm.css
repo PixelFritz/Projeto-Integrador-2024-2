@@ -141,7 +141,7 @@ li{
 }
 .painelControle{
     border: 0.5px solid rgba(0, 0, 0, 0.2);
-    margin-top: 1.5em;
+    margin-top: 2em;
     color: var(--color-letras);
     padding: 2em;
     background-color: var(--color-fundo-tab);
@@ -321,4 +321,29 @@ li{
     position: relative;
     top: 1.5px;
     right: 5px;
+}
+
+canvas{
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width: 768px){
+    .painelControle h3, p{
+        font-size: medium;
+        font-weight: 400;
+    }
+}
+
+@media(max-width: 320px){
+    .painelControle h3, p{
+        font-size: small;
+    }
+    .painelControle img{
+        width: 10px;
+    }
+    .painelControle{
+        padding: 2px;
+        height: 60px;
+    }
 }
