@@ -1,4 +1,4 @@
-fetch('estados_cidades.json')
+fetch('assets/json/estados_cidades.json')
     .then(response => response.json())
     .then(data => {
         const estadoSelect = document.getElementById("uf");

@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="assets/js/cep_cpf.js" defer></script>
     <script src="https://kit.fontawesome.com/e8db2f40d0.js" crossorigin="anonymous" defer></script>
+    <script src="assets/json/estados_cidades.json"></script>
     <script src="assets/js/paginacao.js" defer></script>
     <script src="assets/js/cidade-estado.js" defer></script>
 </head>
@@ -168,7 +169,8 @@
                             <label for="complemento">Complemento:</label>
                             <div class="icone-input">
                                 <i class="fa-solid fa-plus-square borda-i"></i>
-                                <input type="text" name="complemento" id="complemento" placeholder="Digite o Complemento">
+                                <input type="text" name="complemento" id="complemento"
+                                    placeholder="Digite o Complemento">
                             </div>
                         </div>
 
@@ -201,7 +203,8 @@
                                 <input type="text" name="CEP" id="cep" autocomplete="postal-code"
                                     placeholder="Digite seu CEP" onblur="pesquisacep(this.value);" required>
                             </div>
-                            <a href="https://buscacepinter.correios.com.br/app/localidade_logradouro/index.php#" class="cep">Não sabe o CEP? Busque aqui. <i class="fa-solid fa-question-circle"></i></a>
+                            <a href="https://buscacepinter.correios.com.br/app/localidade_logradouro/index.php#"
+                                class="cep">Não sabe o CEP? Busque aqui. <i class="fa-solid fa-question-circle"></i></a>
                         </div>
 
                         <a id="anterior" onclick="paginaAnterior()"><i class="fa-solid fa-angle-left"></i> Anterior</a>
