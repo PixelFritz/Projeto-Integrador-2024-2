@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospetagem - Agenda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/agenda.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body id=content>
+    <header class="header">
+        <img class="logo" src="assets/imagens/icons/logo.svg" alt="">
+        <div class="header-right">
+            <div class="toggle-menu" onclick="toggleFloatingMenu()"><img src="assets/imagens/icons/Subtract.svg" alt="">
+            </div>
+            <div class="user-profile">
+                <img src="assets/imagens/icons/Shape.svg" alt="Usuário">
+                <div class="user-info">
+                    <span class="user-name">Usuário</span>
+                    <span class="user-role">Cargo</span>
+                </div>
+            </div>
+            <button class="icon-btn">
+                <img src="assets/imagens/icons/box-arrow-right.svg" alt="">
+            </button>
+        </div>
+    </header>
+
+    <button id="menuButton"><img src="assets/imagens/icons/chevron-down.svg" alt=""></button>
+    <div class="sidebar" id="sidebar">
+        <h4>Cargo</h4>
+        <h3>Funcionalidades</h3>
+        <hr>
+        <ul>
+            <li><img src="assets/imagens/icons/graph-up.svg" alt=""> Dashboard</li>
+            <li><img src="assets/imagens/icons/currency-dollar.svg" alt=""> Financeiro</li>
+            <li><img src="assets/imagens/icons/search.svg" alt=""> Consultar Hospedagens</li>
+            <li><img src="assets/imagens/icons/exclamation-circle.svg" alt=""> Alertas</li>
+            <li><img src="assets/imagens/icons/calendar3.svg" alt=""> Agenda</li>
+            <li><img src="assets/imagens/icons/pencil-square.svg" alt=""> Alterar Informações</li>
+            <li><img src="assets/imagens/icons/chat-right-text.svg" alt=""> Mensagens</li>
+            <li><img src="assets/imagens/icons/chat-right-quote.svg" alt=""> Feedback</li>
+        </ul>
+    </div>
+
+    <div class="floating-menu" id="floatingMenu">
+        <h4>Mudar Aparência</h4>
+        <hr style="margin-top: 10px;">
+        <p> <img src="assets/imagens/icons/Vector.svg" alt="">Modo Noturno</p>
+        <p> <img src="assets/imagens/icons/universal-access.svg" alt="">Modo Daltônico</p>
+        <p> <img src="assets/imagens/icons/fonts (1).svg" alt="">Mudar Tamanho do Texto</p>
+        <div class="font-size-control">
+            <button class="btnFM">+</button>
+            <span class="font-size-display">Aa</span>
+            <button class="btnFM">-</button>
+        </div>
+    </div>
+
+    <main>
+        <div class="dashboard">
+            <section class="dashB">
+                <h3>Agenda</h3>
+                <p class="calendario"> <img class="calendario" src="assets/imagens/icons/calendar3.svg" alt="">05 maio
+                    2025</p>
+            </section>
+        </div>
+<div class="layout-agenda">
+
+    <div class="coluna-esquerda">
+    <section class="cardsAgendas">
+
+            <div class="calendar">
+                <div class="hea">
+                    <button id="prev"><img src="assets/imagens/icons/Arrow.svg" alt=""></button>
+                    <h2 id="monthYear"></h2>
+              <button id="next"><img src="assets/imagens/icons/Arrow (1).svg" alt=""></button>
+            </div>
+            <div class="calendar-body">
+              <div class="weekdays"></div>
+              <div class="days"></div>
+            </div>
+            <div class="legend">
+              <span class="legend-item reserva">Reservas</span>
+              <span class="legend-item evento">Evento</span>
+              <span class="legend-item"><img src="assets/imagens/icons/plus-lg.svg" alt=""></span>
+            </div>
+        </section>
+        
+        <div class="eventos-hoje">
+            <div class="titulo">
+                <span><img src="assets/imagens/icons/calendar3.svg" alt=""></span> Eventos de Hoje
+                </div>
+                <div class="lista-eventos">
+                  <div class="event">
+                      <p>Reserva às 15h</p>
+                      <p>Detalhes da reserva</p>
+                    </div>
+                  <div class="event">
+                      <p>Reserva às 15h</p>
+                    <p>Detalhes da reserva</p>
+                </div>
+                <div class="event">
+                      <p>Reserva às 15h</p>
+                      <p>Detalhes da reserva</p>
+                    </div>
+                  <div class="event">
+                      <p>Reserva às 15h</p>
+                    <p>Detalhes da reserva</p>
+                </div>
+                  <div class="event">
+                      <p>Reserva às 15h</p>
+                      <p>Detalhes da reserva</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <section class="calen" id="">
+
+                <div class="novo-calendario">
+                <div class="event-calendario">
+                    <div class="mensal">
+                        <span>Mensal</span>
+                    </div>
+                    <div class="semanal">
+                        <span>Semanal</span>
+                    </div>
+                    <span class="new-event"><img src="assets/imagens/icons/plus-lg.svg" alt=""> Novo Evento</span>
+                </div>
+                        
+                      <div class="cabecalho-calendario">
+                          <button id="mesAnterior"><img src="assets/imagens/icons/Arrow.svg" alt=""></button>
+                          <h2 id="mesAtual"></h2>
+                          <button id="mesSeguinte"><img src="assets/imagens/icons/Arrow (1).svg" alt=""></button>
+                        </div>
+                        <div class="dias-semana-novo">
+                            <div>MON</div><div>TUE</div><div>WED</div><div>THU</div><div>FRI</div><div>SAT</div><div>SUN</div>
+                        </div>
+                        <div class="dias-novo" id="diasContainer"></div>
+                    </div>
+            </section>
+        </div>
+            
+              
+            
+
+            <script>
+                
+                function toggleFloatingMenu() {
+                const menu = document.getElementById('floatingMenu');
+                menu.classList.toggle('show');
+                
+            }
+    
+            document.getElementById('menuButton').addEventListener('click', function () {
+                const sidebar = document.getElementById('sidebar');
+                const content = document.getElementById('content');
+                const button = document.getElementById('menuButton');
+                const buttonRect = button.getBoundingClientRect();
+    
+                if (sidebar.classList.contains('show')) {
+                    sidebar.classList.remove('show');
+                    content.style.marginLeft = '0';
+                } else {
+                    sidebar.style.top = `${buttonRect.bottom}px`;
+                    sidebar.style.left = `${buttonRect.left}px`;
+                    sidebar.classList.add('show');
+                    content.style.marginLeft = '250px';
+                }
+                if(window.innerWidth <= 768) {
+                    content.style.marginLeft = '0';
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", () => {
+    const monthYear = document.getElementById("monthYear");
+    const calendarDays = document.querySelector(".days");
+    const weekdaysContainer = document.querySelector(".weekdays");
+    const prevBtn = document.getElementById("prev");
+    const nextBtn = document.getElementById("next");
+
+    let currentDate = new Date(); // Pega a data atual
+
+    // Simulação de eventos
+    const eventos = {
+        "2024-05-10": "evento",
+        "2024-05-22": "evento",
+        "2024-05-05": "reserva",
+        "2024-05-09": "reserva",
+        "2024-05-19": "reserva",
+        "2024-05-21": "reserva",
+        "2024-05-25": "reserva"
+    };
+
+    // Dias da semana
+    const weekdays = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+
+    function createWeekdays() {
+        weekdaysContainer.innerHTML = "";
+        weekdays.forEach(day => {
+            const div = document.createElement("div");
+            div.textContent = day;
+            weekdaysContainer.appendChild(div);
+        });
+    }
+
+    function renderCalendar(date) {
+        calendarDays.innerHTML = "";
+
+        const year = date.getFullYear();
+        const month = date.getMonth();
+
+        // Atualiza o título com o nome do mês e ano
+        monthYear.textContent = new Date(year, month).toLocaleString("default", { month: "long", year: "numeric" });
+
+        const firstDay = new Date(year, month, 1).getDay();
+        const totalDays = new Date(year, month + 1, 0).getDate();
+
+        const offset = (firstDay + 6) % 7; // Ajusta para começar na segunda
+
+        // Preenche os dias vazios antes do primeiro dia
+        for (let i = 0; i < offset; i++) {
+            calendarDays.innerHTML += `<div></div>`;
+        }
+
+        for (let day = 1; day <= totalDays; day++) {
+            const div = document.createElement("div");
+            div.textContent = day;
+
+            // Checa se tem evento ou reserva
+            const dateKey = `${year}-${(month + 1).toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}`;
+            if (eventos[dateKey]) {
+                const dot = document.createElement("span");
+                dot.classList.add("dot", `${eventos[dateKey]}-dot`);
+                div.appendChild(dot);
+            }
+
+            calendarDays.appendChild(div);
+        }
+    }
+
+    prevBtn.addEventListener("click", () => {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar(currentDate);
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar(currentDate);
+    });
+
+    createWeekdays();
+    renderCalendar(currentDate);
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const diasContainer = document.getElementById("diasContainer");
+  const mesAtual = document.getElementById("mesAtual");
+  const mesAnterior = document.getElementById("mesAnterior");
+  const mesSeguinte = document.getElementById("mesSeguinte");
+  
+
+
+  let dataAtual = new Date(); 
+
+  function renderizarCalendario(data) {
+    diasContainer.innerHTML = "";
+
+    const ano = data.getFullYear();
+    const mes = data.getMonth();
+
+    const primeiroDia = new Date(ano, mes, 1);
+    const ultimoDia = new Date(ano, mes + 1, 0);
+
+    const inicioSemana = (primeiroDia.getDay() + 6) % 7; 
+    const totalDias = ultimoDia.getDate();
+    
+    const alturaTela = window.innerHeight;
+    const topoCalendario = diasContainer.getBoundingClientRect().top + window.scrollY;
+    const alturaDisponivel = alturaTela - topoCalendario;
+
+    diasContainer.style.height = `${alturaDisponivel}px`;
+    diasContainer.style.overflowY = "auto";
+
+    
+    mesAtual.textContent = data.toLocaleString("default", { month: "long", year: "numeric" });
+
+    // Preenche dias vazios no início
+    for (let i = 0; i < inicioSemana; i++) {
+      diasContainer.innerHTML += `<div></div>`;
+    }
+
+    // Preenche os dias do mês
+    for (let dia = 1; dia <= totalDias; dia++) {
+      const diaDiv = document.createElement("div");
+      diaDiv.textContent = dia;
+
+      diasContainer.appendChild(diaDiv);
+    }
+
+    
+  }
+
+  mesAnterior.addEventListener("click", () => {
+    dataAtual.setMonth(dataAtual.getMonth() - 1);
+    renderizarCalendario(dataAtual);
+  });
+
+  mesSeguinte.addEventListener("click", () => {
+    dataAtual.setMonth(dataAtual.getMonth() + 1);
+    renderizarCalendario(dataAtual);
+  });
+
+  renderizarCalendario(dataAtual);
+});
+
+
+</script>
