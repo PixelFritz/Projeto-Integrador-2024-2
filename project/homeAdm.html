@@ -68,10 +68,10 @@
                 <div class="chart">
                     <h4 class="title">Estatísticas de Reservas Realizadas Por Dia</h4>
                     <canvas id="reservasChart"></canvas>
-                    <div>
-                        <h4 class="title">Taxa de Ocupação por dia</h4>
-                        <canvas id="ocupacaoChart"></canvas>
-                    </div>
+                </div>
+                <div class="chart"> 
+                    <h4 class="title">Taxa de Ocupação por dia</h4>
+                    <canvas id="ocupacaoChart"></canvas>
                 </div>
                 <h6>Ver mais estatísticas <img src="assets/imagens/icons/arrow-right-short.svg" alt=""></h6>
             </div>
@@ -97,6 +97,9 @@
         });
 
         const ctx2 = document.getElementById('ocupacaoChart').getContext('2d');
+        if(window.innerWidth <= 320){
+            content.style.minWidth = '120%';
+        }
         new Chart(ctx2, {
             type: 'line',
             data: {
