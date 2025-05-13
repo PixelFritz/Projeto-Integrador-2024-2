@@ -128,13 +128,15 @@
 
                 <div class="novo-calendario">
                 <div class="event-calendario">
-                    <div class="mensal">
-                        <span>Mensal</span>
+                    <div class="mensal-semanal">
+                        <div class="mensal">
+                            <span>Mensal</span>
+                        </div>
+                        <div class="semanal">
+                            <span>Semanal</span>
+                        </div>
                     </div>
-                    <div class="semanal">
-                        <span>Semanal</span>
-                    </div>
-                    <span class="new-event"><img src="assets/imagens/icons/plus-lg.svg" alt=""> Novo Evento</span>
+                    <span class="new-event"><img src="assets/imagens/icons/plus-lg.svg" alt=""> <p>Novo Evento</p></span>
                 </div>
                         
                       <div class="cabecalho-calendario">
@@ -149,6 +151,7 @@
                     </div>
             </section>
         </div>
+
             
               
             
@@ -182,67 +185,67 @@
             });
 
             document.addEventListener("DOMContentLoaded", () => {
-    const monthYear = document.getElementById("monthYear");
-    const calendarDays = document.querySelector(".days");
-    const weekdaysContainer = document.querySelector(".weekdays");
-    const prevBtn = document.getElementById("prev");
-    const nextBtn = document.getElementById("next");
+        const monthYear = document.getElementById("monthYear");
+        const calendarDays = document.querySelector(".days");
+        const weekdaysContainer = document.querySelector(".weekdays");
+        const prevBtn = document.getElementById("prev");
+        const nextBtn = document.getElementById("next");
 
-    let currentDate = new Date(); // Pega a data atual
+        let currentDate = new Date(); // Pega a data atual
 
-    // Simulação de eventos
-    const eventos = {
-        "2024-05-10": "evento",
-        "2024-05-22": "evento",
-        "2024-05-05": "reserva",
-        "2024-05-09": "reserva",
-        "2024-05-19": "reserva",
-        "2024-05-21": "reserva",
-        "2024-05-25": "reserva"
-    };
+        // Simulação de eventos
+        const eventos = {
+            "2024-05-10": "evento",
+            "2024-05-22": "evento",
+            "2024-05-05": "reserva",
+            "2024-05-09": "reserva",
+            "2024-05-19": "reserva",
+            "2024-05-21": "reserva",
+            "2024-05-25": "reserva"
+        };
 
-    // Dias da semana
-    const weekdays = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+        // Dias da semana
+        const weekdays = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
 
-    function createWeekdays() {
-        weekdaysContainer.innerHTML = "";
-        weekdays.forEach(day => {
-            const div = document.createElement("div");
-            div.textContent = day;
-            weekdaysContainer.appendChild(div);
-        });
-    }
-
-    function renderCalendar(date) {
-        calendarDays.innerHTML = "";
-
-        const year = date.getFullYear();
-        const month = date.getMonth();
-
-        // Atualiza o título com o nome do mês e ano
-        monthYear.textContent = new Date(year, month).toLocaleString("default", { month: "long", year: "numeric" });
-
-        const firstDay = new Date(year, month, 1).getDay();
-        const totalDays = new Date(year, month + 1, 0).getDate();
-
-        const offset = (firstDay + 6) % 7; // Ajusta para começar na segunda
-
-        // Preenche os dias vazios antes do primeiro dia
-        for (let i = 0; i < offset; i++) {
-            calendarDays.innerHTML += `<div></div>`;
+        function createWeekdays() {
+            weekdaysContainer.innerHTML = "";
+            weekdays.forEach(day => {
+                const div = document.createElement("div");
+                div.textContent = day;
+                weekdaysContainer.appendChild(div);
+            });
         }
 
-        for (let day = 1; day <= totalDays; day++) {
-            const div = document.createElement("div");
-            div.textContent = day;
+        function renderCalendar(date) {
+            calendarDays.innerHTML = "";
 
-            // Checa se tem evento ou reserva
-            const dateKey = `${year}-${(month + 1).toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}`;
-            if (eventos[dateKey]) {
-                const dot = document.createElement("span");
-                dot.classList.add("dot", `${eventos[dateKey]}-dot`);
-                div.appendChild(dot);
+            const year = date.getFullYear();
+            const month = date.getMonth();
+
+            // Atualiza o título com o nome do mês e ano
+            monthYear.textContent = new Date(year, month).toLocaleString("default", { month: "long", year: "numeric" });
+
+            const firstDay = new Date(year, month, 1).getDay();
+            const totalDays = new Date(year, month + 1, 0).getDate();
+
+            const offset = (firstDay + 6) % 7; // Ajusta para começar na segunda
+
+            // Preenche os dias vazios antes do primeiro dia
+            for (let i = 0; i < offset; i++) {
+                calendarDays.innerHTML += `<div></div>`;
             }
+
+            for (let day = 1; day <= totalDays; day++) {
+                const div = document.createElement("div");
+                div.textContent = day;
+
+                // Checa se tem evento ou reserva
+                const dateKey = `${year}-${(month + 1).toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}`;
+                if (eventos[dateKey]) {
+                    const dot = document.createElement("span");
+                    dot.classList.add("dot", `${eventos[dateKey]}-dot`);
+                    div.appendChild(dot);
+                }
 
             calendarDays.appendChild(div);
         }
@@ -292,8 +295,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const topoCalendario = diasContainer.getBoundingClientRect().top + window.scrollY;
     const alturaDisponivel = alturaTela - topoCalendario;
 
-    diasContainer.style.height = `${alturaDisponivel}px`;
-    diasContainer.style.overflowY = "auto";
+    if (window.innerWidth >= 768) {
+        diasContainer.style.height = `${alturaDisponivel}px`;
+        diasContainer.style.overflowY = "auto";
+    }
 
     
     mesAtual.textContent = data.toLocaleString("default", { month: "long", year: "numeric" });

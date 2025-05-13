@@ -23,6 +23,22 @@
     display: flex;
     background-color: var(--color-fundo-body);
   }
+
+  html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+section.calen {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+
+
   
   .header {
     padding: 10px 20px;
@@ -479,7 +495,6 @@
 
   .novo-calendario {
     flex: 1;
-    max-width: 92.5%;
     background-color: var(--color-fundo-tab); 
     border: 0.5px solid rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -542,6 +557,7 @@
   .layout-agenda {
     display: flex;
     gap: 50px;  
+    width: 93.6%;
   }
   
   /* Coluna com as duas tabelas, uma em cima da outra */
@@ -557,14 +573,18 @@
     flex-direction: row;
     gap: 0.3%;
     margin-bottom: 4%;
+    justify-content: space-between;
   }
   .new-event{
-    margin-left: 65%;
+    font-size: small;
     background-color: var(--color-event);
     border-radius: 8px;
     padding: 0.4em;
     align-items: center;
     cursor: pointer;
+    display: flex;
+    gap: 10px;
+    text-align: center;
   }
 
   .mensal{
@@ -580,9 +600,139 @@
     cursor: pointer;
   }
 
-  @media(max-width: 768px){
-    .new-event{
-        margin-left: 35% ;
-        padding: 0.2em;
-    }
+  .mensal-semanal{
+    display: flex;
+    gap: 2%;
   }
+
+  .new-event p{
+    display: contents;
+  }
+  
+
+  @media(max-width: 768px){
+  .calendar-body, .hea {
+    display: none;
+}
+
+  .legend{
+    border-top: none;
+  }
+
+  .coluna-esquerda{
+    justify-content: center;
+  }
+
+  .layout-agenda {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .calen {
+    order: -1; /* Joga o calendário para cima */
+    margin-bottom: 20px; /* Espaço entre o calendário e o restante */
+  }
+
+  .coluna-esquerda {
+    order: 1;
+  }
+
+  .novo-calendario{
+    max-width: 90%;
+    margin-left: 2.6%;
+  }
+
+  .calendar{
+    left: 0;
+    width: 93%;
+  }
+
+  .eventos-hoje{
+    left: 0;
+    width: 93%;
+  }
+  .layout-agenda{
+    width: 100%;
+  }
+}
+
+@media(max-width: 320px){
+  .new-event p{
+    display: none;
+  }
+    .calen {
+    transform: scale(1);
+    transform-origin: top center;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .novo-calendario {
+    width: 213.75px;
+    margin: 0 20px;
+    padding: 8px;
+  }
+
+  .dias-semana-novo {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 0.6rem;
+    gap: 1px;
+  }
+
+  .dias-novo {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+  }
+
+  .dias-novo div {
+    font-size: 0.6rem;
+    min-height: 50px;        /* Altura super reduzida */
+    padding: 2px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+  }
+
+  .event-calendario span,
+  .cabecalho-calendario h2 {
+    font-size: 0.7rem;
+  }
+
+  .cabecalho-calendario {
+    gap: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cabecalho-calendario button img {
+    width: 12px;
+  }
+  .layout-agenda {
+  padding: 0;
+  margin: 0;
+}
+ .dashB{
+  font-size:small;
+ }
+ .dashB img{
+  width: 15px;
+ }
+
+ .calendar{
+  width: 89%;
+ }
+
+  .eventos-hoje{
+  width: 89%;
+ }
+ .mensal-semanal{
+  font-size: small;
+  width: 20px;
+ }
+ 
+}
