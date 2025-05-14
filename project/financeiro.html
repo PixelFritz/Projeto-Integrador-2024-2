@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospetagem - Financeiro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/financeiro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body id=content>
+    <header class="header">
+        <img class="logo" src="assets/imagens/icons/logo.svg" alt="">
+        <div class="header-right">
+            <div class="toggle-menu" onclick="toggleFloatingMenu()"><img src="assets/imagens/icons/Subtract.svg" alt="">
+            </div>
+            <div class="user-profile">
+                <img src="assets/imagens/icons/Shape.svg" alt="Usuário">
+                <div class="user-info">
+                    <span class="user-name">Usuário</span>
+                    <span class="user-role">Cargo</span>
+                </div>
+            </div>
+            <button class="icon-btn">
+                <img src="assets/imagens/icons/box-arrow-right.svg" alt="">
+            </button>
+        </div>
+    </header>
+
+    <button id="menuButton"><img src="assets/imagens/icons/chevron-down.svg" alt=""></button>
+    <div class="sidebar" id="sidebar">
+        <h4>Cargo</h4>
+        <h3>Funcionalidades</h3>
+        <hr>
+        <ul>
+            <li><img src="assets/imagens/icons/graph-up.svg" alt=""> Dashboard</li>
+            <li><img src="assets/imagens/icons/currency-dollar.svg" alt=""> Financeiro</li>
+            <li><img src="assets/imagens/icons/search.svg" alt=""> Consultar Hospedagens</li>
+            <li><img src="assets/imagens/icons/exclamation-circle.svg" alt=""> Alertas</li>
+            <li><img src="assets/imagens/icons/calendar3.svg" alt=""> Agenda</li>
+            <li><img src="assets/imagens/icons/pencil-square.svg" alt=""> Alterar Informações</li>
+            <li><img src="assets/imagens/icons/chat-right-text.svg" alt=""> Mensagens</li>
+            <li><img src="assets/imagens/icons/chat-right-quote.svg" alt=""> Feedback</li>
+        </ul>
+    </div>
+
+    <div class="floating-menu" id="floatingMenu">
+        <h4>Mudar Aparência</h4>
+        <hr style="margin-top: 10px;">
+        <p> <img src="assets/imagens/icons/Vector.svg" alt="">Modo Noturno</p>
+        <p> <img src="assets/imagens/icons/universal-access.svg" alt="">Modo Daltônico</p>
+        <p> <img src="assets/imagens/icons/fonts (1).svg" alt="">Mudar Tamanho do Texto</p>
+        <div class="font-size-control">
+            <button class="btnFM">+</button>
+            <span class="font-size-display">Aa</span>
+            <button class="btnFM">-</button>
+        </div>
+    </div>
+
+    <main>
+        <div class="dashboard">
+            <section class="dashB">
+                <h3>Financeiro</h3>
+                <p class="calendario"> <img class="calendario" src="assets/imagens/icons/calendar3.svg" alt="">05 maio
+                    2025</p>
+            </section>
+            <section>
+                <img src="assets/imagens/nav-dash.svg" alt="" class="imagem-principal">
+            </section>
+
+            <section class="container-barra">
+                <section class="barra-pesquisa">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button type="submit"><img src="assets/imagens/icons/search.svg" alt=""></button>
+                </section>
+
+                
+                <div class="filtros">
+                    <span>Mostrando</span>
+                    <select>
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                    </select>
+                    
+                    <button class="exportar">
+                        <i class="fas fa-download"></i> Exportar
+                    </button>
+                    
+                    <div class="dropdown">
+                        <button class="btn filtro"><img src="assets/imagens/icons/sliders2.svg" alt=""><h2>Filtros</h2></button>
+                        <div class="men" id="menu-filtros">
+                            <p class="menu-title">Filtrar por:</p>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox"> Ano</label>
+                                <label><input type="checkbox"> Mês</label>
+                                <label><input type="checkbox"> Semana</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox"> Concluídos </label>
+                                <label><input type="checkbox"> Pendentes </label>
+                                <label><input type="checkbox"> Cancelados </label>
+                            </div>
+                    </div>
+                    
+            </section>
+
+            <section>
+                <table class="tabela-financeiro">
+                    <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Tipo</th>
+                        <th>Data</th>
+                        <th>Data Pagto</th>
+                        <th>Referência</th>
+                        <th>Valor</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Lucas Felipe</td>
+                        <td>A pagar</td>
+                        <td>10/05/2025</td>
+                        <td>10/05/2025</td>
+                        <td>ASDQ6131HAJDA</td>
+                        <td>R$ 500,00</td>
+                        <td class="status"><span class="bolinha concluido"></span> Concluído</td>
+                    </tr>
+                    <tr>
+                        <td>Lucas Felipe</td>
+                        <td>A receber</td>
+                        <td>10/05/2025</td>
+                        <td>10/05/2025</td>
+                        <td>ASDQ6131HAJDA</td>
+                        <td>R$ 500,00</td>
+                        <td class="status"><span class="bolinha concluido"></span> Concluído</td>
+                    </tr>
+                    <tr>
+                        <td>Lucas Felipe</td>
+                        <td>A pagar</td>
+                        <td>10/05/2025</td>
+                        <td>10/05/2025</td>
+                        <td>ASDQ6131HAJDA</td>
+                        <td>R$ 500,00</td>
+                        <td class="status"><span class="bolinha pendente"></span> Pendente</td>
+                    </tr>
+                    <tr>
+                        <td>Lucas Felipe</td>
+                        <td>A receber</td>
+                        <td>10/05/2025</td>
+                        <td>10/05/2025</td>
+                        <td>ASDQ6131HAJDA</td>
+                        <td>R$ 500,00</td>
+                        <td class="status"><span class="bolinha pendente"></span> Pendente</td>
+                    </tr>
+                    <tr>
+                        <td>Lucas Felipe</td>
+                        <td>A pagar</td>
+                        <td>10/05/2025</td>
+                        <td>10/05/2025</td>
+                        <td>ASDQ6131HAJDA</td>
+                        <td>R$ 500,00</td>
+                        <td class="status"><span class="bolinha cancelado"></span> Cancelado</td>
+                    </tr>
+                    <tr>
+                        <td>Lucas Felipe</td>
+                        <td>A receber</td>
+                        <td>10/05/2025</td>
+                        <td>10/05/2025</td>
+                        <td>ASDQ6131HAJDA</td>
+                        <td>R$ 500,00</td>
+                        <td class="status"><span class="bolinha cancelado"></span> Cancelado</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <div class="titulo-box">
+                    <h4>Informações do Registro de Pagamento</h4>
+                </div>
+            <section class="detalhes-pagamento">
+
+                <div class="info-container">
+                    <div class="info-grid">
+                        <div><strong>Título do pagamento:</strong> Parcela da Reserva</div>
+                        <div><strong>Referência:</strong> ASDQ6131HAJDA</div>
+                        <div><strong>Nome:</strong> Lucas Felipe</div>
+                        <div><strong>Data:</strong> 10/05/2025</div>
+                        <div><strong>Tipo:</strong> A pagar</div>
+                        <div><strong>Data Pagto:</strong> 10/05/2025</div>
+                        <div><strong>Status:</strong> <span class="status-indicator pendente"></span> Pendente</div>
+                        <div><strong>Valor:</strong> R$ 500,00</div>
+                        <div><strong>Sequência:</strong> 02</div>
+                        <div><strong>Dias em atraso:</strong> 00</div>
+                        <div><strong>Cliente:</strong> 0632</div>
+                    </div>
+                </div>
+                
+                <div class="estorno-cancelamento">
+                    <fieldset class="tipo">
+                        <legend>Tipo</legend>
+                        <label><input type="radio" name="acao"> Estorno</label>
+                        <label><input type="radio" name="acao"> Cancelamento</label>
+                        <div>
+                            <label><input type="checkbox"> Reabrir Parcela</label>
+                            <label><input type="radio" name="reabertura"> Total</label>
+                            <label><input type="radio" name="reabertura"> Parcial</label>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset class="estorno">
+                        <legend>Estorno</legend>
+                        <label>Referência: <input type="text"></label>
+                        <label>Data: <input type="text"></label>
+                        <label>Sequência: <input type="text"></label>
+                        <div>
+                            <label><input type="radio" name="estorno"> Total</label>
+                            <label><input type="radio" name="estorno"> Parcial</label>
+                            <label>Qtde Parcelas: <input type="text"></label>
+                        </div>
+                    </fieldset>
+                </div>
+            </section>
+        </section>
+
+
+            
+            
+        </div>
+
+        <script>
+            function toggleFloatingMenu() {
+                const menu = document.getElementById('floatingMenu');
+                menu.classList.toggle('show');
+                
+            }
+    
+            document.getElementById('menuButton').addEventListener('click', function () {
+                const sidebar = document.getElementById('sidebar');
+                const content = document.getElementById('content');
+                const button = document.getElementById('menuButton');
+                const buttonRect = button.getBoundingClientRect();
+    
+                if (sidebar.classList.contains('show')) {
+                    sidebar.classList.remove('show');
+                    content.style.marginLeft = '0';
+                } else {
+                    sidebar.style.top = `${buttonRect.bottom}px`;
+                    sidebar.style.left = `${buttonRect.left}px`;
+                    sidebar.classList.add('show');
+                    content.style.marginLeft = '250px';
+                }
+                if(window.innerWidth <= 768) {
+                    content.style.marginLeft = '0';
+                }
+            });
+
+            
+            document.querySelector('.filtro').addEventListener('click', () => {
+                toggleMenu('menu-filtros');
+            });
+
+            function toggleMenu(menuId) {
+                const menu = document.getElementById(menuId);
+                const isVisible = menu.style.display === 'block';
+
+
+                document.querySelectorAll('.men').forEach(m => m.style.display = 'none');
+
+
+                if (!isVisible) {
+                    menu.style.display = 'block';
+                }
+            }
+
+
+            document.addEventListener('click', function (event) {
+                if (!event.target.closest('.dropdown')) {
+                    document.querySelectorAll('.men').forEach(m => m.style.display = 'none');
+                }
+            });
+
+
+        </script>
