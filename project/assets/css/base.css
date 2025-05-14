@@ -1,93 +1,237 @@
-header {
+:root {
+    --color-fundo-body: #f4f4f4;
+    --color-fundo-tab: #fff;
+    --color-not: rgba(255, 147, 197, 0.3);
+    --color-filtro: rgba(30, 180, 255, 0.2);
+    --color-switch: rgba(0, 34, 79, 0.8);
+}
+
+body {
+    display: flex;
+    background-color: var(--color-fundo-body);
+    height: 100vh;
+}
+
+.header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 12rem;
+    height: 107px;
+    background: linear-gradient(100deg, #fff 20%, rgba(255, 179, 255, 0.5) 60%, rgba(30, 180, 255, 0.3) 100%);
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 10;
-    background-color: rgba(248, 244, 237, 0.9);
 }
 
-.info-principal {
+.logo {
+    width: 11em;
+}
+
+#content {
+    transition: margin-left 0.3s ease;
+    margin-left: 0;
+}
+
+.floating-menu {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
-
-    & .nome-sistema {
-        font-size: 1.7rem;
-
-        & a {
-            text-decoration: none;
-        } 
-
-        & h1 {
-            color: #93CBDB;
-            font-family: "Rammetto One", sans-serif;
-        }
-
-        & span {
-            color: #f494d4;
-            font-family: "Rammetto One", sans-serif;
-        }
-    }
-
-    & .perfil {
-        background-color: #FFE03980;
-        width: 8rem;
-        border-radius: 20px;
-        font-size: 1.5rem;
-        padding: 0;
-
-        &:hover {
-            background-color: #ffd900a1;
-            transform: scale(1.03);
-            transition: 300ms;
-        }
-
-        &:focus {
-            outline: 1px solid #ffd900;
-        }
-
-        & a {
-            color: black;
-            text-decoration: none;
-        }
-    }
-
-    & .menu-btn {
-        display: none;
-        font-size: 1.5rem;
-        background: none;
-        border: none;
-        box-shadow: none;
-    }
+    flex-direction: column;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    height: 85%;
+    position: fixed;
+    top: 110px;
+    right: -300px;
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    border-radius: 8px;
+    z-index: 100;
 }
 
-.menu-nav {
-    text-align: center;
+.floating-menu img {
+    position: relative;
+    top: 0.2em;
+    right: 0.5em;
+}
 
-    & .lista-nav {
-        display: inline-block;
-        padding: .5rem 0;
-        text-align: left;
+.floating-menu.show {
+    top: 110px;
+    right: 0px;
+}
 
-        & .link-nav {
-            padding: 1rem;
-            color: black;
-            text-decoration: 1px underline #FF67C5B2;
-            font-size: 1.5rem;
-            font-family: 'Open Sans', sans-serif;
+.floating-menu h4 {
+    font-weight: bold;
+}
 
-            &:hover {
-                text-decoration: 1px underline #93CBDB;
-            }
-        }
+.floating-menu p {
+    font-weight: 250;
+}
 
-        &:hover {
-            transform: scale(1.1);
-            transition: 300ms;
-        }
-    }
+.toggle-menu {
+    position: relative;
+    top: 0.15em;
+    /* background-color: #2c3e50; */
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.user-role {
+    font-size: 12px;
+    color: #666;
+}
+
+.icon-btn {
+    margin-right: 1em;
+    margin-top: 0.5em;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon-btn:hover {
+    opacity: 0.7;
+}
+
+#menuButton {
+    position: fixed;
+    top: 108px;
+    left: 0px;
+    background: var(--color-fundo-tab);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000;
+    width: 280px;
+    height: 15px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 107px;
+    left: 0px;
+    width: 280px;
+    height: 85%;
+    color: var(--cor-fonte);
+    background-color: var(--color-fundo-tab);
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleY(0);
+    transform-origin: top;
+    z-index: 999;
+}
+
+.sidebar.show {
+    transform: scaleY(1);
+}
+
+.sidebar ul li:hover,
+.active {
+    color: var(--color-fundo-tab);
+    background-color: rgba(0, 34, 79, 0.7);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    margin: 5px 0;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar img {
+    position: relative;
+    top: 1.5px;
+    right: 5px;
+}
+
+.font-size-control {
+    position: relative;
+    left: 1.2em;
+    top: 0.5em;
+    width: 42%;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 3px 8px;
+    gap: 5px;
+    background-color: white;
+}
+
+.btnFM {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 3px 6px;
+    color: #334155;
+}
+
+.font-size-display {
+    font-size: 14px;
+    font-weight: bold;
+    color: #334155;
+}
+
+.btn:hover {
+    color: #1e293b;
+}
+
+.btn:focus {
+    outline: none;
 }
 
 .principal {
@@ -103,16 +247,12 @@ header {
         & .pesquisa-barra {
             display: flex;
             gap: 3px;
-            
+
             & input {
                 width: 20rem;
-                border-right: 1px solid #93CBDB;
+                border-right: 1px solid #1eb4ff;
                 padding: 0.6rem 0.7rem;
                 border-radius: 10px 0 0 10px;
-
-                &:focus {
-                    background-color: #93cbdb3f;
-                }
             }
 
             & .btn-pesquisa {
@@ -126,6 +266,7 @@ header {
                 background-color: #FFF;
                 font-size: 1.5rem;
                 box-shadow: none;
+                color: var(--cor-fonte);
 
                 &:hover {
                     background-color: #0000000a;
@@ -147,6 +288,7 @@ header {
             background-color: #FFF;
             font-size: 1.5rem;
             box-shadow: none;
+            color: var(--cor-fonte);
 
             &:hover {
                 background-color: #0000000a;
@@ -169,11 +311,11 @@ header {
         text-align: center;
         position: relative;
         top: 6.6rem;
-        
+
         & .cachorro-footer {
             width: 12rem;
             z-index: 1;
-        }    
+        }
     }
 
     & .infos {
@@ -183,7 +325,7 @@ header {
         padding: 3rem 9rem;
         width: 100%;
         margin: auto;
-        background-color: #93CBDB;
+        background-color: var(--cor-azul-50);
 
         & .info-footer {
             margin: 1rem;
@@ -231,56 +373,6 @@ header {
             }
         }
     }
-}
-
-.menu-active {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .9);
-    width: 70vw;
-    height: 100vh;
-    text-align: center;
-    z-index: 1;
-    align-items: start;
-    padding: 3rem;
-
-    & .menu-a-link {
-        color: #fff;
-        text-decoration: 1px underline #FF67C5B2;
-        font-size: 1.4rem;
-        position: relative;
-        top: 3rem;
-
-        &:hover {
-            text-decoration: 1px underline #93CBDB;
-        }
-    }
-}
-
-.ativo {
-    & i {
-        color: #fff;
-    }
-}
-
-.menu-hide {
-    display: none;
-}
-
-.menu-icon {
-    position: relative;
-    top: 4rem;
-    left: 1rem;
-    color: #fff;
-}
-
-i:hover {
-    transform: scale(1.1);
-    transition: 300ms;
 }
 
 @media (max-width: 768px) {

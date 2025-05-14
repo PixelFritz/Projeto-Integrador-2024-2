@@ -14,44 +14,75 @@
     <script src="assets/js/menu_index.js" defer></script>
     <script src="assets/js/avaliacao_paw.js" defer></script>
 </head>
-<body>
+<body id="content">
     <header>
-        <section class="info-principal">
-            <div class="nome-sistema">
-                <a href="index.html"><h1>Hos<span>pet</span>agem</h1></a>
+        <header class="header">
+        <img class="logo" src="assets/imagens/icons/logo.svg" alt="">
+        <div class="header-right">
+            <div class="toggle-menu" onclick="toggleFloatingMenu()"><img src="assets/imagens/icons/Subtract.svg" alt="">
             </div>
-            <button class="perfil">
-                <a href="login.html">Entrar</a>
+            <div class="user-profile">
+                <img src="assets/imagens/icons/Shape.svg" alt="Usuário">
+                <div class="user-info">
+                    <span class="user-name">Usuário</span>
+                </div>
+            </div>
+            <button class="icon-btn">
+                <img src="assets/imagens/icons/box-arrow-right.svg" alt="">
             </button>
-            <button id="menu-btn" class="menu-btn"><i class="fa-solid fa-bars fa-2x"></i></button>
-        </section>
-
-        <section>
-            <nav class="menu-nav menu-hidden" id="menu-nav">
-                <li class="lista-nav">
-                    <a href="login.html" class="menu-hide link-nav entrar">Entrar</a>
-                </li>
-                <li class="lista-nav">
-                    <a href="index.html" class="link-nav">Início</a>
-                </li>
-                <li class="lista-nav">
-                    <a href="como_funciona.html" class="link-nav">Como Funciona</a>
-                </li>
-                <li class="lista-nav">
-                    <a href="sobrenos.html" class="link-nav entrar">Sobre Nós</a>
-                </li>
-                <li class="lista-nav">
-                    <a href="planos_precos.html" class="link-nav">Planos e Preços</a>
-                </li>
-                <li class="lista-nav">
-                    <a href="#" class="link-nav">FAQ</a>
-                </li>
-                <li class="lista-nav">
-                    <a href="teste_interativo.html" class="menu-hide link-nav entrar">Faça o teste</a>
-                </li>
-            </nav>
-        </section>
+        </div>
     </header>
+
+    <button id="menuButton"><img src="assets/imagens/icons/chevron-down.svg" alt=""></button>
+    <div class="sidebar" id="sidebar">
+        <hr>
+        <ul>
+            <li>
+                Entrar
+                <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+            </li>
+            <li>
+                Financeiro
+                <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+            </li>
+            <li>
+                Início
+                <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+            </li>
+            <li>
+                Alertas
+                <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+            </li>
+            <li>
+                Como Funciona
+                <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+            </li>
+            <li>
+                Sobre Nós
+                <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+            </li>
+            <li>
+                FAQ
+                <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+            </li>
+            <li>
+                Faça o teste<img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+            </li>
+        </ul>
+    </div>
+
+    <div class="floating-menu" id="floatingMenu">
+        <h4>Mudar Aparência</h4>
+        <hr style="margin-top: 10px;">
+        <p> <img src="assets/imagens/icons/Vector.svg" alt="">Modo Noturno</p>
+        <p> <img src="assets/imagens/icons/universal-access.svg" alt="">Modo Daltônico</p>
+        <p> <img src="assets/imagens/icons/fonts (1).svg" alt="">Mudar Tamanho do Texto</p>
+        <div class="font-size-control">
+            <button class="btnFM">+</button>
+            <span class="font-size-display">Aa</span>
+            <button class="btnFM">-</button>
+        </div>
+    </div>
 
     <main class="principal">
         <section class="pesquisa">
@@ -155,5 +186,32 @@
             </section>
         </section>
     </footer>
+
+    <script>
+        function toggleFloatingMenu() {
+            const menu = document.getElementById('floatingMenu');
+            menu.classList.toggle('show');
+        }
+
+        document.getElementById('menuButton').addEventListener('click', function () {
+            const sidebar = document.getElementById('sidebar');
+            const content = document.getElementById('content');
+            const button = document.getElementById('menuButton');
+            const buttonRect = button.getBoundingClientRect();
+
+            if (sidebar.classList.contains('show')) {
+                sidebar.classList.remove('show');
+                content.style.marginLeft = '0';
+            } else {
+                sidebar.style.top = `${buttonRect.bottom}px`;
+                sidebar.style.left = `${buttonRect.left}px`;
+                sidebar.classList.add('show');
+                content.style.marginLeft = '250px';
+            }
+            if(window.innerWidth <= 768) {
+                content.style.marginLeft = '0';
+            }
+        })
+    </script>
 </body>
 </html>

@@ -59,7 +59,7 @@
         & a {
             display: flex;
             justify-content: flex-end;
-            color: black;
+            color: var(--cor-fonte);
             margin-top: 1.5em;
 
             &:hover {
@@ -85,22 +85,22 @@
 
         & .btn-teste {
             margin-top: 2rem;
-            background-color: #FFE03980;
+            background-color: var(--cor-botao);
             border-radius: 10px;
 
             &:hover {
-                background-color: #ffd900a1;
+                background-color: var(--cor-focus-hover-botao);
                 transform: scale(1.03);
                 transition: 300ms;
             }
 
             &:focus {
-                outline: 1px solid #ffd900;
+                outline: 1px solid var(--cor-focus-hover-botao);
             }
 
             & a {
                 font-size: 1.5rem;
-                color: #000;
+                color: var(--cor-fonte);
             }
         }
     }
