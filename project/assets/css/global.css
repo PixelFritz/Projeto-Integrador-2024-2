@@ -42,7 +42,6 @@ a {
 }
 
 button {
-    padding: 1rem 4.5rem;
     cursor: pointer;
 
     &:hover,

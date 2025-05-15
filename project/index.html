@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,209 +10,200 @@
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/index.css">
-    
-    <script src="https://kit.fontawesome.com/e8db2f40d0.js" crossorigin="anonymous" defer></script>
-    <script src="assets/js/menu_index.js" defer></script>
+
     <script src="assets/js/avaliacao_paw.js" defer></script>
 </head>
+
 <body id="content">
-    <header>
-        <header class="header">
-        <img class="logo" src="assets/imagens/icons/logo.svg" alt="">
-        <div class="header-right">
-            <div class="toggle-menu" onclick="toggleFloatingMenu()"><img src="assets/imagens/icons/Subtract.svg" alt="">
-            </div>
-            <div class="user-profile">
-                <img src="assets/imagens/icons/Shape.svg" alt="Usuário">
-                <div class="user-info">
-                    <span class="user-name">Usuário</span>
+    <div id="content-principal">
+        <header class="header" id="header-principal">
+            <img class="logo" src="assets/imagens/icons/logo.svg" alt="">
+            <div class="header-right">
+                <div class="toggle-menu" onclick="toggleFloatingMenu()"><img src="assets/imagens/icons/Subtract.svg"
+                        alt="">
                 </div>
-            </div>
-            <button class="icon-btn">
-                <img src="assets/imagens/icons/box-arrow-right.svg" alt="">
-            </button>
-        </div>
-    </header>
-
-    <button id="menuButton"><img src="assets/imagens/icons/chevron-down.svg" alt=""></button>
-    <div class="sidebar" id="sidebar">
-        <hr>
-        <ul>
-            <li>
-                Entrar
-                <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
-            </li>
-            <li>
-                Financeiro
-                <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
-            </li>
-            <li>
-                Início
-                <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
-            </li>
-            <li>
-                Alertas
-                <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
-            </li>
-            <li>
-                Como Funciona
-                <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
-            </li>
-            <li>
-                Sobre Nós
-                <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
-            </li>
-            <li>
-                FAQ
-                <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
-            </li>
-            <li>
-                Faça o teste<img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
-            </li>
-        </ul>
-    </div>
-
-    <div class="floating-menu" id="floatingMenu">
-        <h4>Mudar Aparência</h4>
-        <hr style="margin-top: 10px;">
-        <p> <img src="assets/imagens/icons/Vector.svg" alt="">Modo Noturno</p>
-        <p> <img src="assets/imagens/icons/universal-access.svg" alt="">Modo Daltônico</p>
-        <p> <img src="assets/imagens/icons/fonts (1).svg" alt="">Mudar Tamanho do Texto</p>
-        <div class="font-size-control">
-            <button class="btnFM">+</button>
-            <span class="font-size-display">Aa</span>
-            <button class="btnFM">-</button>
-        </div>
-    </div>
-
-    <main class="principal">
-        <section class="pesquisa">
-            <div class="pesquisa-barra">
-                <input type="text" placeholder="Pesquisar..."">
-                <button class="btn-pesquisa">
-                    <i class="fa fa-search"></i>
+                <div class="user-profile">
+                    <img src="assets/imagens/icons/Shape.svg" alt="Usuário">
+                    <div class="user-info">
+                        <span class="user-name">Usuário</span>
+                    </div>
+                </div>
+                <button class="icon-btn">
+                    <img src="assets/imagens/icons/box-arrow-right.svg" alt="">
                 </button>
             </div>
-            <button class="btn-filtro">
-                <i class="fa fa-sliders"></i>
-                Filtrar
-            </button>
-        </section>
-        <section class="section-icon-text">
-            <div class="icon-text-info">
-                <img src="assets/imagens/icon-info1.svg" alt="ícone cachorro tendo ideia">
-                <p>Busque entre diversas opções de hospedagem e garanta a melhor experiência.</p>
-            </div class="section-icon-text">
-            <div class="icon-text-info">
-                <img src="assets/imagens/icon-info2.svg" alt="ícone cachorro com corações">
-                <p>Seu pet merece um lugar onde o amor está sempre presente. Acolhimento é nossa prioridade!</p>
-            </div class="section-icon-text">
-            <div class="icon-text-info">
-                <img src="assets/imagens/icon-info3.svg" alt="ícone cachorro para feedback">
-                <p>Nossos hóspedes sempre saem com um sorriso. Confira o que os outros dizem!</p>
-            </div>
-        </section>
-        <section class="section-hoteis">
-            <h2 class="h2-titulo">Destaques Exclusivos para o seu Pet</h2>
-            <section class="section-infos-hoteis">
-                <div class="infos-hoteis">
-                    <img src="assets/imagens/hotel1.svg" alt="Hotel PetVille Hospedagem">
-                    <h3 class="nome-hotel">PetVille Hospedagem</h3>
-                    <div class="avaliacao" data-rating="5">
-                        <p class="p-texto">Avaliação</p>
-                        <div class="patinhas"></div>
-                    </div>
-                    <p class="valor">R$ XX,XX dia</p>
-                </div>
-                <div class="infos-hoteis">
-                    <img src="assets/imagens/hotel2.svg" alt="Hotel Refúgio dos Peludos">
-                    <h3 class="nome-hotel">Refúgio dos Peludos</h3>
-                    <div class="avaliacao" data-rating="4">
-                        <p class="p-texto">Avaliação</p>
-                        <div class="patinhas"></div>
-                    </div>
-                    <p class="valor">R$ XX,XX dia</p>
-                </div>
-                <div class="infos-hoteis">
-                    <img src="assets/imagens/hotel3.svg" alt="Bicharada Hotel">
-                    <h3 class="nome-hotel">Bicharada Hotel</h3>
-                    <div class="avaliacao" data-rating="4">
-                        <p class="p-texto">Avaliação</p>
-                        <div class="patinhas"></div>
-                    </div>
-                    <p class="valor">R$ XX,XX dia</p>
-                </div>
-            </section>
-            <a href="">
-                Ver mais hospetagens
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-        </section>
-        <section class="section-teste">
-            <h2 class="h2-titulo">Descubra o Hotel Ideal para Seu Pet!</h2>
-            <p class="p-texto">Cada animal é único e merece o melhor! Responda ao nosso teste interativo e descubra em poucos minutos o hotel ideal que atende às necessidades e à personalidade do seu pet.</p>
-            <button class="btn-teste"><a href="teste_interativo.html">Comece o teste!</a></button>
-        </section>
-        <section class="elemento"></section>
-    </main>
+        </header>
+        
+        <div class="menuButton">
+            <button id="menuButton" class="btn-menu-sidebar"><img src="assets/imagens/icons/chevron-down.svg" alt=""></button>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <hr>
+            <ul>
+                <li>
+                    Entrar
+                    <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+                </li>
+                <li>
+                    Financeiro
+                    <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+                </li>
+                <li>
+                    Início
+                    <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+                </li>
+                <li>
+                    Alertas
+                    <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+                </li>
+                <li>
+                    Como Funciona
+                    <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+                </li>
+                <li>
+                    Sobre Nós
+                    <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+                </li>
+                <li>
+                    FAQ
+                    <img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+                </li>
+                <li>
+                    Faça o teste<img src="assets/imagens/icons/box-arrow-up-right.svg" alt="">
+                </li>
+            </ul>
+        </div>
 
-    <footer class="footer">
-        <section class="img-footer">
-            <img src="assets/imagens/cachorro.svg" alt="" class="cachorro-footer">
-        </section>
-        <section class="infos">
-            <section class="info-footer">
-                <h2>Sobre Nós</h2>
-                <li><a href="sobrenos.html" class="info-links">Sobre Nós</a></li>
-                <li><a href="" class="info-links">Hospedar um Pet</a></li>
-                <li><a href="" class="info-links">Contato</a></li>
-                <li><a href="" class="info-links">Termos de Serviço</a></li>
-                <li><a href="" class="info-links">Política de Privacidade</a></li>
+        <div class="floating-menu" id="floatingMenu">
+            <h4>Mudar Aparência</h4>
+            <hr style="margin-top: 10px;">
+            <p> <img src="assets/imagens/icons/Vector.svg" alt="">Modo Noturno</p>
+            <p> <img src="assets/imagens/icons/universal-access.svg" alt="">Modo Daltônico</p>
+            <p> <img src="assets/imagens/icons/fonts (1).svg" alt="">Mudar Tamanho do Texto</p>
+            <div class="font-size-control">
+                <button class="btnFM">+</button>
+                <span class="font-size-display">Aa</span>
+                <button class="btnFM">-</button>
+            </div>
+        </div>
+
+        <main class="principal">
+            <section class="pesquisa">
+                <div class="pesquisa-barra">
+                    <input type="text" placeholder="Pesquisar..."">
+                <button class=" btn-pesquisa">
+                    <i class="fa fa-search"></i>
+                    </button>
+                </div>
+                <button class="btn-filtro">
+                    <i class="fa fa-sliders"></i>
+                    Filtrar
+                </button>
             </section>
-    
-            <section class="info-footer">
-                <h2>Suporte</h2>
-                <li><p>Email:</p></li>
-                <li><a href="" class="info-links">contato@hospedagemdepets.com</a></li>
-                <li><p>Telefone:</p></li>
-                <li><a href="" class="info-links">(XX) XXXXX-XXXX</a></li>
-            </section>
-    
-            <section class="info-footer">
-                <h2>Redes Sociais</h2>
-                <div class="icon-footer">
-                    <i class="fa-brands fa-instagram fa-3x"></i>
-                    <i class="fa-brands fa-facebook fa-3x"></i>    
+            <section class="section-icon-text">
+                <div class="icon-text-info">
+                    <img src="assets/imagens/icon-info1.svg" alt="ícone cachorro tendo ideia">
+                    <p>Busque entre diversas opções de hospedagem e garanta a melhor experiência.</p>
+                </div class="section-icon-text">
+                <div class="icon-text-info">
+                    <img src="assets/imagens/icon-info2.svg" alt="ícone cachorro com corações">
+                    <p>Seu pet merece um lugar onde o amor está sempre presente. Acolhimento é nossa prioridade!</p>
+                </div class="section-icon-text">
+                <div class="icon-text-info">
+                    <img src="assets/imagens/icon-info3.svg" alt="ícone cachorro para feedback">
+                    <p>Nossos hóspedes sempre saem com um sorriso. Confira o que os outros dizem!</p>
                 </div>
             </section>
-        </section>
-    </footer>
+            <section class="section-hoteis">
+                <h2 class="h2-titulo">Destaques Exclusivos para o seu Pet</h2>
+                <section class="section-infos-hoteis">
+                    <div class="infos-hoteis">
+                        <img src="assets/imagens/hotel1.svg" alt="Hotel PetVille Hospedagem">
+                        <h3 class="nome-hotel">PetVille Hospedagem</h3>
+                        <div class="avaliacao" data-rating="5">
+                            <p class="p-texto">Avaliação</p>
+                            <div class="patinhas"></div>
+                        </div>
+                        <p class="valor">R$ XX,XX dia</p>
+                    </div>
+                    <div class="infos-hoteis">
+                        <img src="assets/imagens/hotel2.svg" alt="Hotel Refúgio dos Peludos">
+                        <h3 class="nome-hotel">Refúgio dos Peludos</h3>
+                        <div class="avaliacao" data-rating="4">
+                            <p class="p-texto">Avaliação</p>
+                            <div class="patinhas"></div>
+                        </div>
+                        <p class="valor">R$ XX,XX dia</p>
+                    </div>
+                    <div class="infos-hoteis">
+                        <img src="assets/imagens/hotel3.svg" alt="Bicharada Hotel">
+                        <h3 class="nome-hotel">Bicharada Hotel</h3>
+                        <div class="avaliacao" data-rating="4">
+                            <p class="p-texto">Avaliação</p>
+                            <div class="patinhas"></div>
+                        </div>
+                        <p class="valor">R$ XX,XX dia</p>
+                    </div>
+                </section>
+                <a href="">
+                    Ver mais hospetagens
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </section>
+            <section class="section-teste">
+                <h2 class="h2-titulo">Descubra o Hotel Ideal para Seu Pet!</h2>
+                <p class="p-texto">Cada animal é único e merece o melhor! Responda ao nosso teste interativo e descubra
+                    em poucos minutos o hotel ideal que atende às necessidades e à personalidade do seu pet.</p>
+                <button class="btn-teste"><a href="teste_interativo.html">Comece o teste!</a></button>
+            </section>
+            <section class="elemento"></section>
+        </main>
+
+        <footer class="footer">
+            <section class="img-footer">
+                <img src="assets/imagens/cachorro.svg" alt="" class="cachorro-footer">
+            </section>
+            <section class="infos">
+                <section class="info-footer">
+                    <h2>Sobre Nós</h2>
+                    <li><a href="sobrenos.html" class="info-links">Sobre Nós</a></li>
+                    <li><a href="" class="info-links">Hospedar um Pet</a></li>
+                    <li><a href="" class="info-links">Contato</a></li>
+                    <li><a href="" class="info-links">Termos de Serviço</a></li>
+                    <li><a href="" class="info-links">Política de Privacidade</a></li>
+                </section>
+
+                <section class="info-footer">
+                    <h2>Suporte</h2>
+                    <li>
+                        <p>Email:</p>
+                    </li>
+                    <li><a href="" class="info-links">contato@hospedagemdepets.com</a></li>
+                    <li>
+                        <p>Telefone:</p>
+                    </li>
+                    <li><a href="" class="info-links">(XX) XXXXX-XXXX</a></li>
+                </section>
+
+                <section class="info-footer">
+                    <h2>Redes Sociais</h2>
+                    <div class="icon-footer">
+                        <i class="fa-brands fa-instagram fa-3x"></i>
+                        <i class="fa-brands fa-facebook fa-3x"></i>
+                    </div>
+                </section>
+            </section>
+        </footer>
+    </div>
 
     <script>
         function toggleFloatingMenu() {
             const menu = document.getElementById('floatingMenu');
             menu.classList.toggle('show');
         }
-
-        document.getElementById('menuButton').addEventListener('click', function () {
-            const sidebar = document.getElementById('sidebar');
-            const content = document.getElementById('content');
-            const button = document.getElementById('menuButton');
-            const buttonRect = button.getBoundingClientRect();
-
-            if (sidebar.classList.contains('show')) {
-                sidebar.classList.remove('show');
-                content.style.marginLeft = '0';
-            } else {
-                sidebar.style.top = `${buttonRect.bottom}px`;
-                sidebar.style.left = `${buttonRect.left}px`;
-                sidebar.classList.add('show');
-                content.style.marginLeft = '250px';
-            }
-            if(window.innerWidth <= 768) {
-                content.style.marginLeft = '0';
-            }
-        })
     </script>
+    <script src="responsividadeMobile.js"></script>
+
 </body>
+
 </html>

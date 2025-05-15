@@ -11,6 +11,10 @@ body {
     background-color: var(--color-fundo-body);
     height: 100vh;
 }
+/* CSS */
+.modo-mobile .header-right {
+    display: none;
+}
 
 .header {
     padding: 10px 20px;
@@ -30,7 +34,7 @@ body {
 }
 
 .logo {
-    width: 11em;
+    width: 30rem;
 }
 
 #content {
@@ -134,7 +138,7 @@ body {
     opacity: 0.7;
 }
 
-#menuButton {
+.menuButton {
     position: fixed;
     top: 108px;
     left: 0px;
@@ -146,7 +150,13 @@ body {
     font-size: 16px;
     z-index: 1000;
     width: 280px;
-    height: 15px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#menuButton {
+    background-color: transparent;
 }
 
 .sidebar {
@@ -376,6 +386,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    .logo {
+        width: 20rem;
+    }
+    
     .principal {
         & .pesquisa {
             & .pesquisa-barra {
@@ -421,17 +435,13 @@ body {
         }
     }
 
-    nav {
-        display: none;
-    }
-
     .principal {
-        margin-top: 7.5rem;
 
         & .pesquisa {
             flex-direction: column;
             margin: auto;
             align-items: center;
+            margin-top: 12rem;
 
             & .pesquisa-barra {
                 margin: 1rem 0;
